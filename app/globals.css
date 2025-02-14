@@ -4,6 +4,29 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 2em !important;
+  z-index: 30 !important;
+}
+.round {
+  clip-path: ellipse(100% 100% at 50% 100%);
+}
+
+.round-t {
+  clip-path: ellipse(100% 50% at 50% 100%);
+}
+.round-b {
+  clip-path: ellipse(100% 55% at 48% 44%);
+}
+.bg-burger {
+  background: url("/assets/burger-t.png") no-repeat center center / cover
+    #a31227;
+}
+.bg-bamboo {
+  background: url("/assets/bamboo-bg.jpg") no-repeat top center #e5bd83;
 }
 
 @layer base {
