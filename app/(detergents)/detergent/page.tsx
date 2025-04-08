@@ -6,19 +6,19 @@ import Footer from "@/components/footer";
 import Header from "@/components/detergent/header";
 import SocialMedia from "@/components/social-media";
 import Years from "@/components/years";
-import Cloud from "@/components/detergent/cloud";
 import Faq from "@/components/faq";
+import Other from "@/app/(alimentaire)/alimentaire/_components/other";
 
 const DetergentPage = () => {
   return (
     <>
       <Header />
-      <Cloud />
       <Sep />
       <Product />
       <Astuces />
       <SocialMedia page={"detergent"} />
       <Years page="detergnent" />
+      <Other />
       <div className="-mt-8">
         <Blog />
       </div>
