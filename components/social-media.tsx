@@ -15,7 +15,7 @@ const SocialMedia = ({ page = "alimentaire" }: SocialMediaProps) => {
   return (
     <section
       className={cn(
-        "w-full min-h-[400px] bg-white flex justify-center items-center   relative",
+        "w-full min-h-[400px] bg-white flex justify-center items-center flex-col  relative",
         page == "alimentaire" ? "" : ""
       )}
     >
@@ -66,6 +66,7 @@ const SocialMedia = ({ page = "alimentaire" }: SocialMediaProps) => {
           </Link>
         </div>
       </div>
+      {/* */}
     </section>
   );
 };

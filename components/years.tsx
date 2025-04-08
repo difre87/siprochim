@@ -7,7 +7,7 @@ interface YearsProps {
 
 const Years = ({ page = "alimentaire" }: YearsProps) => {
   return (
-    <section className="w-full h-screen sm:py-20 md:py-0 md:grid md:grid-cols-3 sm:flex sm:flex-col bg-[url('/assets/alimentaire/years/planche.png')] bg-cover bg-center bg-no-repeat relative z-40">
+    <section className="w-full h-screen sm:py-20 md:py-0 md:grid md:grid-cols-3 sm:flex sm:flex-col bg-[url('/assets/alimentaire/years/planche.png')] bg-right-[100px] bg-cover  bg-no-repeat relative z-40">
       <div className="h-full relative md:col-span-2 flex justify-center items-center">
         <Image
           src={`${

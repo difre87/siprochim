@@ -14,6 +14,7 @@ import HeroesForm from "./_components/heroes-form";
 import SepBurger from "./_components/sep-burger";
 import HeroesBouillon from "./_components/heroes-bouillon";
 import HeroesAromate from "./_components/heroes-aromate";
+import "animate.css";
 
 const AlimentairePage = () => {
   return (

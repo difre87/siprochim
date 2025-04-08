@@ -24,8 +24,8 @@ const NosRecettes = () => {
   };
 
   return (
-    <section className="w-full min-h-screen bg-[#436d23] ">
-      <div className="w-full min-h-[500px] bg-[#e59e01] pt-20 pb-36 md:px-0 sm:px-5 round-b">
+    <section className="w-full min-h-screen bg-[#436d23] relative z-10">
+      <div className="w-full min-h-[500px] bg-[#e59e01] relative z-10 pt-20 pb-36 md:px-0 sm:px-5 round-b">
         <div className="w-full max-w-screen-xl mx-auto">
           <div className="w-full grid md:grid-cols-3 sm:grid-cols-1 md:gap-x-5 sm:gap-10">
             <div className="relative overflow-hidden z-10 transition-all duration-500 hover:scale-110 hover:shadow-2xl rounded-[24px]">

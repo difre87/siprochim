@@ -10,13 +10,43 @@ const HeroesBouillon = () => {
   return (
     <section className="w-full min-h-screen bg-[#e5bd83]">
       <div className="w-full max-w-screen-xl mx-auto">
-        <Image
-          src="/assets/plateau.png"
-          width={1000}
-          height={400}
-          alt="sipro-chim"
-          className="mx-auto relative -top-20"
-        />
+        <div className="w-full relative">
+          <Image
+            src="/assets/alimentaire/produits/p-9.png"
+            width={250}
+            height={250}
+            alt="siprochim"
+            className="absolute z-20 -rotate-[30deg] left-[18%]"
+          />
+          <Image
+            src="/assets/alimentaire/produits/p-10.png"
+            width={250}
+            height={250}
+            alt="siprochim"
+            className="absolute z-10 transform left-[42%] -top-[10%]"
+          />
+          <Image
+            src="/assets/alimentaire/produits/p-12.png"
+            width={350}
+            height={250}
+            alt="siprochim"
+            className="absolute z-10 transform left-[38%] top-[25%]"
+          />
+          <Image
+            src="/assets/alimentaire/produits/p-11.png"
+            width={250}
+            height={250}
+            alt="siprochim"
+            className="absolute  z-10 rotate-[30deg] right-[15%]"
+          />
+          <Image
+            src="/assets/alimentaire/plateau.png"
+            width={1000}
+            height={400}
+            alt="sipro-chim"
+            className="mx-auto relative -top-20"
+          />
+        </div>
 
         <div className="w-full max-w-screen-xl mx-auto">
           <Title
