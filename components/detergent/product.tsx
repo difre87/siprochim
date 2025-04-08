@@ -8,7 +8,7 @@ const Product = () => {
         <div className="w-full grid grid-cols-3 gap-x-8">
           <div className="bg-[#313076] rounded-[12px] flex flex-col items-center justify-between p-10 h-96 gap-y-5">
             <Image
-              src="/assets/detergent/maison.png"
+              src="/assets/detergent/Maison.png"
               width={350}
               height={300}
               alt="detergents"
