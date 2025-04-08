@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const SaveurInedite = () => {
@@ -51,78 +53,159 @@ const SaveurInedite = () => {
               />
             </div>
             <div className="flex-1 h-full px-5 md:flex  md:justify-end lg:justify-end 2xl:justify-end items-center relative sm:hidden">
-              <div className="w-[300px] h-[200px] absolute right-[38rem] -rotate-[55deg] mt-96">
+              <motion.div
+                initial={{ right: 0, rotate: 0, opacity: 1 }}
+                whileInView={{ opacity: 1, right: "38rem", rotate: -55 }}
+                transition={{
+                  type: "spring",
+                  ease: "linear",
+                  duration: 1.5,
+                }}
+                className="w-[300px] h-[200px] absolute right-[38rem] -rotate-[55deg] mt-96"
+              >
                 <Image
                   src={"/assets/alimentaire/saveurs/1.png"}
                   fill
                   objectFit="contain"
                   alt="siprochim"
                 />
-              </div>
-              <div className="w-[300px] h-[200px] absolute right-[35rem] -rotate-[45deg] mt-72">
+              </motion.div>
+              <motion.div
+                initial={{ right: 0, rotate: 0, opacity: 1 }}
+                whileInView={{ opacity: 1, right: "35rem", rotate: -45 }}
+                transition={{
+                  type: "spring",
+                  ease: "linear",
+                  duration: 1.5,
+                }}
+                className="w-[300px] h-[200px] absolute right-[35rem] -rotate-[45deg] mt-72"
+              >
                 <Image
                   src={"/assets/alimentaire/saveurs/2.png"}
                   fill
                   objectFit="contain"
                   alt="siprochim"
                 />
-              </div>
-              <div className="w-[300px] h-[220px] absolute right-[32rem] -rotate-[36deg] mt-56">
+              </motion.div>
+              <motion.div
+                initial={{ right: 0, rotate: 0, opacity: 1 }}
+                whileInView={{ opacity: 1, right: "32rem", rotate: -36 }}
+                transition={{
+                  type: "spring",
+                  ease: "linear",
+                  duration: 1.5,
+                }}
+                className="w-[300px] h-[220px] absolute right-[32rem] -rotate-[36deg] mt-56"
+              >
                 <Image
                   src={"/assets/alimentaire/saveurs/3.png"}
                   fill
                   objectFit="contain"
                   alt="siprochim"
                 />
-              </div>
-              <div className="w-[300px] h-[240px] absolute right-[28rem] -rotate-[33deg] mt-40">
+              </motion.div>
+              <motion.div
+                initial={{ right: 0, rotate: 0, opacity: 1 }}
+                whileInView={{ opacity: 1, right: "28rem", rotate: -33 }}
+                transition={{
+                  type: "spring",
+                  ease: "linear",
+                  duration: 1.5,
+                }}
+                className="w-[300px] h-[240px] absolute right-[28rem] -rotate-[33deg] mt-40"
+              >
                 <Image
                   src={"/assets/alimentaire/saveurs/4.png"}
                   fill
                   objectFit="contain"
                   alt="siprochim"
                 />
-              </div>
-              <div className="w-[300px] h-[250px] absolute right-[24rem] -rotate-[28deg] mt-32">
+              </motion.div>
+              <motion.div
+                initial={{ right: 0, rotate: 0, opacity: 1 }}
+                whileInView={{ opacity: 1, right: "24rem", rotate: -28 }}
+                transition={{
+                  type: "spring",
+                  ease: "linear",
+                  duration: 1.5,
+                }}
+                className="w-[300px] h-[250px] absolute right-[24rem] -rotate-[28deg] mt-32"
+              >
                 <Image
                   src={"/assets/alimentaire/saveurs/5.png"}
                   fill
                   objectFit="contain"
                   alt="siprochim"
                 />
-              </div>
-              <div className="w-[300px] h-[300px] absolute right-[20rem] -rotate-[22deg] mt-20">
+              </motion.div>
+              <motion.div
+                initial={{ right: 0, rotate: 0, opacity: 1 }}
+                whileInView={{ opacity: 1, right: "20rem", rotate: -20 }}
+                transition={{
+                  type: "spring",
+                  ease: "linear",
+                  duration: 1.5,
+                }}
+                className="w-[300px] h-[300px] absolute right-[20rem] -rotate-[22deg] mt-20"
+              >
                 <Image
                   src={"/assets/alimentaire/saveurs/6.png"}
                   fill
                   objectFit="contain"
                   alt="siprochim"
                 />
-              </div>
-              <div className="w-[300px] h-[350px] absolute right-[15rem] -rotate-[20deg]">
+              </motion.div>
+              <motion.div
+                initial={{ right: 0, rotate: 0, opacity: 1 }}
+                whileInView={{ opacity: 1, right: "15rem", rotate: -20 }}
+                transition={{
+                  type: "spring",
+                  ease: "linear",
+                  duration: 1.5,
+                }}
+                className="w-[300px] h-[350px] absolute right-[15rem] -rotate-[20deg]"
+              >
                 <Image
                   src={"/assets/alimentaire/saveurs/7.png"}
                   fill
                   objectFit="contain"
                   alt="siprochim"
                 />
-              </div>
-              <div className="w-[200px] h-[400px] absolute right-[12rem]">
+              </motion.div>
+              <motion.div
+                initial={{ right: 0, rotate: 0, opacity: 1 }}
+                whileInView={{ opacity: 1, right: "12rem" }}
+                transition={{
+                  type: "spring",
+                  ease: "linear",
+                  duration: 1.5,
+                }}
+                className="w-[200px] h-[400px] absolute right-[12rem]"
+              >
                 <Image
                   src={"/assets/alimentaire/saveurs/8.png"}
                   fill
                   objectFit="contain"
                   alt="siprochim"
                 />
-              </div>
-              <div className="w-[300px] h-[500px] absolute rotate-[20deg]">
+              </motion.div>
+              <motion.div
+                initial={{ right: 0, rotate: 0, opacity: 1 }}
+                whileInView={{ opacity: 1, rotate: 20 }}
+                transition={{
+                  type: "spring",
+                  ease: "linear",
+                  duration: 1.5,
+                }}
+                className="w-[300px] h-[500px] absolute rotate-[20deg]"
+              >
                 <Image
                   src={"/assets/alimentaire/saveurs/9.png"}
                   fill
                   objectFit="contain"
                   alt="siprochim"
                 />
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
