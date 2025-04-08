@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -5,7 +7,12 @@ const Mayonnaise = () => {
   return (
     <section className="w-full min-h-screen relative bg-[#a31227] py-20 sm:px-5 md:px-0">
       <div className="w-full grid md:grid-cols-2 sm:grid-cols-1 md:gap-x-32 sm:gap-10">
-        <div className="md:min-h-[450px] sm:h-[300px] bg-[url('/assets/alimentaire/mayonnaise/planche-1.png')] bg-cover bg-center bg-no-repeat md:rounded-tr-[100px] md:rounded-br-[100px] sm:rounded-[20px] flex items-center justify-center relative">
+        <motion.div
+          initial={{ transform: "translateX(-100px)", opacity: 0 }}
+          whileInView={{ transform: "translateX(0px)", opacity: 1 }}
+          transition={{ type: "spring", ease: "linear", duration: 2 }}
+          className="md:min-h-[450px] sm:h-[300px] bg-[url('/assets/alimentaire/mayonnaise/planche-1.png')] bg-cover bg-center bg-no-repeat md:rounded-tr-[100px] md:rounded-br-[100px] sm:rounded-[20px] flex items-center justify-center relative"
+        >
           <div className="w-full grid grid-cols-2">
             <div className="flex flex-col h-full gap-y-4">
               <div className="flex justify-end w-full">
@@ -52,14 +59,19 @@ const Mayonnaise = () => {
               className="absolute -right-16 -top-10 md:block sm:hidden"
             />
           </div>
-        </div>
-        <div className="md:min-h-[450px] sm:h-[300px] bg-[url('/assets/alimentaire/mayonnaise/planche-2.png')] bg-cover bg-center bg-no-repeat md:rounded-tr-[100px] md:rounded-br-[100px] sm:rounded-[20px] flex items-center justify-center relative">
+        </motion.div>
+        <motion.div
+          initial={{ transform: "translateX(100px)", opacity: 0 }}
+          whileInView={{ transform: "translateX(0px)", opacity: 1 }}
+          transition={{ type: "spring", ease: "linear", duration: 2.5 }}
+          className="md:min-h-[450px] sm:h-[300px] bg-[url('/assets/alimentaire/mayonnaise/planche-2.png')] bg-cover bg-center bg-no-repeat md:rounded-tl-[100px] md:rounded-bl-[100px] sm:rounded-[20px] flex items-center justify-center relative"
+        >
           <Image
             src={"/assets/alimentaire/mayonnaise/top-mayo.png"}
             width={400}
             height={400}
             alt="mayonnaise mia"
-            className="absolute -top-10  md:block sm:hidden"
+            className="absolute -left-[10%] -top-12  md:block sm:hidden"
           />
           <div className="sm:block md:hidden">
             <Image
@@ -101,10 +113,29 @@ const Mayonnaise = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
+      <motion.div
+        initial={{ opacity: 0, right: -200 }}
+        whileInView={{ opacity: 1, right: -80 }}
+        transition={{ ease: "linear", duration: 1, type: "spring" }}
+        className="z-10 absolute w-[700px]"
+      >
+        <Image
+          src="/assets/cuillere-de-mayonnaise.png"
+          width={700}
+          height={300}
+          alt="mayonnaise"
+          className="absolute"
+        />
+      </motion.div>
       <div className="flex justify-center items-center w-full md:mt-28 sm:mt-10">
-        <div className="w-[795px] md:h-[450px] sm:h-[300px] bg-[url('/assets/alimentaire/mayonnaise/planche-3.png')] bg-cover bg-center bg-no-repeat md:rounded-[100px] sm:rounded-[20px] flex items-center relative">
+        <motion.div
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ type: "esaeaseInOut", ease: "linear", duration: 1.5 }}
+          className="w-[795px] md:h-[450px] sm:h-[300px] bg-[url('/assets/alimentaire/mayonnaise/planche-3.png')] bg-cover bg-center bg-no-repeat md:rounded-[100px] sm:rounded-[20px] flex items-center relative"
+        >
           <Image
             src={"/assets/alimentaire/mayonnaise/santina.png"}
             width={450}
@@ -153,7 +184,7 @@ const Mayonnaise = () => {
               className="absolute -left-2 bottom-5"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
