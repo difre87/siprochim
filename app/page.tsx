@@ -13,7 +13,7 @@ export default function Home() {
               d&apos;Entretien
             </h1>
             <Link
-              href="/detergents"
+              href="/detergent"
               className="bg-red-800 lg:px-10 md:px-8 sm:px-3 lg:py-4 md:py-3 sm:py-2 font-semibold text-white rounded-full lg:text-lg md:text-md sm:text-sm"
             >
               Découvrir cet univers
