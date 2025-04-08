@@ -7,7 +7,7 @@ interface MenuSiteProps {
 
 const MenuSite = ({ page }: MenuSiteProps) => {
   return (
-    <div className="flex gap-x-8 justify-center items-center sm:hidden md:block">
+    <div className="md:flex md:gap-x-8  justify-center items-center sm:hidden">
       {menuAlimentaire.map((menu, index) => (
         <Link
           key={index}

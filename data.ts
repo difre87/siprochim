@@ -1,3 +1,5 @@
+import { Baby, Dog, Hand, House, LampDesk, Shirt } from "lucide-react"
+
 export const menuAlimentaire = [
     {
         title:"Expertise"
@@ -59,5 +61,38 @@ export const menuFooter = [
     {
         label:"Catégorie",
         link:"#"
+    },
+]
+
+export const astucesObject = [
+    {
+        id:"1",
+        label : "Maisons",
+        icon:House
+    },
+    {
+        id:"2",
+        label : "Bébés",
+        icon:Baby
+    },
+    {
+        id:"3",
+        label : "Animaux",
+        icon:Dog
+    },
+    {
+        id:"4",
+        label : "Linges",
+        icon:Shirt
+    },
+    {
+        id:"5",
+        label : "Bureaux",
+        icon:LampDesk
+    },
+    {
+        id:"6",
+        label : "Mains",
+        icon:Hand
     },
 ]
