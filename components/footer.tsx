@@ -4,9 +4,17 @@ import Link from "next/link";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 
-const Footer = () => {
+interface FooterProps {
+  isPage?: boolean;
+}
+
+const Footer = ({ isPage }: FooterProps) => {
   return (
-    <section className="relative bg-[#e20612] py-10 w-full sm:px-5 md:px-0">
+    <section
+      className={`relative  py-10 w-full sm:px-5 md:px-0 ${
+        isPage ? "bg-[#0074b2]" : "bg-[#e20612]"
+      }`}
+    >
       <div className="w-full max-w-screen-xl mx-auto">
         <div className="w-full grid md:grid-cols-3 sm:grid-cols-1 border-b-[1px] pb-10">
           <div className="flex flex-col gap-y-8 col-span-2">

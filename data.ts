@@ -32,19 +32,25 @@ export const menuDetergent = [
         title:"Expertise"
     },
     {
-        title:"Besoin"
+        title:"Besoins",
+        link:"/detergent/nos-produits"
     },
     {
-        title:"Nos produits"
+        title:"Nos produits",
+        link:"/detergent/nos-produits"
     },
     {
-        title:"Qui sommes-nous ?"
+        title:"Qui sommes-nous ?",
+        link:"/detergent/nos-produits"
     },
     {
-        title:"Actualités"
+        title:"Actualités",
+        link:"/detergent/nos-produits"
+
     },
     {
-        title:"Contactez-nous"
+        title:"Contactez-nous",
+        link:"/contactez-nous"
     },
 ]
 export const menuFooter = [
@@ -100,5 +106,56 @@ export const astucesObject = [
         id:"6",
         label : "Mains",
         icon:Hand
+    },
+]
+
+export const ProduitDetergent = [
+    {
+        id:1,
+        title:"Arc",
+        imageUrl:"/assets/detergent/produits/icons/1.png",
+        product:[]
+    },
+    {
+        id:2,
+        title:"Bêko",
+        imageUrl:"/assets/detergent/produits/icons/2.png",
+        product:[]
+    },
+    {
+        id:3,
+        title:"Cosmo",
+        imageUrl:"/assets/detergent/produits/icons/3.png",
+        product:[]
+    },
+    {
+        id:4,
+        title:"Cross",
+        imageUrl:"/assets/detergent/produits/icons/4.png",
+        product:[]
+    },
+    {
+        id:5,
+        title:"Nil",
+        imageUrl:"/assets/detergent/produits/icons/5.png",
+        product:[]
+    },
+    {
+        id:6,
+        title:"Rial",
+        imageUrl:"/assets/detergent/produits/icons/6.png",
+        product:[]
+    },
+    {
+        id:7,
+        title:"Styl",
+        imageUrl:"/assets/detergent/produits/icons/7.png",
+        product:[]
+    },
+    {
+        id:8,
+        title:"Super Clean",
+        imageUrl:"/assets/detergent/produits/icons/8.png",
+        product:[]
     },
 ]
