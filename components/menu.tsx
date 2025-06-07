@@ -3,16 +3,19 @@ import Link from "next/link";
 
 interface MenuSiteProps {
   page: string;
+  isPage?: boolean;
 }
 
-const MenuSite = ({ page }: MenuSiteProps) => {
+const MenuSite = ({ page, isPage }: MenuSiteProps) => {
   return (
     <div className="md:flex md:gap-x-8  justify-center items-center sm:hidden">
       {menuAlimentaire.map((menu, index) => (
         <Link
           key={index}
-          href={"#"}
-          className="font-semibold text-indigo-900 text-sm"
+          href={menu.link}
+          className={`font-semibold text-indigo-900 text-sm ${
+            isPage ? "text-white" : "text-indigo-900"
+          }`}
         >
           {menu.title}
         </Link>

@@ -2,22 +2,28 @@ import { Baby, Dog, Hand, House, LampDesk, Shirt } from "lucide-react"
 
 export const menuAlimentaire = [
     {
-        title:"Expertise"
+        title:"Expertise",
+        link:"/alimentaire/expertise"
     },
     {
-        title:"Besoin"
+        title:"Besoins",
+        link:"/alimentaire/besoins"
     },
     {
-        title:"Nos produits"
+        title:"Nos produits",
+        link:"/alimentaire/nos-produits"
     },
     {
-        title:"Qui sommes-nous ?"
+        title:"Qui sommes-nous ?",
+        link:"/alimentaire/qui-sommes-nous"
     },
     {
-        title:"Actualités"
+        title:"Actualités",
+        link:"/alimentaire/actualites"
     },
     {
-        title:"Contactez-nous"
+        title:"Contactez-nous",
+        link:"/alimentaire/contactez-nous"
     },
 ]
 

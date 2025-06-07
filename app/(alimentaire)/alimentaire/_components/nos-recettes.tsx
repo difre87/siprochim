@@ -3,7 +3,6 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
-
 import "swiper/css";
 import { Autoplay, Navigation } from "swiper/modules";
 import { useRef } from "react";
