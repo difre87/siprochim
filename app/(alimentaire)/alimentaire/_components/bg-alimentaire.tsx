@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const BgAlimentaire = () => {
   return (
-    <section className="w-full md:min-h-screen sm:bg-[url('/assets/alimentaire/home-bg.png')] md:bg-[url('/assets/alimentaire/home.png')] bg-center bg-cover bg-no-repeat relative sm:h-[300px] ">
+    <section className="w-full md:min-h-screen sm:bg-[url('/assets/alimentaire/home/bg.jpg')] md:bg-[url('/assets/alimentaire/home/bg.jpg')] bg-center bg-cover bg-no-repeat relative sm:h-[300px] ">
       <div className="sm:hidden md:block absolute bottom-0 left-0 right-0 h-80 bg-[url('/assets/alimentaire/home-planche.png')] bg-center bg-cover">
         <div className="w-full  h-[400px]  flex justify-between absolute bottom-58 bottom-64">
           <div className="flex items-end justify-end h-full">
@@ -19,7 +19,7 @@ const BgAlimentaire = () => {
               className="w-[250px] h-[400px] relative"
             >
               <Image
-                src="/assets/alimentaire/home/1.png"
+                src="/assets/alimentaire/home/new/1.png"
                 fill
                 alt="SIPROCHIM"
                 objectFit="cover"
@@ -37,7 +37,7 @@ const BgAlimentaire = () => {
               className="w-[200px] h-[320px] relative -ml-16"
             >
               <Image
-                src="/assets/alimentaire/home/2.png"
+                src="/assets/alimentaire/home/new/2.png"
                 fill
                 alt="SIPROCHIM"
                 objectFit="cover"
@@ -54,7 +54,7 @@ const BgAlimentaire = () => {
               className="w-[200px] h-[320px] relative -ml-16"
             >
               <Image
-                src="/assets/alimentaire/home/3.png"
+                src="/assets/alimentaire/home/new/3.png"
                 fill
                 alt="SIPROCHIM"
                 objectFit="cover"
@@ -73,7 +73,7 @@ const BgAlimentaire = () => {
               className="w-[200px] h-[400px] relative"
             >
               <Image
-                src="/assets/alimentaire/home/6.png"
+                src="/assets/alimentaire/home/new/6.png"
                 fill
                 alt="SIPROCHIM"
                 objectFit="cover"
@@ -91,7 +91,7 @@ const BgAlimentaire = () => {
               className="w-[200px] h-[320px] relative  -mr-16"
             >
               <Image
-                src="/assets/alimentaire/home/5.png"
+                src="/assets/alimentaire/home/new/5.png"
                 fill
                 alt="SIPROCHIM"
                 objectFit="cover"
@@ -108,7 +108,7 @@ const BgAlimentaire = () => {
               className="w-[200px] h-[320px] relative -mr-16"
             >
               <Image
-                src="/assets/alimentaire/home/4.png"
+                src="/assets/alimentaire/home/new/4.png"
                 fill
                 alt="SIPROCHIM"
                 objectFit="cover"
@@ -128,7 +128,7 @@ const BgAlimentaire = () => {
             className="w-[200px] h-[320px] relative"
           >
             <Image
-              src="/assets/alimentaire/home/7.png"
+              src="/assets/alimentaire/home/new/7.png"
               fill
               alt="SIPROCHIM"
               objectFit="cover"
@@ -146,7 +146,7 @@ const BgAlimentaire = () => {
             className="w-[200px] h-[320px] relative"
           >
             <Image
-              src="/assets/alimentaire/home/8.png"
+              src="/assets/alimentaire/home/new/8.png"
               fill
               alt="SIPROCHIM"
               objectFit="cover"
@@ -163,7 +163,7 @@ const BgAlimentaire = () => {
             className="w-[200px] h-[320px] relative"
           >
             <Image
-              src="/assets/alimentaire/home/9.png"
+              src="/assets/alimentaire/home/new/9.png"
               fill
               alt="SIPROCHIM"
               objectFit="cover"
@@ -182,7 +182,7 @@ const BgAlimentaire = () => {
             className="w-[200px] h-[200px] relative"
           >
             <Image
-              src="/assets/alimentaire/home/10.png"
+              src="/assets/alimentaire/home/new/10.png"
               fill
               alt="SIPROCHIM"
               objectFit="cover"
@@ -200,7 +200,7 @@ const BgAlimentaire = () => {
             className="w-[200px] h-[200px] relative"
           >
             <Image
-              src="/assets/alimentaire/home/11.png"
+              src="/assets/alimentaire/home/new/11.png"
               fill
               alt="SIPROCHIM"
               objectFit="cover"
@@ -217,7 +217,7 @@ const BgAlimentaire = () => {
             className="w-[300px] h-[100px] relative"
           >
             <Image
-              src="/assets/alimentaire/home/14.png"
+              src="/assets/alimentaire/home/new/14.png"
               fill
               alt="SIPROCHIM"
               objectFit="cover"
@@ -234,7 +234,7 @@ const BgAlimentaire = () => {
             className="w-[200px] h-[200px] relative"
           >
             <Image
-              src="/assets/alimentaire/home/12.png"
+              src="/assets/alimentaire/home/new/12.png"
               fill
               alt="SIPROCHIM"
               objectFit="cover"
@@ -252,7 +252,7 @@ const BgAlimentaire = () => {
             className="w-[200px] h-[200px] relative"
           >
             <Image
-              src="/assets/alimentaire/home/13.png"
+              src="/assets/alimentaire/home/new/13.png"
               fill
               alt="SIPROCHIM"
               objectFit="cover"

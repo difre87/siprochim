@@ -7,7 +7,6 @@ import SocialMedia from "@/components/social-media";
 import Years from "./_components/years";
 import Other from "./_components/other";
 import Blog from "@/components/blog";
-import Faq from "@/components/faq";
 import Footer from "@/components/footer";
 import Heroes from "./_components/heroes";
 import HeroesForm from "./_components/heroes-form";
@@ -33,7 +32,7 @@ const AlimentairePage = () => {
       <Years />
       <Other />
       <Blog />
-      <Faq page={"alimentaire"} />
+      {/* <Faq page={"alimentaire"} /> */}
       <Footer />
     </>
   );

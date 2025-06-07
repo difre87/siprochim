@@ -8,15 +8,15 @@ import { motion } from "framer-motion";
 
 const HeroesBouillon = () => {
   return (
-    <section className="w-full min-h-screen bg-[#e5bd83]">
-      <div className="w-full max-w-screen-xl mx-auto">
-        <div className="w-full relative">
+    <section className="w-full min-h-screen relative bg-[#e5bd83]">
+      <div className="w-full max-w-screen-xl relative mx-auto ">
+        {/* <div className="w-full relative z-10">
           <Image
             src="/assets/alimentaire/produits/p-9.png"
             width={250}
             height={250}
             alt="siprochim"
-            className="absolute z-20 -rotate-[30deg] left-[18%]"
+            className="absolute z-10 -rotate-[30deg] left-[18%]"
           />
           <Image
             src="/assets/alimentaire/produits/p-10.png"
@@ -44,7 +44,59 @@ const HeroesBouillon = () => {
             width={1000}
             height={400}
             alt="sipro-chim"
-            className="mx-auto relative -top-20"
+            className="mx-auto relative -top-20 z-20"
+          />
+          <div className="w-full h-[300px] absolute bottom-96 z-30 overflow-hidden bg-red-500">
+            <Image
+              src="/assets/alimentaire/ombre-planche.png"
+              fill
+              objectFit="cover"
+              alt="siprochim"
+            />
+          </div>
+        </div> */}
+
+        <div className="w-full min-h-[500px] relative z-30 overflow-hidden ">
+          {/* <Image
+            src="/assets/alimentaire/ombre-planche.png"
+            fill
+            objectFit="cover"
+            alt="siprochim"
+          /> */}
+          <Image
+            src="/assets/alimentaire/produits/p-9.png"
+            width={250}
+            height={250}
+            alt="siprochim"
+            className="absolute z-20 -rotate-[30deg] left-[14%]"
+          />
+          <Image
+            src="/assets/alimentaire/produits/p-10.png"
+            width={250}
+            height={250}
+            alt="siprochim"
+            className="absolute z-20 transform left-[40%] -top-[10%]"
+          />
+          <Image
+            src="/assets/alimentaire/produits/p-12.png"
+            width={350}
+            height={250}
+            alt="siprochim"
+            className="absolute z-20 transform left-[36%] top-[55%]"
+          />
+          <Image
+            src="/assets/alimentaire/produits/p-11.png"
+            width={250}
+            height={250}
+            alt="siprochim"
+            className="absolute  z-20 rotate-[30deg] right-[15%]"
+          />
+          <Image
+            src="/assets/alimentaire/plateau-2.png"
+            width={1000}
+            height={600}
+            alt="sipro-chim"
+            className="mx-auto  absolute left-[10%]"
           />
         </div>
 
