@@ -23,7 +23,7 @@ export const menuAlimentaire = [
     },
     {
         title:"Contactez-nous",
-        link:"/alimentaire/contactez-nous"
+        link:"/contactez-nous"
     },
 ]
 
