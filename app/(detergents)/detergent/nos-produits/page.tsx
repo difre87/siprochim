@@ -102,8 +102,7 @@ const NosProduits = () => {
                 }}
               >
                 <Link
-                  href={`/detergent/nos-produits/${product.id}`}
-                  as={`/detergent/nos-produits/${selectedProduct.slug}/${product.id}`}
+                  href={`/detergent/nos-produits/${selectedProduct.slug}/${product.id}`}
                   className="w-full h-full flex flex-col justify-center items-center transition-all duration-500 group hover:scale-110"
                 >
                   <Image
