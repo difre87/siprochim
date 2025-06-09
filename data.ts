@@ -41,11 +41,11 @@ export const menuDetergent = [
     },
     {
         title:"Qui sommes-nous ?",
-        link:"/detergent/nos-produits"
+        link:"/detergent/qui-sommes-nous"
     },
     {
         title:"Actualités",
-        link:"/detergent/nos-produits"
+        link:"/detergent/actualites"
 
     },
     {
