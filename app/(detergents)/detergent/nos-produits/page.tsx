@@ -4,13 +4,24 @@ import Image from "next/image";
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
 import "swiper/css";
 import { Navigation } from "swiper/modules";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Footer from "@/components/footer";
 import { ProduitDetergent } from "@/data";
+import Link from "next/link";
 
 const NosProduits = () => {
   const swiperRef = useRef<SwiperRef>(null);
+
+  const [selectedProduct, setSelectedProduct] = useState<
+    (typeof ProduitDetergent)[number] | null
+  >(ProduitDetergent.find((p) => p.id === 1) || null);
+
+  const handleProductClick = (id: number) => {
+    const prod = ProduitDetergent.find((p) => p.id === id);
+    setSelectedProduct(prod || null);
+    //setIsStep(id);
+  };
 
   const clickNext = () => {
     if (swiperRef.current?.swiper) {
@@ -41,14 +52,19 @@ const NosProduits = () => {
               {ProduitDetergent.map((product) => (
                 <SwiperSlide
                   key={product.id}
-                  className="flex flex-col gap-y-2 justify-center items-center cursor-pointer group"
+                  className="flex flex-col gap-y-2 py-3 px-3 justify-center items-center cursor-pointer group"
+                  onClick={() => handleProductClick(product.id)}
                 >
                   <Image
                     src={product.imageUrl}
                     width={300}
                     height={300}
                     alt={product.title}
-                    className=" group-hover:scale-110 transition-all ease-in-out"
+                    className={`group-hover:scale-110 transition-all ease-in-out rounded-full ${
+                      selectedProduct?.id === product.id
+                        ? "ring-4 ring-[#2e2e72] scale-110 shadow-xl"
+                        : ""
+                    }`}
                   />
                   <h4 className="uppercase text-[#2e2e72] font-bold text-center mt-4">
                     {product.title}
@@ -73,7 +89,36 @@ const NosProduits = () => {
           </div>
         </div>
       </section>
-      <section className="w-full min-h-[500px] bg-[#00a1cf] py-20"></section>
+      <section className="w-full min-h-[500px] bg-[#00a1cf] py-20">
+        {selectedProduct && selectedProduct.product && (
+          <div className="max-w-screen-xl m-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-16">
+            {selectedProduct.product.map((product) => (
+              <div
+                key={product.id}
+                className="bg-white group h-[500px] rounded-lg flex flex-col justify-center items-center transition-all ease-in-out group-hover:scale-110"
+                style={{
+                  background:
+                    "radial-gradient(circle at center, #fff 0%, #ddf4ff 100%)",
+                }}
+              >
+                <Link
+                  href={`/detergent/nos-produits/${product.id}`}
+                  as={`/detergent/nos-produits/${selectedProduct.slug}/${product.id}`}
+                  className="w-full h-full flex flex-col justify-center items-center transition-all duration-500 group hover:scale-110"
+                >
+                  <Image
+                    src={product.imageUrl}
+                    width={130}
+                    height={130}
+                    alt={""}
+                    className="drop-shadow-2xl"
+                  />
+                </Link>
+              </div>
+            ))}
+          </div>
+        )}
+      </section>
       <Footer isPage />
     </>
   );
