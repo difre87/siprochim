@@ -6,12 +6,13 @@ import { Button } from "./ui/button";
 
 interface FooterProps {
   isPage?: boolean;
+  className?: string;
 }
 
-const Footer = ({ isPage }: FooterProps) => {
+const Footer = ({ isPage, className }: FooterProps) => {
   return (
     <section
-      className={`relative  py-10 w-full sm:px-5 md:px-0 ${
+      className={`relative  py-10 w-full sm:px-5 md:px-0 ${className} ${
         isPage ? "bg-[#0074b2]" : "bg-[#e20612]"
       }`}
     >

@@ -6,7 +6,6 @@ import Footer from "@/components/footer";
 import Header from "@/components/detergent/header";
 import SocialMedia from "@/components/social-media";
 import Years from "@/components/years";
-import Faq from "@/components/faq";
 import Other from "@/app/(alimentaire)/alimentaire/_components/other";
 
 const DetergentPage = () => {
@@ -22,7 +21,7 @@ const DetergentPage = () => {
       <div className="-mt-8">
         <Blog />
       </div>
-      <Faq page="detergent" />
+
       <Footer />
     </>
   );

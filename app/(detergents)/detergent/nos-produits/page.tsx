@@ -4,23 +4,37 @@ import Image from "next/image";
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
 import "swiper/css";
 import { Navigation } from "swiper/modules";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Footer from "@/components/footer";
-import { ProduitDetergent } from "@/data";
+import { Category, Product } from "@/lib/type";
 import Link from "next/link";
+import { fetchCategory, fetchProductByCategories } from "@/data/product";
+import Loader from "@/components/Loader";
 
-const NosProduits = () => {
+const NosProduits =  () => {
   const swiperRef = useRef<SwiperRef>(null);
+  const [productsData, setProductsData] = useState<Category[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isLoadingProducts, setIsLoadingProducts] = useState(true);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+ // const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
 
-  const [selectedProduct, setSelectedProduct] = useState<
-    (typeof ProduitDetergent)[number] | null
-  >(ProduitDetergent.find((p) => p.id === 1) || null);
+const handleCategoryClick = async (id:number) => {
+    setIsLoadingProducts(true);
 
-  const handleProductClick = (id: number) => {
-    const prod = ProduitDetergent.find((p) => p.id === id);
-    setSelectedProduct(prod || null);
-    //setIsStep(id);
+    try {
+      const products = await fetchProductByCategories("Détergent", id);
+      console.log("Produits de la catégorie:", products);
+      console.log("ID de la catégorie sélectionnée:", id);
+      setSelectedProduct(products);
+
+    } catch (error) {
+      console.error("Erreur lors du chargement des produits:", error);
+      setSelectedProduct(null);
+    } finally {
+      setIsLoadingProducts(false);
+    }
   };
 
   const clickNext = () => {
@@ -34,6 +48,44 @@ const NosProduits = () => {
       swiperRef.current.swiper.slidePrev();
     }
   };
+
+  useEffect(() => {
+    // Fonction pour charger les produits
+    const loadProducts = async () => {
+      setIsLoading(true);
+      try {
+        const data = await fetchCategory("Détergent");
+        console.log("Produits chargés:", data);
+        setProductsData(data);
+        // Automatiquement sélectionner et charger les produits de la première catégorie
+        if (data && data.length > 0) {
+          const firstCategory = data[0];
+          setSelectedProduct(firstCategory);
+
+          // Charger les produits de la première catégorie
+          setIsLoadingProducts(true);
+          try {
+            const products = await fetchProductByCategories("Détergent", firstCategory.id);
+            console.log("Produits de la première catégorie:", products);
+            setSelectedProduct(products);
+          } catch (error) {
+            console.error("Erreur lors du chargement des produits de la première catégorie:", error);
+            setSelectedProduct(null);
+          } finally {
+            setIsLoadingProducts(false);
+          }
+        }
+
+      } catch (error) {
+        console.error("Erreur lors du chargement des produits:", error);
+      }finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadProducts();
+  }, []);
+
   return (
     <>
       <Header type="detergent" className="bg-[#2e2e72]" isPage />
@@ -49,28 +101,31 @@ const NosProduits = () => {
               spaceBetween={50}
               className="w-full h-full flex"
             >
-              {ProduitDetergent.map((product) => (
-                <SwiperSlide
-                  key={product.id}
-                  className="flex flex-col gap-y-2 py-3 px-3 justify-center items-center cursor-pointer group"
-                  onClick={() => handleProductClick(product.id)}
-                >
-                  <Image
-                    src={product.imageUrl}
-                    width={300}
-                    height={300}
-                    alt={product.title}
-                    className={`group-hover:scale-110 transition-all ease-in-out rounded-full ${
-                      selectedProduct?.id === product.id
-                        ? "ring-4 ring-[#2e2e72] scale-110 shadow-xl"
-                        : ""
-                    }`}
-                  />
-                  <h4 className="uppercase text-[#2e2e72] font-bold text-center mt-4">
-                    {product.title}
-                  </h4>
-                </SwiperSlide>
-              ))}
+              {
+                isLoading ? (
+                  <Loader />
+                ) : (
+                  productsData.map((product) => (
+
+                    <SwiperSlide
+                      key={product.id}
+                      className="flex flex-col gap-y-2 py-3 px-3 justify-center items-center cursor-pointer group"
+                      onClick={() => handleCategoryClick(product.id)}
+                  >
+                    <Image
+                      src={`http://cluezjj.cluster027.hosting.ovh.net/${product.image}`}
+                      width={300}
+                      height={300}
+                      alt={product.name}
+                      className={`group-hover:scale-110 transition-all ease-in-out rounded-full ${selectedProduct?.id === product.id ? "ring-4 ring-[#2e2e72] scale-110 shadow-xl" : ""}`}
+                    />
+                    <h4 className="uppercase text-[#2e2e72] font-bold text-center mt-4">
+                      {product.name}
+                    </h4>
+                  </SwiperSlide>
+                ))
+                )
+              }
             </Swiper>
             <div className="absolute flex gap-x-2 top-1/3 z-20 left-0 right-0">
               <div
@@ -90,33 +145,39 @@ const NosProduits = () => {
         </div>
       </section>
       <section className="w-full min-h-[500px] bg-[#00a1cf] py-20">
-        {selectedProduct && selectedProduct.product && (
-          <div className="max-w-screen-xl m-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-16">
-            {selectedProduct.product.map((product) => (
-              <div
-                key={product.id}
-                className="bg-white group h-[500px] rounded-lg flex flex-col justify-center items-center transition-all ease-in-out group-hover:scale-110"
-                style={{
-                  background:
-                    "radial-gradient(circle at center, #fff 0%, #ddf4ff 100%)",
-                }}
-              >
-                <Link
-                  href={`/detergent/nos-produits/${selectedProduct.slug}/${product.id}`}
-                  className="w-full h-full flex flex-col justify-center items-center transition-all duration-500 group hover:scale-110"
-                >
-                  <Image
-                    src={product.imageUrl}
-                    width={130}
-                    height={130}
-                    alt={""}
-                    className="drop-shadow-2xl"
-                  />
-                </Link>
-              </div>
-            ))}
-          </div>
-        )}
+        {
+          isLoadingProducts ? (
+            <Loader />
+          ): (
+            <div className="max-w-screen-xl m-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-16">
+              {
+                selectedProduct && Array.isArray(selectedProduct) && selectedProduct.map((product) => (
+                  <div
+                    key={product.id}
+                    className="bg-white group h-[500px] rounded-lg flex flex-col justify-center items-center transition-all ease-in-out group-hover:scale-110"
+                    style={{
+                      background:
+                        "radial-gradient(circle at center, #fff 0%, #ddf4ff 100%)",
+                    }}
+                  >
+                    <Link
+                      href={`/detergent/nos-produits/${product.id}`}
+                      className="w-full h-full flex flex-col justify-center items-center transition-all duration-500 group hover:scale-110"
+                    >
+                      <Image
+                        src={`http://cluezjj.cluster027.hosting.ovh.net/${product.image}`}
+                        width={130}
+                        height={130}
+                        alt={""}
+                        className="drop-shadow-2xl"
+                      />
+                    </Link>
+                  </div>
+                ))
+              }
+            </div>
+          )
+        }
       </section>
       <Footer isPage />
     </>

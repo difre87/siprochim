@@ -10,7 +10,7 @@ import "animate.css";
 const HeroesAromate = () => {
   return (
     <>
-      <section className="w-full min-h-screen relative bg-[#e5bd83] ">
+      <section className="w-full min-h-screen relative bg-[#e5bd83] z-10">
         <div className="round-b w-full min-h-[500px]  bg-bamboo">
           {/* <div className="w-full max-w-screen-xl mx-auto">
             <div className="w-full flex items-end justify-center py-20">

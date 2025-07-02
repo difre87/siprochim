@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const HeroesBouillon = () => {
   return (
-    <section className="w-full min-h-screen relative bg-[#e5bd83]">
+    <section className="w-full min-h-screen relative bg-[#e5bd83] ">
       <div className="w-full max-w-screen-xl relative mx-auto ">
         {/* <div className="w-full relative z-10">
           <Image
@@ -56,7 +56,16 @@ const HeroesBouillon = () => {
           </div>
         </div> */}
 
-        <div className="w-full min-h-[500px] relative z-30 overflow-hidden ">
+        <div className="w-full min-h-[500px]  z-30 overflow-hidden ">
+          <div className="w-full relative h-full">
+            <Image
+              src="/assets/alimentaire/plateau-2.png"
+              width={1000}
+              height={600}
+              alt="sipro-chim"
+              className="mx-auto  absolute left-[10%]"
+            />
+          </div>
           {/* <Image
             src="/assets/alimentaire/ombre-planche.png"
             fill
@@ -82,7 +91,7 @@ const HeroesBouillon = () => {
             width={350}
             height={250}
             alt="siprochim"
-            className="absolute z-20 transform left-[36%] top-[55%]"
+            className="absolute z-20 transform left-[36%] top-[25%]"
           />
           <Image
             src="/assets/alimentaire/produits/p-11.png"
@@ -91,13 +100,7 @@ const HeroesBouillon = () => {
             alt="siprochim"
             className="absolute  z-20 rotate-[30deg] right-[15%]"
           />
-          <Image
-            src="/assets/alimentaire/plateau-2.png"
-            width={1000}
-            height={600}
-            alt="sipro-chim"
-            className="mx-auto  absolute left-[10%]"
-          />
+
         </div>
 
         <div className="w-full max-w-screen-xl mx-auto">

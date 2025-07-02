@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  images: {
+    domains: ['cluezjj.cluster027.hosting.ovh.net', 'localhost'],
+  },
   async rewrites() {
     return [
       {
