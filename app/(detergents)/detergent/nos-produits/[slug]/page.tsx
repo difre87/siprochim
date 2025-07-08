@@ -59,6 +59,11 @@ const ProductSlugPage =  ({params}:ProductSlugPageProps) => {
           <h2 className="text-4xl text-[#00a1cf] text-center font-bold py-10">Nos Produits</h2>
           <div className="grid grid-cols-3 gap-10">
             {
+              isLoading ? (
+                <div className="col-span-3 flex justify-center items-center">
+                  <p className="text-xl text-gray-500">Chargement des produits...</p>
+                </div>
+              ) : (
               productSlug?.map((item) => (
                 <div className="flex flex-col " key={item.id}>
                   <Link
@@ -78,7 +83,7 @@ const ProductSlugPage =  ({params}:ProductSlugPageProps) => {
                   </div>
 
                   </Link>
-                </div>
+                </div>)
               ))
             }
           </div>

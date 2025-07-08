@@ -2,12 +2,7 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Image from "next/image";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+
 import Link from "next/link";
 import { Product } from "@/lib/type";
 import { fetchProductBySlug } from "@/data/product";
@@ -64,11 +59,16 @@ const ProductSlugPage =  ({params}:ProductSlugPageProps) => {
           <h2 className="text-4xl text-[#008b36] text-center font-bold py-10">Nos Produits</h2>
           <div className="grid grid-cols-3 gap-10">
             {
-              productSlug?.map((item) => (
-                <div className="flex flex-col " key={item.id}>
-                  <Link
-                    href={`/alimentaire/produit/${item.slug}`}
-                    className="w-full h-full drop-shadow-lg flex flex-col justify-center items-center transition-all duration-500 group bg-[#FAFAFA] hover:bg-[#008b36] hover:scale-110 hover:shadow-2xl rounded-3xl overflow-hidden"
+              isLoading ? (
+                <div className="col-span-3 flex justify-center items-center">
+                  <p className="text-xl text-gray-500">Chargement des produits...</p>
+                </div>
+              ) : (
+                productSlug?.map((item) => (
+                  <div className="flex flex-col " key={item.id}>
+                    <Link
+                      href={`/alimentaire/produit/${item.slug}`}
+                      className="w-full h-full drop-shadow-lg flex flex-col justify-center items-center transition-all duration-500 group bg-[#FAFAFA] hover:bg-[#008b36] hover:scale-110 hover:shadow-2xl rounded-3xl overflow-hidden"
                   >
                     <div className="w-full h-[500px] p-10 flex flex-col justify-center items-center relative  transition-all duration-500 hover:bg-hover-aliment  rounded-lg overflow-hidden">
                       <Image
@@ -83,7 +83,7 @@ const ProductSlugPage =  ({params}:ProductSlugPageProps) => {
                   </div>
 
                   </Link>
-                </div>
+                </div>)
               ))
             }
           </div>
