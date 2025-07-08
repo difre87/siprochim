@@ -5,7 +5,6 @@ import Mayonnaise from "./_components/mayonnaise";
 import NosRecettes from "./_components/nos-recettes";
 import SocialMedia from "@/components/social-media";
 import Years from "./_components/years";
-import Other from "./_components/other";
 import Blog from "@/components/blog";
 import Footer from "@/components/footer";
 import Heroes from "./_components/heroes";
