@@ -13,13 +13,15 @@ import { fetchProductById } from "@/data/product";
 
 interface ProductSlugPageProps {
   params: Promise<{
-    Id: string;
+    id: string;
   }>;
 }
 
 const ProductSlugPage = async ({params}:ProductSlugPageProps) => {
+  //const productId = params.Id; // Extract the product ID from the params
   const resolvedParams = await params;
-  const productId = parseInt(resolvedParams.Id); // Extract the product ID from the params
+  console.log("Params résolus:", resolvedParams);
+  const productId = resolvedParams.id; // Convert the
   // Fetch the product data based on the ID
   let product: Product | null = null;
   console.log("ID du produit:", productId);
@@ -32,15 +34,14 @@ const ProductSlugPage = async ({params}:ProductSlugPageProps) => {
   }
   return (
     <>
-
-      <Header type="detergent" className="bg-[#2e2e72]" isPage />
-      <section className="w-full min-h-[500px] bg-[#00a1cf] py-20">
+      <Header type="alimentaire" className="bg-[#008b36]" isPage />
+      <section className="w-full min-h-[500px] bg-[#008b36] py-20">
         {
           product ? (
             <div className="max-w-screen-xl m-auto">
               <div className="px-20 w-2/3 mx-auto grid grid-cols-2">
                 <Image
-                  src={`http://cluezjj.cluster027.hosting.ovh.net/${product.image}`}
+                  src={`https://esjc.org/siprochim/public/${product.image}`}
                   alt={product.name}
                   width={260}
                   height={250}
@@ -205,7 +206,7 @@ const ProductSlugPage = async ({params}:ProductSlugPageProps) => {
           )
         }
       </section>
-      <Footer isPage />
+      <Footer className="!bg-[#008b3690]" />
     </>
   );
 };

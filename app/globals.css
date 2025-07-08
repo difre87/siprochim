@@ -271,6 +271,20 @@ div .dot {
   animation-delay: 0.5s;
 }
 
+/* Dans globals.css */
+.hover-gradient {
+  background: transparent;
+  transition: all 0.5s ease;
+}
+
+.hover-gradient:hover {
+  background: radial-gradient(circle at center, #28a054 0%, #008b36 100%);
+}
+
+.hover-gradient-aliment:hover {
+  background: radial-gradient(circle at center, #fff 0%, #ddf4ff 100%);
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

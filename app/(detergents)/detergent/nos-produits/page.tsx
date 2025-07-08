@@ -20,11 +20,11 @@ const NosProduits =  () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
  // const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
 
-const handleCategoryClick = async (id:number) => {
+const handleCategoryClick = async (id:string) => {
     setIsLoadingProducts(true);
 
     try {
-      const products = await fetchProductByCategories("Détergent", id);
+      const products = await fetchProductByCategories(id);
       console.log("Produits de la catégorie:", products);
       console.log("ID de la catégorie sélectionnée:", id);
       setSelectedProduct(products);
@@ -54,7 +54,7 @@ const handleCategoryClick = async (id:number) => {
     const loadProducts = async () => {
       setIsLoading(true);
       try {
-        const data = await fetchCategory("Détergent");
+        const data = await fetchCategory("detergent");
         console.log("Produits chargés:", data);
         setProductsData(data);
         // Automatiquement sélectionner et charger les produits de la première catégorie
@@ -65,7 +65,7 @@ const handleCategoryClick = async (id:number) => {
           // Charger les produits de la première catégorie
           setIsLoadingProducts(true);
           try {
-            const products = await fetchProductByCategories("Détergent", firstCategory.id);
+            const products = await fetchProductByCategories(firstCategory.slug);
             console.log("Produits de la première catégorie:", products);
             setSelectedProduct(products);
           } catch (error) {
@@ -75,6 +75,7 @@ const handleCategoryClick = async (id:number) => {
             setIsLoadingProducts(false);
           }
         }
+        console.log("Produits chargés:", productsData);
 
       } catch (error) {
         console.error("Erreur lors du chargement des produits:", error);
@@ -110,10 +111,10 @@ const handleCategoryClick = async (id:number) => {
                     <SwiperSlide
                       key={product.id}
                       className="flex flex-col gap-y-2 py-3 px-3 justify-center items-center cursor-pointer group"
-                      onClick={() => handleCategoryClick(product.id)}
+                      onClick={() => handleCategoryClick(product.slug)}
                   >
                     <Image
-                      src={`http://cluezjj.cluster027.hosting.ovh.net/${product.image}`}
+                      src={`https://esjc.org/siprochim/public/${product.image}`}
                       width={300}
                       height={300}
                       alt={product.name}
@@ -161,16 +162,17 @@ const handleCategoryClick = async (id:number) => {
                     }}
                   >
                     <Link
-                      href={`/detergent/nos-produits/${product.id}`}
+                      href={`/detergent/nos-produits/${product.slug}`}
                       className="w-full h-full flex flex-col justify-center items-center transition-all duration-500 group hover:scale-110"
                     >
                       <Image
-                        src={`http://cluezjj.cluster027.hosting.ovh.net/${product.image}`}
+                        src={`https://esjc.org/siprochim/public/${product.image}`}
                         width={130}
                         height={130}
                         alt={""}
                         className="drop-shadow-2xl"
                       />
+                      <h4 className="font-bold text-xl text-[#2e2e72]">{product.name}</h4>
                     </Link>
                   </div>
                 ))
