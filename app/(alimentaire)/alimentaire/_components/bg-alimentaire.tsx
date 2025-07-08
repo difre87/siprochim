@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const BgAlimentaire = () => {
   return (
-    <section className="w-full md:min-h-screen sm:bg-[url('/assets/alimentaire/home/bg.jpg')] md:bg-[url('/assets/alimentaire/home/bg.jpg')] bg-center bg-cover bg-no-repeat relative sm:h-[300px] ">
+    <section className="w-full md:min-h-screen sm:bg-[url('/assets/alimentaire/bg-alimentaire.jpg')] md:bg-[url('/assets/alimentaire/bg-alimentaire.jpg')]  bg-cover bg-center bg-no-repeat relative sm:h-[300px] ">
       <div className="sm:hidden md:block absolute bottom-0 left-0 right-0 h-80 bg-[url('/assets/alimentaire/home-planche.png')] bg-center bg-cover">
         <div className="w-full  h-[400px]  flex justify-between absolute bottom-58 bottom-64">
           <div className="flex items-end justify-end h-full">

@@ -5,7 +5,7 @@ import Testimonies from "./testimonies";
 
 const Blog = () => {
   return (
-    <section className="w-full min-h-screen bg-[#e32516] ">
+    <section className="w-full min-h-screen bg-[#ffb81c] ">
       <div className="w-full min-h-[500px] bg-[#40409c] round  relative pt-16 pb-20 sm:px-10 md:px-0">
         <div className="w-full max-w-screen-xl mx-auto">
           <div className="w-full py-20 flex flex-col gap-y-8">

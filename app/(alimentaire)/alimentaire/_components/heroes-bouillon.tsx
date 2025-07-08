@@ -77,28 +77,28 @@ const HeroesBouillon = () => {
             width={250}
             height={250}
             alt="siprochim"
-            className="absolute z-20 -rotate-[30deg] left-[14%]"
+            className="absolute z-20 -rotate-[30deg] left-[14%] transition-all duration-500 hover:scale-110"
           />
           <Image
             src="/assets/alimentaire/produits/p-10.png"
             width={250}
             height={250}
             alt="siprochim"
-            className="absolute z-20 transform left-[40%] -top-[10%]"
+            className="absolute z-20 transform left-[40%] -top-[10%] transition-all duration-500 hover:scale-110"
           />
           <Image
             src="/assets/alimentaire/produits/p-12.png"
             width={350}
             height={250}
             alt="siprochim"
-            className="absolute z-20 transform left-[36%] top-[25%]"
+            className="absolute z-20 transform left-[36%] top-[25%] transition-all duration-500 hover:scale-110"
           />
           <Image
             src="/assets/alimentaire/produits/p-11.png"
             width={250}
             height={250}
             alt="siprochim"
-            className="absolute  z-20 rotate-[30deg] right-[15%]"
+            className="absolute  z-20 rotate-[30deg] right-[15%] transition-all duration-500 hover:scale-110"
           />
 
         </div>
@@ -128,12 +128,12 @@ const HeroesBouillon = () => {
                 initial={{ transform: "translateX(-100px)", opacity: 0 }}
                 whileInView={{ transform: "translateX(0px)", opacity: 1 }}
                 transition={{ type: "spring", ease: "linear", duration: 1.5 }}
-                className="h-96 rounded-md bg-[url('/assets/alimentaire/produits/bg-b-gray.png')] bg-cover bg-no-repeat relative"
+                className="h-96 rounded-md bg-[url('/assets/alimentaire/produits/bg-poulet.png')] bg-cover bg-no-repeat relative"
               >
                 <div className="w-full h-full flex flex-col justify-center items-center">
                   <Image
-                    src="/assets/alimentaire/produits/p-9.png"
-                    width={130}
+                    src="/assets/alimentaire/produits/poulet.png"
+                    width={230}
                     height={250}
                     alt="siprochim"
                     className="group-hover:scale-125 transition-all duration-500"
@@ -149,12 +149,12 @@ const HeroesBouillon = () => {
                 initial={{ transform: "translateX(-100px)", opacity: 0 }}
                 whileInView={{ transform: "translateX(0px)", opacity: 1 }}
                 transition={{ type: "spring", ease: "linear", duration: 2 }}
-                className="h-96 rounded-md bg-[url('/assets/alimentaire/produits/bg-b-yellow.png')] bg-cover bg-no-repeat relative"
+                className="h-96 rounded-md bg-[url('/assets/alimentaire/produits/bg-epice.jpg')] bg-cover bg-no-repeat relative"
               >
                 <div className="w-full h-full flex flex-col justify-center items-center">
                   <Image
-                    src="/assets/alimentaire/produits/p-10.png"
-                    width={130}
+                    src="/assets/alimentaire/produits/epice.png"
+                    width={230}
                     height={250}
                     alt="siprochim"
                     className="group-hover:scale-125 transition-all duration-500"
@@ -170,12 +170,12 @@ const HeroesBouillon = () => {
                 initial={{ transform: "translateX(-100px)", opacity: 0 }}
                 whileInView={{ transform: "translateX(0px)", opacity: 1 }}
                 transition={{ type: "spring", ease: "linear", duration: 2.5 }}
-                className="h-96 rounded-md bg-[url('/assets/alimentaire/produits/bg-b-brown.png')] bg-cover bg-no-repeat relative"
+                className="h-96 rounded-md bg-[url('/assets/alimentaire/produits/bg-crevette.png')] bg-cover bg-no-repeat relative"
               >
                 <div className="w-full h-full flex flex-col justify-center items-center">
                   <Image
-                    src="/assets/alimentaire/produits/p-11.png"
-                    width={130}
+                    src="/assets/alimentaire/produits/crevette.png"
+                    width={250}
                     height={250}
                     alt="siprochim"
                     className="group-hover:scale-125 transition-all duration-500"
@@ -191,11 +191,11 @@ const HeroesBouillon = () => {
                 initial={{ transform: "translateX(-100px)", opacity: 0 }}
                 whileInView={{ transform: "translateX(0px)", opacity: 1 }}
                 transition={{ type: "spring", ease: "linear", duration: 3 }}
-                className="h-96 rounded-md bg-[url('/assets/alimentaire/produits/bg-b-red.png')] bg-cover bg-no-repeat relative"
+                className="h-96 rounded-md bg-[url('/assets/alimentaire/produits/bg-tomate.png')] bg-cover bg-no-repeat relative"
               >
                 <div className="w-full h-full flex flex-col justify-center items-center">
                   <Image
-                    src="/assets/alimentaire/produits/p-12.png"
+                    src="/assets/alimentaire/produits/tomate.png"
                     width={200}
                     height={250}
                     alt="siprochim"

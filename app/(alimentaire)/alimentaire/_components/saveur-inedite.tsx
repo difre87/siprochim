@@ -5,14 +5,15 @@ import Image from "next/image";
 const SaveurInedite = () => {
   return (
     <section className="w-full h-screen  relative">
-      <div className="w-full h-full round-b bg-[#436d23]">
-        <Image
+       <Image
           src="/assets/alimentaire/saveurs/tranche-de-tomate.png"
-          width={250}
+          width={200}
           height={500}
           alt="siprochim"
           className="absolute left-[5%] -top-[15%] z-20"
         />
+      <div className="w-full h-full round-b bg-[#436d23]">
+
         <Image
           src="/assets/alimentaire/saveurs/oignons.png"
           width={550}

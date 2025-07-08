@@ -39,16 +39,16 @@ const Header = () => {
             <div className="flex gap-x-5">
               <Link
                 href="#"
-                className="bg-[#313076] text-white text-md rounded-lg px-5 py-3"
+                className="bg-[#313076] text-white text-md rounded-lg px-5 py-3 transition-all duration-500 hover:bg-white hover:text-[#313076] hover:drop-shadow-lg"
               >
                 En savoir plus
               </Link>
-              <Link
+              {/* <Link
                 href="#"
-                className="border-[#313076] border-[1px] text-[#313076] text-md rounded-lg px-5 py-3"
+                className="border-[#313076] border-[1px] text-[#313076] text-md rounded-lg px-5 py-3 transition-all duration-500 hover:bg-[#313076] hover:text-white hover:drop-shadow-lg"
               >
                 En savoir plus
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

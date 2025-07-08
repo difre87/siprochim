@@ -6,11 +6,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
+
 .swiper-pagination {
   position: relative !important;
   margin-top: 2em !important;
   z-index: 30 !important;
 }
+
 .round {
   clip-path: ellipse(100% 100% at 50% 100%);
 }
@@ -18,16 +20,19 @@ body {
 .round-t {
   clip-path: ellipse(100% 50% at 50% 100%);
 }
+
 .round-b {
   clip-path: ellipse(100% 55% at 48% 44%);
 }
+
 .bg-burger {
-  background: url("/assets/burger-t.png") no-repeat center center / cover
-    #a31227;
+  background: url("/assets/burger-t.png") no-repeat center center / cover #a31227;
 }
+
 .bg-bamboo {
   background: url("/assets/bamboo-bg.jpg") no-repeat top center #e5bd83;
 }
+
 .bg-detergent {
   background-image: url("/assets/detergent/bg-detergent.png");
   background-position: top -320px center;
@@ -58,6 +63,7 @@ body {
   background-size: cover; */
   position: absolute;
 }
+
 .wrapper h1 {
   top: 50%;
   left: 50%;
@@ -71,6 +77,7 @@ body {
   font-weight: 888;
   text-transform: uppercase;
 }
+
 .wrapper div {
   height: 60px;
   width: 60px;
@@ -81,6 +88,7 @@ body {
   left: 10%;
   animation: 4s linear infinite;
 }
+
 div .dot {
   height: 10px;
   width: 10px;
@@ -90,88 +98,177 @@ div .dot {
   top: 20%;
   right: 20%;
 }
+
 .wrapper div:nth-child(1) {
   top: 20%;
   left: 20%;
   animation: animate 8s linear infinite;
 }
+
 .wrapper div:nth-child(2) {
   top: 60%;
   left: 80%;
   animation: animate 10s linear infinite;
 }
+
 .wrapper div:nth-child(3) {
   top: 40%;
   left: 40%;
   animation: animate 3s linear infinite;
 }
+
 .wrapper div:nth-child(4) {
   top: 66%;
   left: 30%;
   animation: animate 7s linear infinite;
 }
+
 .wrapper div:nth-child(5) {
   top: 90%;
   left: 10%;
   animation: animate 9s linear infinite;
 }
+
 .wrapper div:nth-child(6) {
   top: 30%;
   left: 60%;
   animation: animate 5s linear infinite;
 }
+
 .wrapper div:nth-child(7) {
   top: 70%;
   left: 20%;
   animation: animate 8s linear infinite;
 }
+
 .wrapper div:nth-child(8) {
   top: 75%;
   left: 60%;
   animation: animate 10s linear infinite;
 }
+
 .wrapper div:nth-child(9) {
   top: 50%;
   left: 50%;
   animation: animate 6s linear infinite;
 }
+
 .wrapper div:nth-child(10) {
   top: 45%;
   left: 20%;
   animation: animate 10s linear infinite;
 }
+
 .wrapper div:nth-child(11) {
   top: 10%;
   left: 90%;
   animation: animate 9s linear infinite;
 }
+
 .wrapper div:nth-child(12) {
   top: 20%;
   left: 70%;
   animation: animate 7s linear infinite;
 }
+
 .wrapper div:nth-child(13) {
   top: 20%;
   left: 20%;
   animation: animate 8s linear infinite;
 }
+
 .wrapper div:nth-child(14) {
   top: 60%;
   left: 5%;
   animation: animate 6s linear infinite;
 }
+
 .wrapper div:nth-child(15) {
   top: 90%;
   left: 80%;
   animation: animate 9s linear infinite;
 }
+
 @keyframes animate {
   0% {
     transform: scale(0) translateY(0) rotate(70deg);
   }
+
   100% {
     transform: scale(1.3) translateY(-100px) rotate(360deg);
   }
+}
+
+/* Animation de mousse de lessive */
+@keyframes soap-foam {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+
+  10% {
+    transform: translate(-50%, -50%) scale(0.3);
+    opacity: 0.8;
+  }
+
+  30% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  70% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes soap-foam-float {
+  0% {
+    transform: translate(-50%, -50%) scale(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translate(-50%, -50%) scale(1) rotate(10deg);
+    opacity: 0.7;
+  }
+
+  80% {
+    transform: translate(-50%, -50%) scale(1.1) rotate(-5deg);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.3) rotate(15deg);
+    opacity: 0;
+  }
+}
+
+.soap-foam-main {
+  animation: soap-foam 2s ease-out forwards;
+  position: relative;
+}
+
+.soap-foam-small {
+  animation: soap-foam-float 2s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.soap-foam-small:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.soap-foam-small:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.soap-foam-small:nth-child(4) {
+  animation-delay: 0.5s;
 }
 
 @layer base {
@@ -202,6 +299,7 @@ div .dot {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -234,6 +332,7 @@ div .dot {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }

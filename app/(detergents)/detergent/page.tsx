@@ -6,7 +6,7 @@ import Footer from "@/components/footer";
 import Header from "@/components/detergent/header";
 import SocialMedia from "@/components/social-media";
 import Years from "@/components/years";
-import Other from "@/app/(alimentaire)/alimentaire/_components/other";
+//import Other from "@/app/(alimentaire)/alimentaire/_components/other";
 
 const DetergentPage = () => {
   return (
@@ -17,7 +17,7 @@ const DetergentPage = () => {
       <Astuces />
       <SocialMedia page={"detergent"} />
       <Years page="detergnent" />
-      <Other />
+      {/* <Other /> */}
       <div className="-mt-8">
         <Blog />
       </div>

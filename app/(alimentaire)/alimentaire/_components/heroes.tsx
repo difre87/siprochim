@@ -127,7 +127,7 @@ const Heroes = () => {
             width={1200}
             height={1500}
             alt="woman eat"
-            className="mx-auto relative md:-top-[23px] sm:-top-16"
+            className="mx-auto relative md:top-[5px] sm:-top-16"
           />
         </motion.div>
       </AnimatePresence>

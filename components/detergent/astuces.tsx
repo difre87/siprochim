@@ -48,7 +48,7 @@ const Astuces = () => {
               <Carousel className="w-full">
                 <CarouselContent className="w-full">
                   {astucesObject.map((astuce) => (
-                    <CarouselItem key={astuce.id} className="basis-1/5">
+                    <CarouselItem key={astuce.id} className="basis-1/5 ">
                       <AstuceItems label={astuce.label} icon={astuce.icon} />
                     </CarouselItem>
                   ))}

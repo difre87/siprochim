@@ -21,7 +21,6 @@ const AlimentairePage = () => {
       <Header type="alimentaire" />
       <BgAlimentaire />
       <Heroes />
-      <HeroesForm />
       <HeroesAromate />
       <HeroesBouillon />
       <SepBurger />
@@ -30,7 +29,8 @@ const AlimentairePage = () => {
       <SaveurInedite />
       <SocialMedia page={"alimentaire"} />
       <Years />
-      <Other />
+      {/* <Other /> */}
+      <HeroesForm />
       <Blog />
       {/* <Faq page={"alimentaire"} /> */}
       <Footer />

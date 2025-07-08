@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const Years = () => {
   return (
-    <section className="w-full h-screen sm:py-20 md:py-0 md:grid md:grid-cols-3 sm:flex sm:flex-col bg-[url('/assets/alimentaire/years/planche.png')] bg-cover bg-center bg-no-repeat relative z-40">
-      <div className="h-full relative md:col-span-2 flex justify-center items-center">
+    <section className="w-full h-screen sm:py-20 md:py-0 sm:flex sm:flex-col bg-[url('/assets/alimentaire/years/planche.png')] bg-cover bg-center bg-no-repeat relative z-10">
+      <div className="h-full relative w-[1100px] mx-auto flex justify-center items-center -mt-10">
         <Image
           src="/assets/alimentaire/years/produit.png"
           fill
@@ -12,7 +12,7 @@ const Years = () => {
           alt=""
         />
       </div>
-      <div className="md:col-span-1 flex flex-col justify-center items-center gap-y-4">
+      {/* <div className="md:col-span-1 flex flex-col justify-center items-center gap-y-4">
         <Image
           src={"/assets/logo-25-ans.png"}
           width={300}
@@ -40,7 +40,7 @@ const Years = () => {
         >
           En savoir plus
         </Link>
-      </div>
+      </div> */}
     </section>
   );
 };

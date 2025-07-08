@@ -76,7 +76,7 @@ const Heroes = () => {
           <div className="flex pl-14 mt-5">
             <Link
               href="#"
-              className="bg-[#313076] text-white text-md rounded-lg px-5 py-3"
+              className="bg-[#313076] text-white text-md rounded-lg px-5 py-3 transition-all duration-500 hover:bg-white hover:text-[#313076] hover:drop-shadow-lg"
             >
               En savoir plus
             </Link>

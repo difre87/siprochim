@@ -7,8 +7,8 @@ interface YearsProps {
 
 const Years = ({ page = "alimentaire" }: YearsProps) => {
   return (
-    <section className="w-full h-screen sm:py-20 md:py-0 md:grid md:grid-cols-3 sm:flex sm:flex-col bg-[url('/assets/alimentaire/years/planche.png')] bg-right-[100px] bg-cover  bg-no-repeat relative z-40">
-      <div className="h-full relative md:col-span-2 flex justify-center items-center">
+    <section className="w-full h-screen sm:py-20 md:py-0  sm:flex sm:flex-col bg-[url('/assets/alimentaire/years/planche.png')] bg-right-[100px] bg-cover  bg-no-repeat relative z-40">
+      <div className="h-full w-[1300px] mx-auto relative  flex justify-center items-center mt-20">
         <Image
           src={`${
             page == "alimentaire"
@@ -18,17 +18,18 @@ const Years = ({ page = "alimentaire" }: YearsProps) => {
           fill
           objectFit="contain"
           alt=""
+          className=""
         />
       </div>
       <div className="md:col-span-1 flex flex-col justify-center items-center gap-y-4">
-        <Image
+        {/* <Image
           src={"/assets/logo-25-ans.png"}
           width={300}
           height={300}
           alt="siprochim 25 ans"
           className=" sm:hidden md:block"
-        />
-        <div className="w-[200px] h-[200px] sm:block md:hidden relative">
+        /> */}
+        {/* <div className="w-[200px] h-[200px] sm:block md:hidden relative">
           <Image
             src={"/assets/logo-25-ans.png"}
             fill
@@ -47,7 +48,7 @@ const Years = ({ page = "alimentaire" }: YearsProps) => {
           className="bg-[#e30613] rounded-full px-5 py-4 text-white font-medium w-[300px] text-center text-xl transition-all duration-300 hover:bg-red-700"
         >
           En savoir plus
-        </Link>
+        </Link> */}
       </div>
     </section>
   );
