@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Heroes from "./heroes";
 import Nav from "./nav";
-import Bubbles from "./bubble";
+import ThreeBubbles from "./threeBubbles";
+
 
 const Header = () => {
   return (
@@ -16,7 +17,7 @@ const Header = () => {
       />
 
       <div className="w-full h-screen relative">
-        <Bubbles />
+       <ThreeBubbles />
         <Nav />
         <Image
           src="/assets/detergent/detergents.png"
