@@ -61,6 +61,7 @@ const NosProduits =  () => {
         if (data && data.length > 0) {
           const firstCategory = data[0];
           setSelectedProduct(firstCategory);
+          //console.log("Première catégorie sélectionnée:", firstCategory);
 
           // Charger les produits de la première catégorie
           setIsLoadingProducts(true);
@@ -75,7 +76,7 @@ const NosProduits =  () => {
             setIsLoadingProducts(false);
           }
         }
-        console.log("Produits chargés:", productsData);
+        //console.log("Produits chargés:", productsData);
 
       } catch (error) {
         console.error("Erreur lors du chargement des produits:", error);
@@ -125,13 +126,18 @@ const NosProduits =  () => {
                       className="flex flex-col gap-y-2 py-3 px-3 justify-center items-center cursor-pointer group"
                       onClick={() => handleCategoryClick(product.slug)}
                   >
-                    <Image
-                      src={`https://esjc.org/siprochim/public/${product.image}`}
-                      width={300}
-                      height={300}
-                      alt={product.name}
-                      className={`group-hover:scale-110 transition-all ease-in-out rounded-full ${selectedProduct?.id === product.id ? "ring-4 ring-[#2e2e72] scale-110 shadow-xl" : ""}`}
-                    />
+                    {
+                      product.image && (
+                        <Image
+                          src={`https://esjc.org/siprochim/public/${product.image}`}
+                          width={100}
+                          height={100}
+                          alt={product.name}
+                          className="drop-shadow-2xl object-contain transition-all duration-500 group-hover:scale-110 group-hover:rotate-6"
+                        />
+                      )
+                    }
+
                     <h4 className="uppercase text-[#2e2e72] font-bold text-center mt-4">
                       {product.name}
                     </h4>
@@ -174,16 +180,21 @@ const NosProduits =  () => {
                     }}
                   >
                     <Link
-                      href={`/alimentaire/nos-produits/${product.slug}`}
+                      href={`/alimentaire/nos-produits/${product.id}`}
                       className="w-full h-full flex flex-col justify-center items-center transition-all duration-500 group hover:scale-110"
                     >
-                      <Image
-                        src={`https://esjc.org/siprochim/public/${product.image}`}
-                        width={130}
-                        height={130}
-                        alt={""}
-                        className="drop-shadow-2xl"
-                      />
+                      {
+                        product.image && (
+                          <Image
+                            src={`https://esjc.org/siprochim/public/${product.image}`}
+                            width={130}
+                            height={130}
+                            alt={""}
+                            className="drop-shadow-2xl"
+                        />
+                        )
+                      }
+
                       <h4 className="text-white text-3xl font-bold">{product.name}</h4>
                     </Link>
                   </div>

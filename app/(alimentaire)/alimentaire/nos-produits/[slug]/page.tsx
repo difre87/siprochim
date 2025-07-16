@@ -68,18 +68,18 @@ const ProductSlugPage =  ({params}:ProductSlugPageProps) => {
                   <div className="flex flex-col " key={item.id}>
                     <Link
                       href={`/alimentaire/produit/${item.slug}`}
-                      className="w-full h-full drop-shadow-lg flex flex-col justify-center items-center transition-all duration-500 group bg-[#FAFAFA] hover:bg-[#008b36] hover:scale-110 hover:shadow-2xl rounded-3xl overflow-hidden"
+                      className="w-full h-full border border-[#008b36] flex flex-col justify-center items-center transition-all duration-500 group bg-[#FAFAFA] hover:bg-[#008b36] hover:scale-110 hover:shadow-2xl rounded-3xl overflow-hidden"
                   >
-                    <div className="w-full h-[500px] p-10 flex flex-col justify-center items-center relative  transition-all duration-500 hover:bg-hover-aliment  rounded-lg overflow-hidden">
+                    <div className="w-full h-[450px] p-10 flex flex-col justify-center items-center relative  transition-all duration-500 hover:bg-hover-aliment  rounded-lg overflow-hidden">
                       <Image
                         src={`https://esjc.org/siprochim/public/${item.image}`}
                         alt={item.name}
-                        width={200}
-                        height={200}
-                        className="drop-shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6"
+                        width={100}
+                        height={100}
+                        className="drop-shadow-2xl object-contain transition-all duration-500 group-hover:scale-110 group-hover:rotate-6"
 
                     />
-                    <h4 className="font-bold text-2xl text-[#008b36] py-4 group-hover:text-white">{item.name}</h4>
+                    <h4 className="font-light text-center text-xl text-[#008b36] py-4 group-hover:text-white">{item.name}</h4>
                   </div>
 
                   </Link>

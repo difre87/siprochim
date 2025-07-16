@@ -56,7 +56,7 @@ const ProductSlugPage =  ({params}:ProductSlugPageProps) => {
       <Header type="detergent" className="bg-[#2e2e72]" isPage  />
       <section className="w-full py-10 relative">
         <div className="max-w-screen-xl m-auto w-full">
-          <h2 className="text-4xl text-[#00a1cf] text-center font-bold py-10">Nos Produits</h2>
+          <h2 className="text-4xl text-[#00a1cf] text-center font-bold pt-10 pb-20">Nos Produits</h2>
           <div className="grid grid-cols-3 gap-10">
             {
               isLoading ? (
@@ -68,18 +68,21 @@ const ProductSlugPage =  ({params}:ProductSlugPageProps) => {
                 <div className="flex flex-col " key={item.id}>
                   <Link
                     href={`/detergent/produit/${item.slug}`}
-                    className="w-full h-full drop-shadow-lg flex flex-col justify-center items-center transition-all duration-500 group bg-[#FAFAFA] hover:bg-[#000a1cf] hover:scale-110 hover:shadow-2xl rounded-3xl overflow-hidden"
+                    className="w-full h-full border border-[#00a1cf] flex flex-col justify-center items-center transition-all duration-500 group bg-white hover:bg-[#000a1cf] hover:scale-110 hover:shadow-2xl rounded-3xl overflow-hidden"
                   >
-                    <div className="w-full h-[500px] p-10 flex flex-col justify-center items-center relative  transition-all duration-500 hover:bg-hover-aliment  rounded-lg overflow-hidden">
+                    <div className="w-full h-[450px] flex flex-col justify-center items-center relative  transition-all duration-500 hover:bg-hover-aliment  rounded-lg overflow-hidden">
                       <Image
                         src={`https://esjc.org/siprochim/public/${item.image}`}
                         alt={item.name}
-                        width={200}
-                        height={200}
-                        className="drop-shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6"
+                        width={100}
+                        height={100}
+                        className="drop-shadow-2xl object-contain transition-all duration-500 group-hover:scale-110 group-hover:rotate-6"
 
                     />
-                    <h4 className="font-bold text-2xl text-[#00a1cf] py-4 group-hover:text-[#00a1cf]">{item.name}</h4>
+                    <div className="px-5 flex justify-center items-center">
+                    <h4 className="font-light text-center text-lg text-[#00a1cf] py-4 group-hover:text-[#00a1cf]">{item.name}</h4>
+                    </div>
+
                   </div>
 
                   </Link>

@@ -155,23 +155,28 @@ const handleCategoryClick = async (id:string) => {
                 selectedProduct && Array.isArray(selectedProduct) && selectedProduct.map((product) => (
                   <div
                     key={product.id}
-                    className="bg-white group h-[500px] rounded-lg flex flex-col justify-center items-center transition-all ease-in-out group-hover:scale-110"
+                    className="bg-white group h-[400px] rounded-lg flex flex-col justify-center items-center transition-all ease-in-out group-hover:scale-110"
                     style={{
                       background:
                         "radial-gradient(circle at center, #fff 0%, #ddf4ff 100%)",
                     }}
                   >
                     <Link
-                      href={`/detergent/nos-produits/${product.slug}`}
+                      href={`/detergent/nos-produits/${product.id}`}
                       className="w-full h-full flex flex-col justify-center items-center transition-all duration-500 group hover:scale-110"
                     >
-                      <Image
-                        src={`https://esjc.org/siprochim/public/${product.image}`}
-                        width={130}
-                        height={130}
-                        alt={""}
-                        className="drop-shadow-2xl"
-                      />
+                      {
+                        product.image && (
+                          <Image
+                            src={`https://esjc.org/siprochim/public/${product.image}`}
+                            width={130}
+                            height={130}
+                            alt={""}
+                            className="drop-shadow-2xl"
+                          />
+                        )
+                      }
+
                       <h4 className="font-bold text-xl text-[#2e2e72]">{product.name}</h4>
                     </Link>
                   </div>
