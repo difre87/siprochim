@@ -43,8 +43,8 @@ const ProductSlugPage = async ({params}:ProductSlugPageProps) => {
                 <Image
                   src={`https://esjc.org/siprochim/public/${product.image}`}
                   alt={product.name}
-                  width={260}
-                  height={250}
+                  width={150}
+                  height={150}
                   className="drop-shadow-2xl"
                 />
 

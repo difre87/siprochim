@@ -56,7 +56,9 @@ const ProductSlugPage =  ({params}:ProductSlugPageProps) => {
       <Header type="detergent" className="bg-[#2e2e72]" isPage  />
       <section className="w-full py-10 relative">
         <div className="max-w-screen-xl m-auto w-full">
-          <h2 className="text-4xl text-[#00a1cf] text-center font-bold pt-10 pb-20">Nos Produits</h2>
+          <h2 className="text-4xl text-[#00a1cf] text-center font-bold pt-10 pb-20">
+            Nos Produits
+          </h2>
           <div className="grid grid-cols-3 gap-10">
             {
               isLoading ? (
