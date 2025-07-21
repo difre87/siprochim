@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
 import "swiper/css";
 import { Navigation } from "swiper/modules";
 import {  useEffect, useRef, useState } from "react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+//import { ArrowLeft, ArrowRight } from "lucide-react";
 import Footer from "@/components/footer";
 import { Category, Product } from "@/lib/type";
 import Link from "next/link";
@@ -38,7 +38,7 @@ const NosProduits =  () => {
     }
   };
 
-  const clickNext = () => {
+  /* const clickNext = () => {
     if (swiperRef.current?.swiper) {
       swiperRef.current.swiper.slideNext();
     }
@@ -48,7 +48,7 @@ const NosProduits =  () => {
     if (swiperRef.current?.swiper) {
       swiperRef.current.swiper.slidePrev();
     }
-  };
+  }; */
 
   useEffect(() => {
     // Fonction pour charger les produits
@@ -153,7 +153,7 @@ const NosProduits =  () => {
                 )
               }
             </Swiper>
-            <div className="absolute flex gap-x-2 top-1/3 z-20 left-0 right-0">
+            {/* <div className="absolute flex gap-x-2 top-1/3 z-20 left-0 right-0">
               <div
                 className="w-14 h-14 border-[4px] border-[#008b36] rounded-full flex justify-center items-center cursor-pointer transition-all duration-500 hover:scale-110 hover:bg-white hover:shadow-2xl group absolute -left-20"
                 onClick={clickPrev}
@@ -166,7 +166,7 @@ const NosProduits =  () => {
               >
                 <ArrowRight className="text-[#008b36] w-8 h-8 group-hover:text-black" />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

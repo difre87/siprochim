@@ -31,11 +31,11 @@ const SaveurInedite = () => {
         <div className="w-full h-full max-w-screen-xl mx-auto sm:px-10 md:px-0">
           <div className="w-full h-full md:flex md:justify-center md:items-center sm:grid sm:grid-cols-1 gap-x-5">
             <div className="flex justify-center  flex-col gap-y-2 md:w-[400px] sm:w-full md:h-full">
-              <h1 className="md:text-6xl sm:text-4xl text-white uppercase">
+              <h1 className="md:text-6xl sm:text-4xl text-white uppercase font-bold">
                 Des
                 <br /> saveurs
               </h1>
-              <h4 className="text-white md:text-5xl sm:text-3xl uppercase">
+              <h4 className="text-white md:text-6xl sm:text-4xl uppercase font-bold">
                 Inédites
               </h4>
               <p className="text-white md:text-md sm:text-sm text-justify mt-5">

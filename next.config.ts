@@ -3,7 +3,26 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ['cluezjj.cluster027.hosting.ovh.net', 'localhost', 'https://esjc.org', 'esjc.org'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cluezjj.cluster027.hosting.ovh.net',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'esjc.org',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
   async rewrites() {
     return [

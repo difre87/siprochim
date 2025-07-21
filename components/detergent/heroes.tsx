@@ -1,4 +1,4 @@
-import Link from "next/link";
+//import Link from "next/link";
 import Image from "next/image";
 import { QuoteIcon } from "lucide-react";
 
@@ -73,14 +73,14 @@ const Heroes = () => {
               </p>
             </div>
           </div>
-          <div className="flex pl-14 mt-5">
+          {/* <div className="flex pl-14 mt-5">
             <Link
               href="#"
               className="bg-[#313076] text-white text-md rounded-lg px-5 py-3 transition-all duration-500 hover:bg-white hover:text-[#313076] hover:drop-shadow-lg"
             >
               En savoir plus
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeft, ArrowRight } from "lucide-react";
+//import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Title from "./title";
 import { motion } from "framer-motion";
@@ -183,14 +183,14 @@ const HeroesAromate = () => {
               />
             </div>
             <div className="w-full max-w-screen-xl mx-auto relative">
-              <div className="absolute bg-red-400  left-0 right-0 top-[50%] z-10">
+              {/* <div className="absolute bg-red-400  left-0 right-0 top-[50%] z-10">
                 <div className="w-16 h-16 border-[5px] border-white rounded-full flex justify-center items-center cursor-pointer absolute -left-24 transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-left-28 hover:bg-white group">
                   <ArrowLeft className="text-white w-12 h-12 group-hover:text-black" />
                 </div>
                 <div className="w-16 h-16 border-[5px] border-white rounded-full flex justify-center items-center cursor-pointer absolute -right-24 transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-right-28 hover:bg-white group">
                   <ArrowRight className="text-white w-12 h-12 group-hover:text-black" />
                 </div>
-              </div>
+              </div> */}
               <div className="w-full grid md:grid-cols-4 sm:grid-cols-1 sm:px-14 md:py-0 gap-10 py-20 ">
                 <Link
                   href="#"

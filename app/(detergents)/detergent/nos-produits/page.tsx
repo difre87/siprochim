@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
 import "swiper/css";
 import { Navigation } from "swiper/modules";
 import { useEffect, useRef, useState } from "react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+//import { ArrowLeft, ArrowRight } from "lucide-react";
 import Footer from "@/components/footer";
 import { Category, Product } from "@/lib/type";
 import Link from "next/link";
@@ -38,7 +38,7 @@ const NosProduits =  () => {
     }
   };
 
-  const clickNext = () => {
+  /* const clickNext = () => {
     if (swiperRef.current?.swiper) {
       swiperRef.current.swiper.slideNext();
     }
@@ -48,7 +48,7 @@ const NosProduits =  () => {
     if (swiperRef.current?.swiper) {
       swiperRef.current.swiper.slidePrev();
     }
-  };
+  }; */
 
   useEffect(() => {
     // Fonction pour charger les produits
@@ -56,7 +56,7 @@ const NosProduits =  () => {
       setIsLoading(true);
       try {
         const data = await fetchCategory("detergent");
-        console.log("Produits chargés:", data);
+        //console.log("Produits chargés:", data);
         setProductsData(data);
         // Automatiquement sélectionner et charger les produits de la première catégorie
         if (data && data.length > 0) {
@@ -67,8 +67,9 @@ const NosProduits =  () => {
           setIsLoadingProducts(true);
           try {
             const products = await fetchProductByCategories(firstCategory.slug);
-            console.log("Produits de la première catégorie:", products);
+            //console.log("Produits de la première catégorie:", products.length);
             setSelectedProduct(products);
+            //console.log(selectedProduct?.length)
           } catch (error) {
             console.error("Erreur lors du chargement des produits de la première catégorie:", error);
             setSelectedProduct(null);
@@ -135,7 +136,7 @@ const NosProduits =  () => {
                 )
               }
             </Swiper>
-            <div className="absolute flex gap-x-2 top-1/3 z-20 left-0 right-0">
+            {/* <div className="absolute flex gap-x-2 top-1/3 z-20 left-0 right-0">
               <div
                 className="w-14 h-14 border-[4px] border-[#2e2e72] rounded-full flex justify-center items-center cursor-pointer transition-all duration-500 hover:scale-110 hover:bg-white hover:shadow-2xl group absolute -left-20"
                 onClick={clickPrev}
@@ -148,7 +149,7 @@ const NosProduits =  () => {
               >
                 <ArrowRight className="text-[#2e2e72] w-8 h-8 group-hover:text-black" />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -157,8 +158,11 @@ const NosProduits =  () => {
           isLoadingProducts ? (
             <Loader />
           ): (
-            <div className="max-w-screen-xl m-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-16">
+
+
+            <div className={`max-w-screen-xl m-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-16`}>
               {
+
                 selectedProduct && Array.isArray(selectedProduct) && selectedProduct.map((product) => (
                   <div
                     key={product.id}
@@ -190,6 +194,7 @@ const NosProduits =  () => {
                 ))
               }
             </div>
+
           )
         }
       </section>

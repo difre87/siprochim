@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+//import Link from "next/link";
 
 const Product = () => {
   return (
@@ -8,11 +8,11 @@ const Product = () => {
         <div className="w-full grid grid-cols-3 gap-x-8">
           <div className="bg-[#313076] rounded-[12px] flex flex-col items-center justify-between p-10 h-96 gap-y-5 group">
             <Image
-              src="/assets/detergent/Maison.png"
+              src="/assets/detergent/pour-la-maison.png"
               width={350}
               height={300}
               alt="detergents"
-              className="-mt-64 transition-all duration-500 group-hover:scale-110"
+              className="-mt-48 transition-all duration-500 group-hover:scale-110"
             />
             <div className="w-full flex justify-center items-center flex-col -mt-32 gap-y-5">
               <h1 className="text-4xl text-white font-bold -mt-64">Pour la maison</h1>
@@ -30,7 +30,7 @@ const Product = () => {
           </div>
           <div className="bg-[#c83d38] rounded-[12px] flex flex-col items-center justify-between p-10 h-96 gap-y-5 group">
             <Image
-              src="/assets/detergent/vaisselle.png"
+              src="/assets/detergent/pour-la-vaiselle.png"
               width={450}
               height={300}
               alt="detergents"
@@ -55,7 +55,7 @@ const Product = () => {
           </div>
           <div className="bg-[#2ba3da] rounded-[12px] flex flex-col items-center justify-between p-10 h-96 gap-y-5 group">
             <Image
-              src="/assets/detergent/linge.png"
+              src="/assets/detergent/pour-le-linge.png"
               width={300}
               height={300}
               alt="detergents"
@@ -88,12 +88,12 @@ const Product = () => {
               désinfectant vous propose une gamme innovante de produits destinés
               à l&lsquo;hygiène de la maison, du linge et des mains.
             </p>
-            <Link
+            {/* <Link
               href="#"
               className="bg-[#313076] p-4 text-white font-semibold rounded-md w-52 text-center transition-all duration-300 hover:bg-[#c83d38] hover:text-white  hover:drop-shadow-lg"
             >
               En savoir plus
-            </Link>
+            </Link> */}
           </div>
           <div className="grid grid-cols-4 gap-x-4">
             <div className="flex flex-col items-center gap-y-3">

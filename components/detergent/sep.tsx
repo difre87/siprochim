@@ -1,4 +1,4 @@
-import Link from "next/link";
+//import Link from "next/link";
 
 const Sep = () => {
   return (
@@ -15,7 +15,7 @@ const Sep = () => {
               quotidien.
             </p>
           </div>
-          <div className="w-full flex justify-center items-center gap-x-5">
+          {/* <div className="w-full flex justify-center items-center gap-x-5">
             <Link
               href="#"
               className="bg-[#313076] text-white text-md rounded-lg px-5 py-3"
@@ -28,7 +28,7 @@ const Sep = () => {
             >
               En savoir plus
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

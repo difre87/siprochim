@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Title from "./title";
 import Image from "next/image";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+//import { ArrowLeft, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 const HeroesBouillon = () => {
@@ -111,14 +111,14 @@ const HeroesBouillon = () => {
           />
         </div>
         <div className="w-full max-w-screen-xl mx-auto relative">
-          <div className="absolute bg-red-400  left-0 right-0 top-[50%] z-10">
+          {/* <div className="absolute bg-red-400  left-0 right-0 top-[50%] z-10">
             <div className="w-16 h-16 border-[5px] border-white rounded-full flex justify-center items-center cursor-pointer absolute -left-24 transition-all duration-500 hover:scale-110 hover:bg-white hover:shadow-2xl hover:-left-28 group">
               <ArrowLeft className="text-white w-12 h-12 group-hover:text-black" />
             </div>
             <div className="w-16 h-16 border-[5px] border-white rounded-full flex justify-center items-center cursor-pointer absolute -right-24 transition-all duration-500 hover:scale-110 hover:bg-white hover:shadow-2xl hover:-right-28 group">
               <ArrowRight className="text-white w-12 h-12 group-hover:text-black" />
             </div>
-          </div>
+          </div> */}
           <div className="w-full grid md:grid-cols-4 sm:grid-cols-1 sm:px-14 md:px-0 gap-10 py-10 ">
             <Link
               href="/alimentaire/produit/aromate-poulet-sachet-50g"

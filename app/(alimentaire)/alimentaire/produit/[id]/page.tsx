@@ -40,13 +40,15 @@ const ProductSlugPage = async ({params}:ProductSlugPageProps) => {
           product ? (
             <div className="max-w-screen-xl m-auto">
               <div className="px-20 w-2/3 mx-auto grid grid-cols-2">
+              <div className="h-[400px] relative w-full flex justify-center items-center">
                 <Image
                   src={`https://esjc.org/siprochim/public/${product.image}`}
                   alt={product.name}
-                  width={260}
-                  height={250}
-                  className="drop-shadow-2xl"
+                  fill
+                  className="drop-shadow-2xl object-contain"
                 />
+              </div>
+
 
                 <div className="flex flex-col gap-10">
                   <h2 className="text-[3rem] text-white uppercase font-bold leading-10">{product.name}</h2>

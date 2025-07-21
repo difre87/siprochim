@@ -1,574 +1,574 @@
 import { Baby, Dog, Hand, House, LampDesk, Shirt } from "lucide-react"
 
 export const menuAlimentaire = [
+    /*  {
+         title:"Expertise",
+         link:"/alimentaire/expertise"
+     },
+     {
+         title:"Besoins",
+         link:"/alimentaire/besoins"
+     }, */
     {
-        title:"Expertise",
-        link:"/alimentaire/expertise"
+        title: "Nos produits",
+        link: "/alimentaire/nos-produits"
     },
     {
-        title:"Besoins",
-        link:"/alimentaire/besoins"
+        title: "Qui sommes-nous ?",
+        link: "/alimentaire/qui-sommes-nous"
     },
     {
-        title:"Nos produits",
-        link:"/alimentaire/nos-produits"
+        title: "Actualités",
+        link: "/alimentaire/actualites"
     },
     {
-        title:"Qui sommes-nous ?",
-        link:"/alimentaire/qui-sommes-nous"
-    },
-    {
-        title:"Actualités",
-        link:"/alimentaire/actualites"
-    },
-    {
-        title:"Contactez-nous",
-        link:"/contactez-nous"
+        title: "Contactez-nous",
+        link: "/contactez-nous"
     },
 ]
 
 export const menuDetergent = [
+    /*  {
+         title:"Expertise"
+     },
+     {
+         title:"Besoins",
+         link:"/detergent/nos-produits"
+     }, */
     {
-        title:"Expertise"
+        title: "Nos produits",
+        link: "/detergent/nos-produits"
     },
     {
-        title:"Besoins",
-        link:"/detergent/nos-produits"
+        title: "Qui sommes-nous ?",
+        link: "/detergent/qui-sommes-nous"
     },
     {
-        title:"Nos produits",
-        link:"/detergent/nos-produits"
-    },
-    {
-        title:"Qui sommes-nous ?",
-        link:"/detergent/qui-sommes-nous"
-    },
-    {
-        title:"Actualités",
-        link:"/detergent/actualites"
+        title: "Actualités",
+        link: "/detergent/actualites"
 
     },
     {
-        title:"Contactez-nous",
-        link:"/contactez-nous"
+        title: "Contactez-nous",
+        link: "/contactez-nous"
     },
 ]
 export const menuFooter = [
     {
-        label:"Nos Produits",
-        link:"#"
+        label: "Nos Produits",
+        link: "#"
     },
     {
-        label:"Actualités",
-        link:"#"
+        label: "Actualités",
+        link: "#"
     },
     {
-        label:"Qui sommes-nous?",
-        link:"#"
+        label: "Qui sommes-nous?",
+        link: "#"
     },
     {
-        label:"Contactez-nous",
-        link:"#"
+        label: "Contactez-nous",
+        link: "#"
     },
     {
-        label:"Catégorie",
-        link:"#"
+        label: "Catégorie",
+        link: "#"
     },
 ]
 
 export const astucesObject = [
     {
-        id:"1",
-        label : "Maisons",
-        icon:House
+        id: "1",
+        label: "Maisons",
+        icon: House
     },
     {
-        id:"2",
-        label : "Bébés",
-        icon:Baby
+        id: "2",
+        label: "Bébés",
+        icon: Baby
     },
     {
-        id:"3",
-        label : "Animaux",
-        icon:Dog
+        id: "3",
+        label: "Animaux",
+        icon: Dog
     },
     {
-        id:"4",
-        label : "Linges",
-        icon:Shirt
+        id: "4",
+        label: "Linges",
+        icon: Shirt
     },
     {
-        id:"5",
-        label : "Bureaux",
-        icon:LampDesk
+        id: "5",
+        label: "Bureaux",
+        icon: LampDesk
     },
     {
-        id:"6",
-        label : "Mains",
-        icon:Hand
+        id: "6",
+        label: "Mains",
+        icon: Hand
     },
 ]
 
 export const ProduitDetergent = [
     {
-        id:1,
-        title:"Arc",
-        imageUrl:"/assets/detergent/produits/icons/1.png",
-        slug:"arc",
-        product:[
+        id: 1,
+        title: "Arc",
+        imageUrl: "/assets/detergent/produits/icons/1.png",
+        slug: "arc",
+        product: [
             {
-                id:1,
-                imageUrl:"/assets/detergent/produits/arc/1.png"
+                id: 1,
+                imageUrl: "/assets/detergent/produits/arc/1.png"
             },
             {
-                id:2,
-                imageUrl:"/assets/detergent/produits/arc/2.png"
+                id: 2,
+                imageUrl: "/assets/detergent/produits/arc/2.png"
             },
             {
-                id:3,
-                imageUrl:"/assets/detergent/produits/arc/3.png"
+                id: 3,
+                imageUrl: "/assets/detergent/produits/arc/3.png"
             },
             {
-                id:4,
-                imageUrl:"/assets/detergent/produits/arc/4.png"
+                id: 4,
+                imageUrl: "/assets/detergent/produits/arc/4.png"
             },
             {
-                id:5,
-                imageUrl:"/assets/detergent/produits/arc/5.png"
+                id: 5,
+                imageUrl: "/assets/detergent/produits/arc/5.png"
             },
             {
-                id:6,
-                imageUrl:"/assets/detergent/produits/arc/6.png"
+                id: 6,
+                imageUrl: "/assets/detergent/produits/arc/6.png"
             },
             {
-                id:7,
-                imageUrl:"/assets/detergent/produits/arc/7.png"
+                id: 7,
+                imageUrl: "/assets/detergent/produits/arc/7.png"
             },
             {
-                id:8,
-                imageUrl:"/assets/detergent/produits/arc/8.png"
+                id: 8,
+                imageUrl: "/assets/detergent/produits/arc/8.png"
             },
             {
-                id:9,
-                imageUrl:"/assets/detergent/produits/arc/9.png"
+                id: 9,
+                imageUrl: "/assets/detergent/produits/arc/9.png"
             },
             {
-                id:10,
-                imageUrl:"/assets/detergent/produits/arc/10.png"
+                id: 10,
+                imageUrl: "/assets/detergent/produits/arc/10.png"
             },
             {
-                id:11,
-                imageUrl:"/assets/detergent/produits/arc/11.png"
+                id: 11,
+                imageUrl: "/assets/detergent/produits/arc/11.png"
             },
             {
-                id:12,
-                imageUrl:"/assets/detergent/produits/arc/12.png"
+                id: 12,
+                imageUrl: "/assets/detergent/produits/arc/12.png"
             },
             {
-                id:13,
-                imageUrl:"/assets/detergent/produits/arc/13.png"
+                id: 13,
+                imageUrl: "/assets/detergent/produits/arc/13.png"
             },
             {
-                id:14,
-                imageUrl:"/assets/detergent/produits/arc/14.png"
+                id: 14,
+                imageUrl: "/assets/detergent/produits/arc/14.png"
             },
             {
-                id:15,
-                imageUrl:"/assets/detergent/produits/arc/15.png"
+                id: 15,
+                imageUrl: "/assets/detergent/produits/arc/15.png"
             },
             {
-                id:16,
-                imageUrl:"/assets/detergent/produits/arc/16.png"
+                id: 16,
+                imageUrl: "/assets/detergent/produits/arc/16.png"
             },
             {
-                id:17,
-                imageUrl:"/assets/detergent/produits/arc/17.png"
-            },
-        ]
-    },
-    {
-        id:2,
-        title:"Bêko",
-        imageUrl:"/assets/detergent/produits/icons/2.png",
-        slug:"beko",
-        product:[
-            {
-                id:1,
-                imageUrl:"/assets/detergent/produits/beko/1.png"
-            },
-            {
-                id:2,
-                imageUrl:"/assets/detergent/produits/beko/2.png"
-            },
-            {
-                id:3,
-                imageUrl:"/assets/detergent/produits/beko/3.png"
-            },
-            {
-                id:4,
-                imageUrl:"/assets/detergent/produits/beko/4.png"
-            },
-            {
-                id:5,
-                imageUrl:"/assets/detergent/produits/beko/5.png"
-            },
-            {
-                id:6,
-                imageUrl:"/assets/detergent/produits/beko/6.png"
-            },
-            {
-                id:7,
-                imageUrl:"/assets/detergent/produits/beko/7.png"
-            },
-            {
-                id:8,
-                imageUrl:"/assets/detergent/produits/beko/8.png"
-            },
-            {
-                id:9,
-                imageUrl:"/assets/detergent/produits/beko/9.png"
-            },
-            {
-                id:10,
-                imageUrl:"/assets/detergent/produits/beko/10.png"
-            },
-            {
-                id:11,
-                imageUrl:"/assets/detergent/produits/beko/11.png"
-            },
-            {
-                id:12,
-                imageUrl:"/assets/detergent/produits/beko/12.png"
+                id: 17,
+                imageUrl: "/assets/detergent/produits/arc/17.png"
             },
         ]
     },
     {
-        id:3,
-        title:"Cosmo",
-        imageUrl:"/assets/detergent/produits/icons/3.png",
-        slug:"cosmo",
-        product:[
+        id: 2,
+        title: "Bêko",
+        imageUrl: "/assets/detergent/produits/icons/2.png",
+        slug: "beko",
+        product: [
             {
-                id:1,
-                imageUrl:"/assets/detergent/produits/cosmo/1.png"
+                id: 1,
+                imageUrl: "/assets/detergent/produits/beko/1.png"
             },
             {
-                id:2,
-                imageUrl:"/assets/detergent/produits/cosmo/2.png"
-            },
-        ]
-    },
-    {
-        id:4,
-        title:"Cross",
-        imageUrl:"/assets/detergent/produits/icons/4.png",
-        slug:"cross",
-        product:[
-            {
-                id:1,
-                imageUrl:"/assets/detergent/produits/cross/1.png"
+                id: 2,
+                imageUrl: "/assets/detergent/produits/beko/2.png"
             },
             {
-                id:2,
-                imageUrl:"/assets/detergent/produits/cross/2.png"
+                id: 3,
+                imageUrl: "/assets/detergent/produits/beko/3.png"
             },
             {
-                id:3,
-                imageUrl:"/assets/detergent/produits/cross/3.png"
-            },
-        ]
-    },
-    {
-        id:5,
-        title:"Nil",
-        imageUrl:"/assets/detergent/produits/icons/5.png",
-        slug:"nil",
-        product:[
-            {
-                id:1,
-                imageUrl:"/assets/detergent/produits/nil/1.png"
+                id: 4,
+                imageUrl: "/assets/detergent/produits/beko/4.png"
             },
             {
-                id:2,
-                imageUrl:"/assets/detergent/produits/nil/2.png"
+                id: 5,
+                imageUrl: "/assets/detergent/produits/beko/5.png"
             },
             {
-                id:3,
-                imageUrl:"/assets/detergent/produits/nil/3.png"
+                id: 6,
+                imageUrl: "/assets/detergent/produits/beko/6.png"
             },
             {
-                id:4,
-                imageUrl:"/assets/detergent/produits/nil/4.png"
+                id: 7,
+                imageUrl: "/assets/detergent/produits/beko/7.png"
             },
             {
-                id:5,
-                imageUrl:"/assets/detergent/produits/nil/5.png"
+                id: 8,
+                imageUrl: "/assets/detergent/produits/beko/8.png"
             },
             {
-                id:6,
-                imageUrl:"/assets/detergent/produits/nil/6.png"
+                id: 9,
+                imageUrl: "/assets/detergent/produits/beko/9.png"
             },
             {
-                id:7,
-                imageUrl:"/assets/detergent/produits/nil/7.png"
+                id: 10,
+                imageUrl: "/assets/detergent/produits/beko/10.png"
             },
             {
-                id:8,
-                imageUrl:"/assets/detergent/produits/nil/8.png"
+                id: 11,
+                imageUrl: "/assets/detergent/produits/beko/11.png"
             },
             {
-                id:9,
-                imageUrl:"/assets/detergent/produits/nil/9.png"
-            },
-            {
-                id:10,
-                imageUrl:"/assets/detergent/produits/nil/10.png"
-            },
-            {
-                id:11,
-                imageUrl:"/assets/detergent/produits/nil/11.png"
-            },
-            {
-                id:12,
-                imageUrl:"/assets/detergent/produits/nil/12.png"
-            },
-            {
-                id:13,
-                imageUrl:"/assets/detergent/produits/nil/13.png"
-            },
-            {
-                id:14,
-                imageUrl:"/assets/detergent/produits/nil/14.png"
-            },
-            {
-                id:15,
-                imageUrl:"/assets/detergent/produits/nil/15.png"
-            },
-            {
-                id:16,
-                imageUrl:"/assets/detergent/produits/nil/16.png"
-            },
-            {
-                id:17,
-                imageUrl:"/assets/detergent/produits/nil/17.png"
-            },
-            {
-                id:18,
-                imageUrl:"/assets/detergent/produits/nil/18.png"
-            },
-            {
-                id:19,
-                imageUrl:"/assets/detergent/produits/nil/19.png"
-            },
-            {
-                id:20,
-                imageUrl:"/assets/detergent/produits/nil/20.png"
+                id: 12,
+                imageUrl: "/assets/detergent/produits/beko/12.png"
             },
         ]
     },
     {
-        id:6,
-        title:"Rial",
-        imageUrl:"/assets/detergent/produits/icons/6.png",
-        slug:"rial",
-        product:[
+        id: 3,
+        title: "Cosmo",
+        imageUrl: "/assets/detergent/produits/icons/3.png",
+        slug: "cosmo",
+        product: [
             {
-                id:1,
-                imageUrl:"/assets/detergent/produits/rial/1.png"
+                id: 1,
+                imageUrl: "/assets/detergent/produits/cosmo/1.png"
             },
             {
-                id:2,
-                imageUrl:"/assets/detergent/produits/rial/2.png"
+                id: 2,
+                imageUrl: "/assets/detergent/produits/cosmo/2.png"
+            },
+        ]
+    },
+    {
+        id: 4,
+        title: "Cross",
+        imageUrl: "/assets/detergent/produits/icons/4.png",
+        slug: "cross",
+        product: [
+            {
+                id: 1,
+                imageUrl: "/assets/detergent/produits/cross/1.png"
+            },
+            {
+                id: 2,
+                imageUrl: "/assets/detergent/produits/cross/2.png"
+            },
+            {
+                id: 3,
+                imageUrl: "/assets/detergent/produits/cross/3.png"
+            },
+        ]
+    },
+    {
+        id: 5,
+        title: "Nil",
+        imageUrl: "/assets/detergent/produits/icons/5.png",
+        slug: "nil",
+        product: [
+            {
+                id: 1,
+                imageUrl: "/assets/detergent/produits/nil/1.png"
+            },
+            {
+                id: 2,
+                imageUrl: "/assets/detergent/produits/nil/2.png"
+            },
+            {
+                id: 3,
+                imageUrl: "/assets/detergent/produits/nil/3.png"
+            },
+            {
+                id: 4,
+                imageUrl: "/assets/detergent/produits/nil/4.png"
+            },
+            {
+                id: 5,
+                imageUrl: "/assets/detergent/produits/nil/5.png"
+            },
+            {
+                id: 6,
+                imageUrl: "/assets/detergent/produits/nil/6.png"
+            },
+            {
+                id: 7,
+                imageUrl: "/assets/detergent/produits/nil/7.png"
+            },
+            {
+                id: 8,
+                imageUrl: "/assets/detergent/produits/nil/8.png"
+            },
+            {
+                id: 9,
+                imageUrl: "/assets/detergent/produits/nil/9.png"
+            },
+            {
+                id: 10,
+                imageUrl: "/assets/detergent/produits/nil/10.png"
+            },
+            {
+                id: 11,
+                imageUrl: "/assets/detergent/produits/nil/11.png"
+            },
+            {
+                id: 12,
+                imageUrl: "/assets/detergent/produits/nil/12.png"
+            },
+            {
+                id: 13,
+                imageUrl: "/assets/detergent/produits/nil/13.png"
+            },
+            {
+                id: 14,
+                imageUrl: "/assets/detergent/produits/nil/14.png"
+            },
+            {
+                id: 15,
+                imageUrl: "/assets/detergent/produits/nil/15.png"
+            },
+            {
+                id: 16,
+                imageUrl: "/assets/detergent/produits/nil/16.png"
+            },
+            {
+                id: 17,
+                imageUrl: "/assets/detergent/produits/nil/17.png"
+            },
+            {
+                id: 18,
+                imageUrl: "/assets/detergent/produits/nil/18.png"
+            },
+            {
+                id: 19,
+                imageUrl: "/assets/detergent/produits/nil/19.png"
+            },
+            {
+                id: 20,
+                imageUrl: "/assets/detergent/produits/nil/20.png"
+            },
+        ]
+    },
+    {
+        id: 6,
+        title: "Rial",
+        imageUrl: "/assets/detergent/produits/icons/6.png",
+        slug: "rial",
+        product: [
+            {
+                id: 1,
+                imageUrl: "/assets/detergent/produits/rial/1.png"
+            },
+            {
+                id: 2,
+                imageUrl: "/assets/detergent/produits/rial/2.png"
             },
 
         ]
     },
     {
-        id:7,
-        title:"Styl",
-        imageUrl:"/assets/detergent/produits/icons/7.png",
-        slug:"styl",
-        product:[
-             {
-                id:1,
-                imageUrl:"/assets/detergent/produits/styl/1.png"
+        id: 7,
+        title: "Styl",
+        imageUrl: "/assets/detergent/produits/icons/7.png",
+        slug: "styl",
+        product: [
+            {
+                id: 1,
+                imageUrl: "/assets/detergent/produits/styl/1.png"
             },
             {
-                id:2,
-                imageUrl:"/assets/detergent/produits/styl/2.png"
+                id: 2,
+                imageUrl: "/assets/detergent/produits/styl/2.png"
             },
         ]
     },
     {
-        id:8,
-        title:"Super Clean",
-        imageUrl:"/assets/detergent/produits/icons/8.png",
-        slug:"super-clean",
-        product:[
+        id: 8,
+        title: "Super Clean",
+        imageUrl: "/assets/detergent/produits/icons/8.png",
+        slug: "super-clean",
+        product: [
             {
-                id:1,
-                imageUrl:"/assets/detergent/produits/super-clean/1.png"
+                id: 1,
+                imageUrl: "/assets/detergent/produits/super-clean/1.png"
             },
             {
-                id:2,
-                imageUrl:"/assets/detergent/produits/super-clean/2.png"
+                id: 2,
+                imageUrl: "/assets/detergent/produits/super-clean/2.png"
             },
             {
-                id:3,
-                imageUrl:"/assets/detergent/produits/super-clean/3.png"
+                id: 3,
+                imageUrl: "/assets/detergent/produits/super-clean/3.png"
             },
             {
-                id:4,
-                imageUrl:"/assets/detergent/produits/super-clean/4.png"
+                id: 4,
+                imageUrl: "/assets/detergent/produits/super-clean/4.png"
             },
 
             {
-                id:6,
-                imageUrl:"/assets/detergent/produits/super-clean/6.png"
+                id: 6,
+                imageUrl: "/assets/detergent/produits/super-clean/6.png"
             },
             {
-                id:7,
-                imageUrl:"/assets/detergent/produits/super-clean/7.png"
+                id: 7,
+                imageUrl: "/assets/detergent/produits/super-clean/7.png"
             },
             {
-                id:8,
-                imageUrl:"/assets/detergent/produits/super-clean/8.png"
+                id: 8,
+                imageUrl: "/assets/detergent/produits/super-clean/8.png"
             },
             {
-                id:9,
-                imageUrl:"/assets/detergent/produits/super-clean/9.png"
+                id: 9,
+                imageUrl: "/assets/detergent/produits/super-clean/9.png"
             },
             {
-                id:10,
-                imageUrl:"/assets/detergent/produits/super-clean/10.png"
+                id: 10,
+                imageUrl: "/assets/detergent/produits/super-clean/10.png"
             },
             {
-                id:11,
-                imageUrl:"/assets/detergent/produits/super-clean/11.png"
+                id: 11,
+                imageUrl: "/assets/detergent/produits/super-clean/11.png"
             },
             {
-                id:12,
-                imageUrl:"/assets/detergent/produits/super-clean/12.png"
+                id: 12,
+                imageUrl: "/assets/detergent/produits/super-clean/12.png"
             },
             {
-                id:13,
-                imageUrl:"/assets/detergent/produits/super-clean/13.png"
+                id: 13,
+                imageUrl: "/assets/detergent/produits/super-clean/13.png"
             },
             {
-                id:14,
-                imageUrl:"/assets/detergent/produits/super-clean/14.png"
+                id: 14,
+                imageUrl: "/assets/detergent/produits/super-clean/14.png"
             },
             {
-                id:15,
-                imageUrl:"/assets/detergent/produits/super-clean/15.png"
+                id: 15,
+                imageUrl: "/assets/detergent/produits/super-clean/15.png"
             },
             {
-                id:16,
-                imageUrl:"/assets/detergent/produits/super-clean/16.png"
+                id: 16,
+                imageUrl: "/assets/detergent/produits/super-clean/16.png"
             },
             {
-                id:17,
-                imageUrl:"/assets/detergent/produits/super-clean/17.png"
+                id: 17,
+                imageUrl: "/assets/detergent/produits/super-clean/17.png"
             },
             {
-                id:18,
-                imageUrl:"/assets/detergent/produits/super-clean/18.png"
+                id: 18,
+                imageUrl: "/assets/detergent/produits/super-clean/18.png"
             },
             {
-                id:19,
-                imageUrl:"/assets/detergent/produits/super-clean/19.png"
+                id: 19,
+                imageUrl: "/assets/detergent/produits/super-clean/19.png"
             },
             {
-                id:20,
-                imageUrl:"/assets/detergent/produits/super-clean/20.png"
+                id: 20,
+                imageUrl: "/assets/detergent/produits/super-clean/20.png"
             },
             {
-                id:21,
-                imageUrl:"/assets/detergent/produits/super-clean/21.png"
+                id: 21,
+                imageUrl: "/assets/detergent/produits/super-clean/21.png"
             },
             {
-                id:22,
-                imageUrl:"/assets/detergent/produits/super-clean/22.png"
+                id: 22,
+                imageUrl: "/assets/detergent/produits/super-clean/22.png"
             },
             {
-                id:23,
-                imageUrl:"/assets/detergent/produits/super-clean/23.png"
+                id: 23,
+                imageUrl: "/assets/detergent/produits/super-clean/23.png"
             },
             {
-                id:24,
-                imageUrl:"/assets/detergent/produits/super-clean/24.png"
+                id: 24,
+                imageUrl: "/assets/detergent/produits/super-clean/24.png"
             },
             {
-                id:25,
-                imageUrl:"/assets/detergent/produits/super-clean/25.png"
+                id: 25,
+                imageUrl: "/assets/detergent/produits/super-clean/25.png"
             },
             {
-                id:26,
-                imageUrl:"/assets/detergent/produits/super-clean/26.png"
+                id: 26,
+                imageUrl: "/assets/detergent/produits/super-clean/26.png"
             },
             {
-                id:27,
-                imageUrl:"/assets/detergent/produits/super-clean/27.png"
+                id: 27,
+                imageUrl: "/assets/detergent/produits/super-clean/27.png"
             },
             {
-                id:28,
-                imageUrl:"/assets/detergent/produits/super-clean/28.png"
+                id: 28,
+                imageUrl: "/assets/detergent/produits/super-clean/28.png"
             },
             {
-                id:29,
-                imageUrl:"/assets/detergent/produits/super-clean/29.png"
+                id: 29,
+                imageUrl: "/assets/detergent/produits/super-clean/29.png"
             },
             {
-                id:30,
-                imageUrl:"/assets/detergent/produits/super-clean/30.png"
+                id: 30,
+                imageUrl: "/assets/detergent/produits/super-clean/30.png"
             },
             {
-                id:31,
-                imageUrl:"/assets/detergent/produits/super-clean/31.png"
+                id: 31,
+                imageUrl: "/assets/detergent/produits/super-clean/31.png"
             },
             {
-                id:32,
-                imageUrl:"/assets/detergent/produits/super-clean/32.png"
+                id: 32,
+                imageUrl: "/assets/detergent/produits/super-clean/32.png"
             },
             {
-                id:33,
-                imageUrl:"/assets/detergent/produits/super-clean/33.png"
+                id: 33,
+                imageUrl: "/assets/detergent/produits/super-clean/33.png"
             },
             {
-                id:34,
-                imageUrl:"/assets/detergent/produits/super-clean/34.png"
+                id: 34,
+                imageUrl: "/assets/detergent/produits/super-clean/34.png"
             },
             {
-                id:35,
-                imageUrl:"/assets/detergent/produits/super-clean/35.png"
+                id: 35,
+                imageUrl: "/assets/detergent/produits/super-clean/35.png"
             },
             {
-                id:36,
-                imageUrl:"/assets/detergent/produits/super-clean/36.png"
+                id: 36,
+                imageUrl: "/assets/detergent/produits/super-clean/36.png"
             },
             {
-                id:37,
-                imageUrl:"/assets/detergent/produits/super-clean/37.png"
+                id: 37,
+                imageUrl: "/assets/detergent/produits/super-clean/37.png"
             },
             {
-                id:38,
-                imageUrl:"/assets/detergent/produits/super-clean/38.png"
+                id: 38,
+                imageUrl: "/assets/detergent/produits/super-clean/38.png"
             },
             {
-                id:39,
-                imageUrl:"/assets/detergent/produits/super-clean/39.png"
+                id: 39,
+                imageUrl: "/assets/detergent/produits/super-clean/39.png"
             },
             {
-                id:40,
-                imageUrl:"/assets/detergent/produits/super-clean/40.png"
+                id: 40,
+                imageUrl: "/assets/detergent/produits/super-clean/40.png"
             },
             {
-                id:41,
-                imageUrl:"/assets/detergent/produits/super-clean/41.png"
+                id: 41,
+                imageUrl: "/assets/detergent/produits/super-clean/41.png"
             },
             {
-                id:42,
-                imageUrl:"/assets/detergent/produits/super-clean/42.png"
+                id: 42,
+                imageUrl: "/assets/detergent/produits/super-clean/42.png"
             },
         ]
     },

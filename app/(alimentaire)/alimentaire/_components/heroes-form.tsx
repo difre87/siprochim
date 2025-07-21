@@ -31,7 +31,7 @@ const HeroesForm = () => {
         >
           <h1 className="md:text-6xl sm:text-4xl font-bold text-white uppercase leading-none ">
             Rester au
-            <h4 className="uppercase text-white text-xl">Courant!</h4>
+            <h4 className="uppercase text-white md:text-6xl sm:text-4xl font-bold">Courant!</h4>
           </h1>
 
           <p className="md:text-lg sm:text-md uppercase text-white text-justify">

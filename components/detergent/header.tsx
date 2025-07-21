@@ -20,14 +20,14 @@ const Header = () => {
        <ThreeBubbles />
         <Nav />
         <Image
-          src="/assets/detergent/detergents.png"
+          src="/assets/detergent/profil-detergent.png"
           width={1300}
           height={500}
           alt="detergents"
           className="absolute bottom-[12%] right-5"
         />
         <div className="w-full max-w-screen-xl mx-auto">
-          <div className="w-[600px] absolute top-[22%] flex flex-col gap-y-4">
+          <div className="w-[600px] absolute top-[25%] flex flex-col gap-y-4">
             <h1 className="text-4xl text-[#313076] font-bold">
               Découvrez nos produits de qualité supérieur
             </h1>
@@ -39,7 +39,7 @@ const Header = () => {
             </p>
             <div className="flex gap-x-5">
               <Link
-                href="#"
+                href="/detergent/nos-produits"
                 className="bg-[#313076] text-white text-md rounded-lg px-5 py-3 transition-all duration-500 hover:bg-white hover:text-[#313076] hover:drop-shadow-lg"
               >
                 En savoir plus

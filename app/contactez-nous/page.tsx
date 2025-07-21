@@ -10,7 +10,7 @@ const Apropos = () => {
   return (
     <>
       <Header type="alimentaire" className="bg-[#2e2e72]" isPage />
-      <section className="w-full h-screen bg-[url('/assets/alimentaire/contact/bg.png')] bg-cover bg-no-repeat bg-center">
+      <section className="w-full h-screen bg-[url('/assets/contact.jpg')] bg-cover bg-no-repeat bg-center">
         <div className="max-w-screen-xl m-auto px-5 h-full">
           <div className="w-full flex flex-col gap-y-2 justify-center h-full">
             <h1 className=" text-[#2e2e72] text-6xl leading-none font-bold">
