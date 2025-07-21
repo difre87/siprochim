@@ -68,3 +68,19 @@ export const fetchProductById = async (id: string) => {
         return null;
     }
 }
+
+export const fetchCategoryBySlug = async (id: number) => {
+    try {
+        const response = await fetch(
+            `${endpoint}subcategories/${id}` // Adjust the endpoint as needed
+        );
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        return data.data;
+    } catch (error) {
+        console.error("Error fetching category by slug:", error);
+        return null;
+    }
+}

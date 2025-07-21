@@ -18,10 +18,11 @@ const NosProduits =  () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isLoadingProducts, setIsLoadingProducts] = useState(true);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  //const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
 
-  const handleCategoryClick = async (slug:string) => {
+  const handleCategoryClick = async (slug:string, category: Category) => {
     setIsLoadingProducts(true);
+    setSelectedCategory(category); // Mettre à jour la catégorie sélectionnée
 
     try {
       const products = await fetchProductByCategories(slug);
@@ -60,8 +61,7 @@ const NosProduits =  () => {
         // Automatiquement sélectionner et charger les produits de la première catégorie
         if (data && data.length > 0) {
           const firstCategory = data[0];
-          setSelectedProduct(firstCategory);
-          //console.log("Première catégorie sélectionnée:", firstCategory);
+          setSelectedCategory(firstCategory); // Définir la première catégorie comme sélectionnée
 
           // Charger les produits de la première catégorie
           setIsLoadingProducts(true);
@@ -76,7 +76,6 @@ const NosProduits =  () => {
             setIsLoadingProducts(false);
           }
         }
-        //console.log("Produits chargés:", productsData);
 
       } catch (error) {
         console.error("Erreur lors du chargement des produits:", error);
@@ -101,8 +100,6 @@ const NosProduits =  () => {
             className="w-full h-full object-contain"
           />
         </div>
-
-
       </section>
 
       <section className="w-full py-10 bg-[#008b3610]">
@@ -120,29 +117,39 @@ const NosProduits =  () => {
                   <Loader />
                 ) : (
                   productsData.map((product) => (
-
                     <SwiperSlide
                       key={product.id}
-                      className="flex flex-col gap-y-2 py-3 px-3 justify-center items-center cursor-pointer group"
-                      onClick={() => handleCategoryClick(product.slug)}
-                  >
-                    {
-                      product.image && (
-                        <Image
-                          src={`https://esjc.org/siprochim/public/${product.image}`}
-                          width={100}
-                          height={100}
-                          alt={product.name}
-                          className="drop-shadow-2xl object-contain transition-all duration-500 group-hover:scale-110 group-hover:rotate-6"
-                        />
-                      )
-                    }
+                      className={`flex flex-col gap-y-2 py-3 justify-center items-center cursor-pointer group transition-all duration-500 rounded-lg ${
+                        selectedCategory?.id === product.id
+                          ? "bg-[#008b36] shadow-xl transform scale-105"
+                          : "hover:bg-[#008b3620]"
+                      }`}
+                      onClick={() => handleCategoryClick(product.slug, product)}
+                    >
+                      {
+                        product.image && (
+                          <div className="flex justify-center items-center">
+                            <Image
+                            src={`https://esjc.org/siprochim/public/${product.image}`}
+                            width={100}
+                            height={100}
+                            alt={product.name}
+                            className={`drop-shadow-2xl object-contain text-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 `}
+                          />
+                          </div>
 
-                    <h4 className="uppercase text-[#2e2e72] font-bold text-center mt-4">
-                      {product.name}
-                    </h4>
-                  </SwiperSlide>
-                ))
+                        )
+                      }
+
+                      <h4 className={`uppercase font-bold text-center mt-4 transition-all duration-300 ${
+                        selectedCategory?.id === product.id
+                          ? "text-white text-lg"
+                          : "text-[#2e2e72] group-hover:text-[#008b36]"
+                      }`}>
+                        {product.name}
+                      </h4>
+                    </SwiperSlide>
+                  ))
                 )
               }
             </Swiper>

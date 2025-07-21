@@ -18,15 +18,16 @@ const NosProduits =  () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isLoadingProducts, setIsLoadingProducts] = useState(true);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
- // const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
 
-const handleCategoryClick = async (id:string) => {
+  const handleCategoryClick = async (slug: string, category: Category) => {
     setIsLoadingProducts(true);
+    setSelectedCategory(category); // Mettre à jour la catégorie sélectionnée
 
     try {
-      const products = await fetchProductByCategories(id);
+      const products = await fetchProductByCategories(slug);
       console.log("Produits de la catégorie:", products);
-      console.log("ID de la catégorie sélectionnée:", id);
+      console.log("ID de la catégorie sélectionnée:", slug);
       setSelectedProduct(products);
 
     } catch (error) {
@@ -60,7 +61,7 @@ const handleCategoryClick = async (id:string) => {
         // Automatiquement sélectionner et charger les produits de la première catégorie
         if (data && data.length > 0) {
           const firstCategory = data[0];
-          setSelectedProduct(firstCategory);
+          setSelectedCategory(firstCategory); // Définir la première catégorie comme sélectionnée
 
           // Charger les produits de la première catégorie
           setIsLoadingProducts(true);
@@ -75,7 +76,6 @@ const handleCategoryClick = async (id:string) => {
             setIsLoadingProducts(false);
           }
         }
-        console.log("Produits chargés:", productsData);
 
       } catch (error) {
         console.error("Erreur lors du chargement des produits:", error);
@@ -107,24 +107,31 @@ const handleCategoryClick = async (id:string) => {
                   <Loader />
                 ) : (
                   productsData.map((product) => (
-
                     <SwiperSlide
                       key={product.id}
-                      className="flex flex-col gap-y-2 py-3 px-3 justify-center items-center cursor-pointer group"
-                      onClick={() => handleCategoryClick(product.slug)}
-                  >
-                    <Image
-                      src={`https://esjc.org/siprochim/public/${product.image}`}
-                      width={300}
-                      height={300}
-                      alt={product.name}
-                      className={`group-hover:scale-110 transition-all ease-in-out rounded-full ${selectedProduct?.id === product.id ? "ring-4 ring-[#2e2e72] scale-110 shadow-xl" : ""}`}
-                    />
-                    <h4 className="uppercase text-[#2e2e72] font-bold text-center mt-4">
-                      {product.name}
-                    </h4>
-                  </SwiperSlide>
-                ))
+                      className={`flex flex-col gap-y-2 py-3 px-3 justify-center items-center cursor-pointer group transition-all duration-300 rounded-lg ${
+                        selectedCategory?.id === product.id
+                          ? "bg-[#2e2e72] shadow-xl transform scale-105"
+                          : "hover:bg-[#2e2e7220]"
+                      }`}
+                      onClick={() => handleCategoryClick(product.slug, product)}
+                    >
+                      <Image
+                        src={`https://esjc.org/siprochim/public/${product.image}`}
+                        width={300}
+                        height={300}
+                        alt={product.name}
+                        className={`group-hover:scale-110 transition-all ease-in-out rounded-full`}
+                      />
+                      <h4 className={`uppercase font-bold text-center mt-4 transition-all duration-300 ${
+                        selectedCategory?.id === product.id
+                          ? "text-white text-md"
+                          : "text-[#2e2e72] group-hover:text-[#00a1cf]"
+                      }`}>
+                        {product.name}
+                      </h4>
+                    </SwiperSlide>
+                  ))
                 )
               }
             </Swiper>

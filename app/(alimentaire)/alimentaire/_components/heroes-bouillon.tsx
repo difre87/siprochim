@@ -121,7 +121,7 @@ const HeroesBouillon = () => {
           </div>
           <div className="w-full grid md:grid-cols-4 sm:grid-cols-1 sm:px-14 md:px-0 gap-10 py-10 ">
             <Link
-              href="#"
+              href="/alimentaire/produit/aromate-poulet-sachet-50g"
               className="transition-all duration-500 group hover:scale-110"
             >
               <motion.div
@@ -142,7 +142,7 @@ const HeroesBouillon = () => {
               </motion.div>
             </Link>
             <Link
-              href="#"
+              href="/alimentaire/produit/aromate-epices-sachet-50g"
               className="transition-all duration-500 group hover:scale-110"
             >
               <motion.div
@@ -163,7 +163,7 @@ const HeroesBouillon = () => {
               </motion.div>
             </Link>
             <Link
-              href="#"
+              href="/alimentaire/produit/aromate-crevette-sachet-50g"
               className="transition-all duration-500 group hover:scale-110"
             >
               <motion.div
@@ -184,7 +184,7 @@ const HeroesBouillon = () => {
               </motion.div>
             </Link>
             <Link
-              href="#"
+              href="/alimentaire/produit/aromate-tomate-sachet-50g"
               className="transition-all duration-500 group hover:scale-110"
             >
               <motion.div
