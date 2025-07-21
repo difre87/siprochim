@@ -50,7 +50,7 @@ const ProductSlugPage = async ({params}:ProductSlugPageProps) => {
               </div>
 
 
-                <div className="flex flex-col gap-10">
+                <div className="flex flex-col gap-10 ml-10">
                   <h2 className="text-[3rem] text-white uppercase font-bold leading-10">{product.name}</h2>
                   {/* <h2 className="text-[6rem] text-white uppercase font-bold">
                     Lorem <br />{" "}
