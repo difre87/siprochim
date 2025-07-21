@@ -31,8 +31,6 @@ const ProductSlugPage =  ({params}:ProductSlugPageProps) => {
           const data = await fetchProductBySlug(resolvedParams.slug);
           console.log("Produits chargés:", data);
           setProductSlug(data);
-          // Automatiquement sélectionner et charger les produits de la première catégorie
-
           console.log("Produits chargés:", productSlug);
 
         } catch (error) {

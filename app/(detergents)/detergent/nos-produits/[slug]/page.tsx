@@ -4,8 +4,8 @@ import Header from "@/components/header";
 import Image from "next/image";
 
 import Link from "next/link";
-import { Product, Category } from "@/lib/type";
-import { fetchProductBySlug, fetchCategoryBySlug } from "@/data/product";
+import { Product } from "@/lib/type";
+import { fetchProductBySlug } from "@/data/product";
 import { useEffect, useState } from "react";
 
 interface ProductSlugPageProps {
@@ -20,7 +20,7 @@ const ProductSlugPage =  ({params}:ProductSlugPageProps) => {
   //const productId = parseInt(resolvedParams.slug); // Convert the
   // Fetch the product data based on the ID
   const [productSlug, setProductSlug] = useState<Product[]>([]);
-  const [categoryData, setCategoryData] = useState<Category | null>(null);
+  //const [categoryData, setCategoryData] = useState<Category | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -35,9 +35,9 @@ const ProductSlugPage =  ({params}:ProductSlugPageProps) => {
           setProductSlug(data);
 
           // Charger les informations de la catégorie
-          const categoryInfo = await fetchCategoryBySlug(parseInt(resolvedParams.slug));
+          /* const categoryInfo = await fetchCategoryBySlug(parseInt(resolvedParams.slug));
           console.log("Catégorie chargée:", categoryInfo);
-          setCategoryData(categoryInfo);
+          setCategoryData(categoryInfo); */
 
         } catch (error) {
           console.error("Erreur lors du chargement des produits:", error);
