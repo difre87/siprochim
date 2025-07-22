@@ -12,7 +12,7 @@ const Heroes = () => {
         <Title label="Nos produits préférés" otherclass="text-center" />
         <div className="w-full grid md:grid-cols-4 sm:grid-cols-1 gap-x-10 sm:gap-y-5  py-20 sm:px-14 md:px-0">
           <Link
-            href="/alimentaire/produit/aromate-mayonnaise-bocal-450ml"
+            href="/alimentaire/nos-produits?category=aromate"
             className="transition-all duration-500 group hover:scale-110"
           >
             <motion.div
@@ -38,7 +38,7 @@ const Heroes = () => {
             </motion.div>
           </Link>
           <Link
-            href="/alimentaire/produit/mia-mayonnaise-450ml"
+            href="/alimentaire/nos-produits?category=mia"
             className="transition-all duration-500 group hover:scale-110"
           >
             <motion.div
@@ -62,7 +62,7 @@ const Heroes = () => {
             </motion.div>
           </Link>
           <Link
-            href="/alimentaire/produit/top-mayo-mayonnaise-250ml"
+            href="/alimentaire/nos-produits?category=top-mayo"
             className="transition-all duration-500 group hover:scale-110"
           >
             <motion.div
@@ -88,7 +88,7 @@ const Heroes = () => {
             </motion.div>
           </Link>
           <Link
-            href="/alimentaire/produit/aromate-mayo-25ml"
+            href="/alimentaire/nos-produits?category=aromate"
             className="transition-all duration-500 group hover:scale-110"
           >
             <motion.div

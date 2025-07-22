@@ -193,7 +193,7 @@ const HeroesAromate = () => {
               </div> */}
               <div className="w-full grid md:grid-cols-4 sm:grid-cols-1 sm:px-14 md:py-0 gap-10 py-20 ">
                 <Link
-                  href="#"
+                  href="/alimentaire/nos-produits/55"
                   className="transition-all duration-500 group hover:scale-110"
                 >
                   <motion.div
@@ -218,7 +218,7 @@ const HeroesAromate = () => {
                   </motion.div>
                 </Link>
                 <Link
-                  href="/alimentaire/produit/aromate-mayonnaise-squeeze-ail-350ml"
+                  href="/alimentaire/nos-produits/16"
                   className="transition-all duration-500 group hover:scale-110"
                 >
                   <motion.div
@@ -239,7 +239,7 @@ const HeroesAromate = () => {
                   </motion.div>
                 </Link>
                 <Link
-                  href="/alimentaire/produit/aromate-mayonnaise-sauce-barbecue-350ml-flacon"
+                  href="/alimentaire/nos-produits/16"
                   className="transition-all duration-500 group hover:scale-110"
                 >
                   <motion.div
@@ -260,7 +260,7 @@ const HeroesAromate = () => {
                   </motion.div>
                 </Link>
                 <Link
-                  href="/alimentaire/produit/aromate-mayonnaise-sauce-burger-350ml"
+                  href="/alimentaire/nos-produits/16"
                   className="transition-all duration-500 group hover:scale-110"
                 >
                   <motion.div

@@ -34,8 +34,8 @@ const Mayonnaise = () => {
                 </p>
                 <div className="w-full flex justify-end">
                   <Link
-                    href="/"
-                    className="bg-[#e30613] rounded-full md:py-3 sm:py-2 px-5 transition-all duration-500 text-white font-medium"
+                    href="/alimentaire/nos-produits?category=mia"
+                    className="bg-[#e30613] rounded-full md:py-3 sm:py-2 px-5 transition-all duration-500 text-white font-medium hover:bg-[#b8050f]"
                   >
                     En savoir plus
                   </Link>
@@ -60,6 +60,7 @@ const Mayonnaise = () => {
             />
           </div>
         </motion.div>
+
         <motion.div
           initial={{ transform: "translateX(100px)", opacity: 0 }}
           whileInView={{ transform: "translateX(0px)", opacity: 1 }}
@@ -104,8 +105,8 @@ const Mayonnaise = () => {
                 </p>
                 <div className="w-full flex justify-start">
                   <Link
-                    href="/"
-                    className="bg-[#e30613] rounded-full md:py-3 sm:py-2 px-5 transition-all duration-500 text-white font-medium"
+                    href="/alimentaire/nos-produits?category=top-mayo"
+                    className="bg-[#e30613] rounded-full md:py-3 sm:py-2 px-5 transition-all duration-500 text-white font-medium hover:bg-[#b8050f]"
                   >
                     En savoir plus
                   </Link>
@@ -115,6 +116,7 @@ const Mayonnaise = () => {
           </div>
         </motion.div>
       </div>
+
       <motion.div
         initial={{ opacity: 0, right: -200 }}
         whileInView={{ opacity: 1, right: -80 }}
@@ -129,6 +131,7 @@ const Mayonnaise = () => {
           className="absolute"
         />
       </motion.div>
+
       <div className="w-full grid md:grid-cols-2 sm:grid-cols-1 md:gap-x-32 sm:gap-10 mt-32">
         <motion.div
           initial={{ transform: "translateX(-100px)", opacity: 0 }}
@@ -149,7 +152,7 @@ const Mayonnaise = () => {
               <div className="flex flex-col gap-y-4">
                 <h1 className="text-white md:text-3xl sm:text-xl font-semibold text-right">
                   Mayonnaise
-                  <br /> Mia
+                  <br /> Santina
                 </h1>
                 <p className="text-white md:text-sm sm:text-[12px] text-right">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -157,8 +160,8 @@ const Mayonnaise = () => {
                 </p>
                 <div className="w-full flex justify-end">
                   <Link
-                    href="/"
-                    className="bg-[#e30613] rounded-full md:py-3 sm:py-2 px-5 transition-all duration-500 text-white font-medium"
+                    href="/alimentaire/nos-produits?category=santina"
+                    className="bg-[#e30613] rounded-full md:py-3 sm:py-2 px-5 transition-all duration-500 text-white font-medium hover:bg-[#b8050f]"
                   >
                     En savoir plus
                   </Link>
@@ -183,6 +186,7 @@ const Mayonnaise = () => {
             />
           </div>
         </motion.div>
+
         <motion.div
           initial={{ transform: "translateX(100px)", opacity: 0 }}
           whileInView={{ transform: "translateX(0px)", opacity: 1 }}
@@ -193,7 +197,7 @@ const Mayonnaise = () => {
             src={"/assets/alimentaire/mayonnaise/amerigo.png"}
             width={450}
             height={400}
-            alt="mayonnaise mia"
+            alt="mayonnaise amerigo"
             className="absolute -left-20 -top-10  md:block sm:hidden"
           />
           <div className="sm:block md:hidden">
@@ -213,7 +217,7 @@ const Mayonnaise = () => {
                   src={"/assets/alimentaire/mayonnaise/logo-amerigo.png"}
                   width={100}
                   height={100}
-                  alt="mayonnaise top mayo"
+                  alt="mayonnaise amerigo"
                 />
               </div>
               <div className="flex flex-col gap-y-4">
@@ -227,8 +231,8 @@ const Mayonnaise = () => {
                 </p>
                 <div className="w-full flex justify-start">
                   <Link
-                    href="/"
-                    className="bg-[#e30613] rounded-full md:py-3 sm:py-2 px-5 transition-all duration-500 text-white font-medium"
+                    href="/alimentaire/nos-produits?category=amerigo"
+                    className="bg-[#e30613] rounded-full md:py-3 sm:py-2 px-5 transition-all duration-500 text-white font-medium hover:bg-[#b8050f]"
                   >
                     En savoir plus
                   </Link>

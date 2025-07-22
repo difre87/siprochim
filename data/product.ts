@@ -84,3 +84,35 @@ export const fetchCategoryBySlug = async (id: number) => {
         return null;
     }
 }
+
+export const findCategoryById = async (id: number) => {
+    try {
+        const response = await fetch(
+            `${endpoint}categories/find/${id}` // Adjust the endpoint as needed
+        );
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        return data.data;
+    } catch (error) {
+        console.error("Error fetching category by ID:", error);
+        return null;
+    }
+}
+
+export const findSubCategoryById = async (id: number) => {
+    try {
+        const response = await fetch(
+            `${endpoint}subcategories/find/${id}` // Adjust the endpoint as needed
+        );
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        return data.data;
+    } catch (error) {
+        console.error("Error fetching subcategory by ID:", error);
+        return null;
+    }
+}

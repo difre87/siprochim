@@ -67,7 +67,7 @@ const NosProduits =  () => {
           setIsLoadingProducts(true);
           try {
             const products = await fetchProductByCategories(firstCategory.slug);
-            //console.log("Produits de la première catégorie:", products.length);
+            console.log("Produits de la première catégorie:", products);
             setSelectedProduct(products);
             //console.log(selectedProduct?.length)
           } catch (error) {
@@ -163,9 +163,9 @@ const NosProduits =  () => {
             <div className={`max-w-screen-xl m-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-16`}>
               {
 
-                selectedProduct && Array.isArray(selectedProduct) && selectedProduct.map((product) => (
+                selectedProduct && Array.isArray(selectedProduct) && selectedProduct.map((subproduct) => (
                   <div
-                    key={product.id}
+                    key={subproduct.id}
                     className="bg-white group h-[400px] rounded-lg flex flex-col justify-center items-center transition-all ease-in-out group-hover:scale-110"
                     style={{
                       background:
@@ -173,13 +173,13 @@ const NosProduits =  () => {
                     }}
                   >
                     <Link
-                      href={`/detergent/nos-produits/${product.id}`}
+                      href={`/detergent/nos-produits/${subproduct.slug}/${subproduct.id}`}
                       className="w-full h-full flex flex-col justify-center items-center transition-all duration-500 group hover:scale-110"
                     >
                       {
-                        product.image && (
+                        subproduct.image && (
                           <Image
-                            src={`https://esjc.org/siprochim/public/${product.image}`}
+                            src={`https://esjc.org/siprochim/public/${subproduct.image}`}
                             width={130}
                             height={130}
                             alt={""}
@@ -188,7 +188,7 @@ const NosProduits =  () => {
                         )
                       }
 
-                      <h4 className="font-bold text-xl text-[#2e2e72]">{product.name}</h4>
+                      <h4 className="font-bold text-xl text-[#2e2e72]">{subproduct.name}</h4>
                     </Link>
                   </div>
                 ))

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import Link from "next/link";
 import { Product } from "@/lib/type";
-import { fetchProductBySlug } from "@/data/product";
+import { fetchProductBySlug, findSubCategoryById } from "@/data/product";
 import { useEffect, useState } from "react";
 
 interface ProductSlugPageProps {
@@ -20,7 +20,8 @@ const ProductSlugPage =  ({params}:ProductSlugPageProps) => {
   //const productId = parseInt(resolvedParams.slug); // Convert the
   // Fetch the product data based on the ID
   const [productSlug, setProductSlug] = useState<Product[]>([]);
-  //const [categoryData, setCategoryData] = useState<Category | null>(null);
+  const [categoryData, setCategoryData] = useState<{ name: string } | null>(null);
+  const [subCategoryData, setSubCategoryData] = useState<{ name: string } | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -35,9 +36,10 @@ const ProductSlugPage =  ({params}:ProductSlugPageProps) => {
           setProductSlug(data);
 
           // Charger les informations de la catégorie
-          /* const categoryInfo = await fetchCategoryBySlug(parseInt(resolvedParams.slug));
-          console.log("Catégorie chargée:", categoryInfo);
-          setCategoryData(categoryInfo); */
+          const subCategoryInfo = await findSubCategoryById(parseInt(resolvedParams.slug));
+          console.log("Sous-catégorie chargée:", subCategoryInfo);
+          setCategoryData(subCategoryInfo["category"]);
+          setSubCategoryData(subCategoryInfo);
 
         } catch (error) {
           console.error("Erreur lors du chargement des produits:", error);
@@ -65,13 +67,14 @@ const ProductSlugPage =  ({params}:ProductSlugPageProps) => {
               Nos Produits
             </h2>
             {productSlug && (
-              <div className="flex items-center justify-center gap-3 pb-10">
-                <span className="text-xl text-gray-600">Catégorie :</span>
+              <div className="flex flex-col items-center justify-center gap-3 pb-10 mb-20">
+
                 <h3 className="text-2xl text-[#2e2e72] font-semibold bg-gradient-to-r from-[#00a1cf] to-[#2e2e72] bg-clip-text text-transparent">
-                  {typeof productSlug[0]?.product_subcategory_id === "string"
-                    ? parseInt(productSlug[0]?.product_subcategory_id)
-                    : productSlug[0]?.product_subcategory_id}
+                  {categoryData ? categoryData.name : "Chargement..."}
                 </h3>
+                <span className="text-xl text-[#2e2e72] font-semibold">
+                  {subCategoryData ? subCategoryData.name : "Chargement..."}
+                </span>
               </div>
             )}
           </div>

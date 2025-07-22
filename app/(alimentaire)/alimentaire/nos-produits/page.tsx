@@ -4,25 +4,28 @@ import Image from "next/image";
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
 import "swiper/css";
 import { Navigation } from "swiper/modules";
-import {  useEffect, useRef, useState } from "react";
-//import { ArrowLeft, ArrowRight } from "lucide-react";
+import { useEffect, useRef, useState, Suspense } from "react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import Footer from "@/components/footer";
 import { Category, Product } from "@/lib/type";
 import Link from "next/link";
 import { fetchCategory, fetchProductByCategories } from "@/data/product";
 import Loader from "@/components/Loader";
+import { useSearchParams } from "next/navigation";
 
-const NosProduits =  () => {
+// Composant interne qui utilise useSearchParams
+const NosProduitContent = () => {
   const swiperRef = useRef<SwiperRef>(null);
   const [productsData, setProductsData] = useState<Category[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isLoadingProducts, setIsLoadingProducts] = useState(true);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
+  const searchParams = useSearchParams();
 
-  const handleCategoryClick = async (slug:string, category: Category) => {
+  const handleCategoryClick = async (slug: string, category: Category) => {
     setIsLoadingProducts(true);
-    setSelectedCategory(category); // Mettre à jour la catégorie sélectionnée
+    setSelectedCategory(category);
 
     try {
       const products = await fetchProductByCategories(slug);
@@ -38,7 +41,7 @@ const NosProduits =  () => {
     }
   };
 
-  /* const clickNext = () => {
+  const clickNext = () => {
     if (swiperRef.current?.swiper) {
       swiperRef.current.swiper.slideNext();
     }
@@ -48,7 +51,7 @@ const NosProduits =  () => {
     if (swiperRef.current?.swiper) {
       swiperRef.current.swiper.slidePrev();
     }
-  }; */
+  };
 
   useEffect(() => {
     // Fonction pour charger les produits
@@ -58,19 +61,34 @@ const NosProduits =  () => {
         const data = await fetchCategory("alimentaire");
         console.log("Produits chargés:", data);
         setProductsData(data);
-        // Automatiquement sélectionner et charger les produits de la première catégorie
-        if (data && data.length > 0) {
-          const firstCategory = data[0];
-          setSelectedCategory(firstCategory); // Définir la première catégorie comme sélectionnée
 
-          // Charger les produits de la première catégorie
+        // Vérifier si il y a un paramètre de catégorie dans l'URL
+        const categoryParam = searchParams.get('category');
+
+        if (data && data.length > 0) {
+          let targetCategory = data[0]; // Par défaut, prendre la première catégorie
+
+          // Si il y a un paramètre category, chercher la catégorie correspondante
+          if (categoryParam) {
+            const foundCategory: Category | undefined = data.find((cat: Category) =>
+              cat.slug.toLowerCase() === categoryParam.toLowerCase() ||
+              cat.name.toLowerCase().includes(categoryParam.toLowerCase())
+            );
+            if (foundCategory) {
+              targetCategory = foundCategory;
+            }
+          }
+
+          setSelectedCategory(targetCategory);
+
+          // Charger les produits de la catégorie ciblée
           setIsLoadingProducts(true);
           try {
-            const products = await fetchProductByCategories(firstCategory.slug);
-            console.log("Produits de la première catégorie:", products);
+            const products = await fetchProductByCategories(targetCategory.slug);
+            console.log("Produits de la catégorie sélectionnée:", products);
             setSelectedProduct(products);
           } catch (error) {
-            console.error("Erreur lors du chargement des produits de la première catégorie:", error);
+            console.error("Erreur lors du chargement des produits de la catégorie:", error);
             setSelectedProduct(null);
           } finally {
             setIsLoadingProducts(false);
@@ -79,13 +97,13 @@ const NosProduits =  () => {
 
       } catch (error) {
         console.error("Erreur lors du chargement des produits:", error);
-      }finally {
+      } finally {
         setIsLoading(false);
       }
     };
 
     loadProducts();
-  }, []);
+  }, [searchParams]);
 
   return (
     <>
@@ -110,50 +128,47 @@ const NosProduits =  () => {
               modules={[Navigation]}
               slidesPerView={7}
               spaceBetween={50}
-              className="w-full h-full flex "
+              className="w-full h-full flex"
             >
-              {
-                isLoading ? (
-                  <Loader />
-                ) : (
-                  productsData.map((product) => (
-                    <SwiperSlide
-                      key={product.id}
-                      className={`flex flex-col gap-y-2 py-3 justify-center items-center cursor-pointer group transition-all duration-500 rounded-lg ${
-                        selectedCategory?.id === product.id
-                          ? "bg-[#008b36] shadow-xl transform scale-105"
-                          : "hover:bg-[#008b3620]"
-                      }`}
-                      onClick={() => handleCategoryClick(product.slug, product)}
-                    >
-                      {
-                        product.image && (
-                          <div className="flex justify-center items-center">
-                            <Image
-                            src={`https://esjc.org/siprochim/public/${product.image}`}
-                            width={100}
-                            height={100}
-                            alt={product.name}
-                            className={`drop-shadow-2xl object-contain text-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 `}
-                          />
-                          </div>
+              {isLoading ? (
+                <Loader />
+              ) : (
+                productsData.map((product) => (
+                  <SwiperSlide
+                    key={product.id}
+                    className={`flex flex-col gap-y-2 py-3 px-3 justify-center items-center cursor-pointer group transition-all duration-300 rounded-lg ${
+                      selectedCategory?.id === product.id
+                        ? "bg-[#008b36] shadow-xl transform scale-105"
+                        : "hover:bg-[#008b3620]"
+                    }`}
+                    onClick={() => handleCategoryClick(product.slug, product)}
+                  >
+                    {product.image && (
+                      <Image
+                        src={`https://esjc.org/siprochim/public/${product.image}`}
+                        width={100}
+                        height={100}
+                        alt={product.name}
+                        className={`drop-shadow-2xl object-contain transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 ${
+                          selectedCategory?.id === product.id
+                            ? " scale-110 filter brightness-110"
+                            : ""
+                        }`}
+                      />
+                    )}
 
-                        )
-                      }
-
-                      <h4 className={`uppercase font-bold text-center mt-4 transition-all duration-300 ${
-                        selectedCategory?.id === product.id
-                          ? "text-white text-lg"
-                          : "text-[#2e2e72] group-hover:text-[#008b36]"
-                      }`}>
-                        {product.name}
-                      </h4>
-                    </SwiperSlide>
-                  ))
-                )
-              }
+                    <h4 className={`uppercase font-bold text-center mt-4 transition-all duration-300 ${
+                      selectedCategory?.id === product.id
+                        ? "text-white text-lg"
+                        : "text-[#2e2e72] group-hover:text-[#008b36]"
+                    }`}>
+                      {product.name}
+                    </h4>
+                  </SwiperSlide>
+                ))
+              )}
             </Swiper>
-            {/* <div className="absolute flex gap-x-2 top-1/3 z-20 left-0 right-0">
+            <div className="absolute flex gap-x-2 top-1/3 z-20 left-0 right-0">
               <div
                 className="w-14 h-14 border-[4px] border-[#008b36] rounded-full flex justify-center items-center cursor-pointer transition-all duration-500 hover:scale-110 hover:bg-white hover:shadow-2xl group absolute -left-20"
                 onClick={clickPrev}
@@ -166,53 +181,55 @@ const NosProduits =  () => {
               >
                 <ArrowRight className="text-[#008b36] w-8 h-8 group-hover:text-black" />
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>
       <section className="w-full min-h-[500px] bg-white py-20">
-        {
-          isLoadingProducts ? (
-            <Loader />
-          ): (
-            <div className="max-w-screen-xl m-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-16">
-              {
-                selectedProduct && Array.isArray(selectedProduct) && selectedProduct.map((product) => (
-                  <div
-                    key={product.id}
-                    className="bg-white group h-[500px] rounded-lg flex flex-col justify-center items-center transition-all ease-in-out group-hover:scale-110"
-                    style={{
-                      background:
-                        "radial-gradient(circle at center, #28a054 0%, #008b36 100%)",
-                    }}
-                  >
-                    <Link
-                      href={`/alimentaire/nos-produits/${product.id}`}
-                      className="w-full h-full flex flex-col justify-center items-center transition-all duration-500 group hover:scale-110"
-                    >
-                      {
-                        product.image && (
-                          <Image
-                            src={`https://esjc.org/siprochim/public/${product.image}`}
-                            width={130}
-                            height={130}
-                            alt={""}
-                            className="drop-shadow-2xl"
-                        />
-                        )
-                      }
+        {isLoadingProducts ? (
+          <Loader />
+        ) : (
+          <div className="max-w-screen-xl m-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-16">
+            {selectedProduct && Array.isArray(selectedProduct) && selectedProduct.map((product) => (
+              <div
+                key={product.id}
+                className="bg-white group h-[500px] rounded-lg flex flex-col justify-center items-center transition-all ease-in-out group-hover:scale-110"
+                style={{
+                  background: "radial-gradient(circle at center, #28a054 0%, #008b36 100%)",
+                }}
+              >
+                <Link
+                  href={`/alimentaire/nos-produits/${product.id}`}
+                  className="w-full h-full flex flex-col justify-center items-center transition-all duration-500 group hover:scale-110"
+                >
+                  {product.image && (
+                    <Image
+                      src={`https://esjc.org/siprochim/public/${product.image}`}
+                      width={130}
+                      height={130}
+                      alt={""}
+                      className="drop-shadow-2xl"
+                    />
+                  )}
 
-                      <h4 className="text-white text-3xl font-bold">{product.name}</h4>
-                    </Link>
-                  </div>
-                ))
-              }
-            </div>
-          )
-        }
+                  <h4 className="text-white text-3xl font-bold">{product.name}</h4>
+                </Link>
+              </div>
+            ))}
+          </div>
+        )}
       </section>
-      <Footer className="!bg-[#008b36]"  />
+      <Footer className="!bg-[#008b36]" />
     </>
+  );
+};
+
+// Composant principal avec Suspense
+const NosProduits = () => {
+  return (
+    <Suspense fallback={<Loader />}>
+      <NosProduitContent />
+    </Suspense>
   );
 };
 
