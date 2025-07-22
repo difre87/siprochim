@@ -59,7 +59,7 @@ const ProductSlugPage = async ({params}:ProductSlugPageProps) => {
                       Ipsum
                     </span>
                   </h2> */}
-                  <div className="grid grid-cols-2 gap-4 ml-10">
+                  <div className="grid grid-cols-2 gap-4">
                     <Link
                       href={"#"}
                       className="px-2 h-10 font-bold transition-all ease-in-out duration-500 rounded-full flex justify-center items-center uppercase text-[#2e2e72] bg-white hover:bg-transparent hover:text-white hover:border-[2px]"
