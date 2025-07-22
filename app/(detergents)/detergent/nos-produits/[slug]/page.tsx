@@ -89,7 +89,7 @@ const ProductSlugPage =  ({params}:ProductSlugPageProps) => {
                 <div className="flex flex-col " key={item.id}>
                   <Link
                     href={`/detergent/produit/${item.slug}`}
-                    className="w-full h-full border border-[#00a1cf] flex flex-col justify-center items-center transition-all duration-500 group bg-white hover:bg-[#000a1cf] hover:scale-110 hover:shadow-2xl rounded-3xl overflow-hidden"
+                    className="w-full h-full border border-[#00a1cf] flex flex-col justify-center items-center transition-all duration-500 group bg-white hover:bg-[#00a1cf] hover:scale-110 hover:shadow-2xl rounded-3xl overflow-hidden"
                   >
                     <div className="w-full h-[450px] flex flex-col justify-center items-center relative  transition-all duration-500 hover:bg-hover-aliment  rounded-lg overflow-hidden">
                       <Image

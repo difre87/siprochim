@@ -24,7 +24,7 @@ const Header = () => {
           width={1300}
           height={500}
           alt="detergents"
-          className="absolute bottom-[12%] right-5"
+          className="absolute bottom-[8%] right-5"
         />
         <div className="w-full max-w-screen-xl mx-auto">
           <div className="w-[600px] absolute top-[25%] flex flex-col gap-y-4">
