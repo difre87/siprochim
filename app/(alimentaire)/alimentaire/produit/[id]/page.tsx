@@ -45,7 +45,7 @@ const ProductSlugPage = async ({params}:ProductSlugPageProps) => {
                   src={`https://esjc.org/siprochim/public/${product.image}`}
                   alt={product.name}
                   fill
-                  className="drop-shadow-2xl object-contain"
+                  className="drop-shadow-2xl object-contain transition-all duration-300 ease-in-out hover:scale-110"
                 />
               </div>
 
