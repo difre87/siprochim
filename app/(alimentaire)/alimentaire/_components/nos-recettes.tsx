@@ -44,13 +44,13 @@ const NosRecettes = () => {
             </div>
             <div className="md:col-span-2 flex flex-col justify-between">
               <div className="w-full flex  items-center md:px-10 sm:px-0">
-                <p className="text-justify text-white font-regular uppercase">
+                {/* <p className="text-justify text-white font-regular uppercase">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Doloribus maiores officia mollitia voluptas minus rem
                   necessitatibus, distinctio totam illo! Reprehenderit
                   recusandae quos unde est impedit iusto necessitatibus laborum
                   veniam atque!
-                </p>
+                </p> */}
               </div>
               <Swiper
                 ref={swiperRef}

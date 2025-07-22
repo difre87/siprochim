@@ -34,30 +34,30 @@ const HeroesForm = () => {
             <h4 className="uppercase text-white md:text-6xl sm:text-4xl font-bold">Courant!</h4>
           </h1>
 
-          <p className="md:text-lg sm:text-md uppercase text-white text-justify">
+          {/* <p className="md:text-lg sm:text-md uppercase text-white text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
             nisi, est minus modi excepturi iure obcaecati placeat, recusandae
             esse beatae sit neque dolorum vel facilis! Blanditiis esse
             asperiores ad officiis!
-          </p>
+          </p> */}
           <div className="w-full flex flex-col">
             <div className="w-full grid md:grid-cols-2 sm:grid-cols-1 gap-5 mb-5">
               <div className="relative">
                 <Label className="text-white uppercase text-lg pl-2 pb-2">
-                  Lorem ipsum
+                  Nom
                 </Label>
                 <Input className="bg-white h-14 border-none rounded-[24px]" />
               </div>
               <div className="relative">
                 <Label className="text-white uppercase text-lg pl-2 pb-2">
-                  Lorem ipsum
+                  Prénoms
                 </Label>
                 <Input className="bg-white h-14 border-none rounded-[24px]" />
               </div>
             </div>
             <div className="w-full">
               <Label className="text-white uppercase text-lg pl-2 pb-2">
-                Lorem ipsum
+                Objet
               </Label>
               <Input className="bg-white h-14 border-none rounded-[24px]" />
             </div>

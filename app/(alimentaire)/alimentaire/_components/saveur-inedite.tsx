@@ -38,12 +38,12 @@ const SaveurInedite = () => {
               <h4 className="text-white md:text-6xl sm:text-4xl uppercase font-bold">
                 Inédites
               </h4>
-              <p className="text-white md:text-md sm:text-sm text-justify mt-5">
+              {/* <p className="text-white md:text-md sm:text-sm text-justify mt-5">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Dignissimos ea sint cumque perspiciatis voluptatem quaerat nobis
                 porro, doloribus possimus debitis voluptatum corrupti, tempora
                 rerum nesciunt ex enim eveniet, cum exercitationem!
-              </p>
+              </p> */}
             </div>
             <div className="w-full h-[300px] relative sm:block md:hidden lg:hidden 2xl:hidden">
               <Image
