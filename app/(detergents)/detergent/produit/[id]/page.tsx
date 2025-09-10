@@ -32,6 +32,11 @@ const ProductSlugPage = async ({params}:ProductSlugPageProps) => {
   } catch (error) {
     console.error("Erreur lors du chargement du produit:", error);
   }
+  const stripHtml = (html?: string) => {
+    if (!html) return "";
+    // Convert <br> to new line, then remove any other tags
+    return html.replace(/<br\s*\/?>/gi, "\n").replace(/<[^>]+>/g, "");
+  };
   return (
     <>
       <Header type="detergent" className="bg-[#2e2e72]" isPage />
@@ -74,10 +79,7 @@ const ProductSlugPage = async ({params}:ProductSlugPageProps) => {
                     </Link>
                   </div>
                   <p className="text-white uppercase text-justify">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam
-                    aperiam a unde. Iste, atque harum dolor possimus reiciendis
-                    deleniti mollitia ipsum optio illo, quaerat molestias
-                    consectetur inventore nulla fugiat nostrum.
+                    {stripHtml(product.description)}
                   </p>
                 </div>
               </div>
