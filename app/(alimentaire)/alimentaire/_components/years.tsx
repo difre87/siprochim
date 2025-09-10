@@ -3,10 +3,10 @@ import Image from "next/image";
 
 const Years = () => {
   return (
-    <section className="w-full h-screen sm:py-20 md:py-0 sm:flex sm:flex-col bg-[url('/assets/alimentaire/years/planche.png')] bg-cover bg-center bg-no-repeat relative z-10">
+    <section className="w-full h-screen sm:py-20 md:py-0 sm:flex sm:flex-col bg-[url('/assets/alimentaire/years/news/planche.webp')] bg-cover bg-center bg-no-repeat relative z-10">
       <div className="h-full relative w-[1100px] mx-auto flex justify-center items-center -mt-10">
         <Image
-          src="/assets/alimentaire/years/produit.png"
+          src="/assets/alimentaire/years/news/produits.webp"
           fill
           objectFit="contain"
           alt=""

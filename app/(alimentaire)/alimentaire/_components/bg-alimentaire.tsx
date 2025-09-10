@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const BgAlimentaire = () => {
   return (
-    <section className="w-full md:min-h-screen sm:bg-[url('/assets/alimentaire/bg-alimentaire.jpg')] md:bg-[url('/assets/alimentaire/bg-alimentaire.jpg')]  bg-cover bg-center bg-no-repeat relative sm:h-[300px] ">
-      <div className="sm:hidden md:block absolute bottom-0 left-0 right-0 h-80 bg-[url('/assets/alimentaire/home-planche.png')] bg-center bg-cover">
+    <section className="w-full md:min-h-screen sm:bg-[url('/assets/alimentaire/home/news/tournesol.webp')] md:bg-[url('/assets/alimentaire/home/news/tournesol.webp')]  bg-cover bg-center bg-no-repeat relative sm:h-[300px] ">
+      <div className="sm:hidden md:block absolute bottom-0 left-0 right-0 h-80 bg-[url('/assets/alimentaire/home/news/SUPPORT.webp')] bg-center bg-cover">
         <div className="w-full  h-[400px]  flex justify-between absolute bottom-58 bottom-64">
           <div className="flex items-end justify-end h-full">
             <motion.div
@@ -19,7 +19,7 @@ const BgAlimentaire = () => {
               className="w-[250px] h-[400px] relative"
             >
               <Image
-                src="/assets/alimentaire/home/new/1.png"
+                src="/assets/alimentaire/home/news/AROMATE_Huile_de_Tournesol 3L.webp"
                 fill
                 alt="SIPROCHIM"
                 objectFit="cover"
@@ -37,7 +37,7 @@ const BgAlimentaire = () => {
               className="w-[200px] h-[320px] relative -ml-16"
             >
               <Image
-                src="/assets/alimentaire/home/new/2.png"
+                src="/assets/alimentaire/home/news/AROMATE_MayonnaiseSauce_Burger_350ml NLOGO.webp"
                 fill
                 alt="SIPROCHIM"
                 objectFit="cover"
@@ -54,7 +54,7 @@ const BgAlimentaire = () => {
               className="w-[200px] h-[320px] relative -ml-16"
             >
               <Image
-                src="/assets/alimentaire/home/new/3.png"
+                src="/assets/alimentaire/home/news/AROMATE_Mayonnaise_Sauce_Barbecue_350ml NLOGO.webp"
                 fill
                 alt="SIPROCHIM"
                 objectFit="cover"
@@ -73,7 +73,7 @@ const BgAlimentaire = () => {
               className="w-[200px] h-[400px] relative"
             >
               <Image
-                src="/assets/alimentaire/home/new/6.png"
+                src="/assets/alimentaire/home/news/AROMATE_Vinaigre_Blanc_0.9L.webp"
                 fill
                 alt="SIPROCHIM"
                 objectFit="cover"
@@ -91,7 +91,7 @@ const BgAlimentaire = () => {
               className="w-[200px] h-[320px] relative  -mr-16"
             >
               <Image
-                src="/assets/alimentaire/home/new/5.png"
+                src="/assets/alimentaire/home/news/AROMATE_Mayonnaise_Squeeze_Poivre_350ml.webp"
                 fill
                 alt="SIPROCHIM"
                 objectFit="cover"
@@ -108,7 +108,7 @@ const BgAlimentaire = () => {
               className="w-[200px] h-[320px] relative -mr-16"
             >
               <Image
-                src="/assets/alimentaire/home/new/4.png"
+                src="/assets/alimentaire/home/news/AROMATE_Mayonnaise_Squeeze_Olive_350ml.webp"
                 fill
                 alt="SIPROCHIM"
                 objectFit="cover"
@@ -125,10 +125,10 @@ const BgAlimentaire = () => {
               ease: "linear",
               duration: 1.5,
             }}
-            className="w-[200px] h-[320px] relative"
+            className="w-[200px] h-[360px] relative"
           >
             <Image
-              src="/assets/alimentaire/home/new/7.png"
+              src="/assets/alimentaire/home/news/Rectangle_1.webp"
               fill
               alt="SIPROCHIM"
               objectFit="cover"
@@ -146,7 +146,7 @@ const BgAlimentaire = () => {
             className="w-[200px] h-[320px] relative"
           >
             <Image
-              src="/assets/alimentaire/home/new/8.png"
+              src="/assets/alimentaire/home/news/Rectangle_7 copie.webp"
               fill
               alt="SIPROCHIM"
               objectFit="cover"
@@ -160,10 +160,10 @@ const BgAlimentaire = () => {
               ease: "linear",
               duration: 1.5,
             }}
-            className="w-[200px] h-[320px] relative"
+            className="w-[200px] h-[360px] relative"
           >
             <Image
-              src="/assets/alimentaire/home/new/9.png"
+              src="/assets/alimentaire/home/news/Rectangle_2.webp"
               fill
               alt="SIPROCHIM"
               objectFit="cover"
@@ -182,7 +182,7 @@ const BgAlimentaire = () => {
             className="w-[200px] h-[200px] relative"
           >
             <Image
-              src="/assets/alimentaire/home/new/10.png"
+              src="/assets/alimentaire/home/news/AROMATE_Poulet-Sachet-75g_nvo.webp"
               fill
               alt="SIPROCHIM"
               objectFit="cover"
@@ -200,7 +200,7 @@ const BgAlimentaire = () => {
             className="w-[200px] h-[200px] relative"
           >
             <Image
-              src="/assets/alimentaire/home/new/11.png"
+              src="/assets/alimentaire/home/news/AROMATE_Tomate-Sachet-75g_nvo.webp"
               fill
               alt="SIPROCHIM"
               objectFit="cover"
@@ -217,7 +217,7 @@ const BgAlimentaire = () => {
             className="w-[300px] h-[100px] relative"
           >
             <Image
-              src="/assets/alimentaire/home/new/14.png"
+              src="/assets/alimentaire/home/news/AROMATE-Tomate_Stick-10g.webp"
               fill
               alt="SIPROCHIM"
               objectFit="cover"
@@ -234,7 +234,7 @@ const BgAlimentaire = () => {
             className="w-[200px] h-[200px] relative"
           >
             <Image
-              src="/assets/alimentaire/home/new/12.png"
+              src="/assets/alimentaire/home/news/AROMATE_Crevette-Sachet-75g_nvo.webp"
               fill
               alt="SIPROCHIM"
               objectFit="cover"
@@ -252,7 +252,7 @@ const BgAlimentaire = () => {
             className="w-[200px] h-[200px] relative"
           >
             <Image
-              src="/assets/alimentaire/home/new/13.png"
+              src="/assets/alimentaire/home/news/AROMATE_Piment-Sachet-75g_nvo.webp"
               fill
               alt="SIPROCHIM"
               objectFit="cover"

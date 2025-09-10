@@ -6,13 +6,13 @@ interface YearsProps {
 
 const Years = ({ page = "alimentaire" }: YearsProps) => {
   return (
-    <section className="w-full h-screen sm:py-20 md:py-0  sm:flex sm:flex-col bg-[url('/assets/planche.png')] bg-right-[100px] bg-cover  bg-no-repeat relative z-40">
-      <div className="h-full w-[1100px] mx-auto relative  flex justify-center items-center mt-20">
+    <section className="w-full h-screen sm:py-20 md:py-0 sm:flex sm:flex-col bg-[url('/assets/alimentaire/years/news/planche.webp')] bg-cover bg-center bg-no-repeat relative z-10">
+      <div className="h-full w-[1300px] mx-auto relative  flex justify-center items-center mt-20">
         <Image
           src={`${
             page == "alimentaire"
               ? "/assets/alimentaire/years/produit.png"
-              : "/assets/detergent/year.png"
+              : "/assets/detergent/year_detergent.webp"
           }`}
           fill
           objectFit="contain"

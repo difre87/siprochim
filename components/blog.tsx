@@ -3,12 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 import Testimonies from "./testimonies";
 
-const Blog = () => {
+interface BlogProps {
+  page?: string;
+}
+
+const Blog = ({ page }: BlogProps) => {
   return (
-    <section className="w-full min-h-screen bg-[#ffb81c] ">
+    <section className={`w-full min-h-screen  ${page == "alimentaire" ? "bg-[#ffb81c]" : "bg-white  -mt-52"} `}>
       <div className="w-full min-h-[500px] bg-[#40409c] round  relative pt-16 pb-20 sm:px-10 md:px-0">
         <div className="w-full max-w-screen-xl mx-auto">
-          <div className="w-full py-20 flex flex-col gap-y-8">
+          <div className="w-full py-40 flex flex-col gap-y-8">
             <span className="text-white font-semibold">Blog</span>
             <h1 className="text-white text-5xl font-bold">
               Actualités de l&apos;entreprise

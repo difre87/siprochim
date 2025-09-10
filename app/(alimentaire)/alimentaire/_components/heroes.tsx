@@ -123,7 +123,7 @@ const Heroes = () => {
           className="w-full"
         >
           <Image
-            src="/assets/woman-eat-burger.png"
+            src="/assets/woman-eat-burger.webp"
             width={1200}
             height={1500}
             alt="woman eat"

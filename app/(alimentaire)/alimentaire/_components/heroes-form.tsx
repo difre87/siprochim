@@ -11,7 +11,7 @@ const HeroesForm = () => {
     <section className="w-full h-screen  bg-[#ffb81c] round md:-mt-40 sm:-mt-32 sm:px-10 md:px-0 sm:py-20 md:py-0 mt-40  relative z-10">
       <motion.div className="md:w-[600px] lg:w-[600px] lg:h-[700px] xl:w-[900px] xl:h-[800px] 2xl:w-[900px] 2xl:h-[1000px]  absolute -left-56 2xl:-left-56 2xl:-top-20 z-20">
         <Image
-          src="/assets/planche-de-poulet.png"
+          src="/assets/planche-de-poulet.webp"
           fill
           objectFit="contain"
           alt="sipro-chim"
@@ -42,24 +42,34 @@ const HeroesForm = () => {
           </p> */}
           <div className="w-full flex flex-col">
             <div className="w-full grid md:grid-cols-2 sm:grid-cols-1 gap-5 mb-5">
-              <div className="relative">
+              <div className="relative flex flex-col">
                 <Label className="text-white uppercase text-lg pl-2 pb-2">
                   Nom
                 </Label>
                 <Input className="bg-white h-14 border-none rounded-[24px]" />
               </div>
-              <div className="relative">
+              <div className="relative flex flex-col">
                 <Label className="text-white uppercase text-lg pl-2 pb-2">
                   Prénoms
                 </Label>
-                <Input className="bg-white h-14 border-none rounded-[24px]" />
+                <Input className="bg-white h-14 border-none rounded-[24px] outline-0" />
               </div>
             </div>
-            <div className="w-full">
+            <div className="w-full flex flex-col">
               <Label className="text-white uppercase text-lg pl-2 pb-2">
                 Objet
               </Label>
-              <Input className="bg-white h-14 border-none rounded-[24px]" />
+              <Input className="bg-white h-14 border-none rounded-[24px] outline-0" />
+            </div>
+            <div className="w-full flex flex-col mt-5 mb-5">
+              <Label className="text-white uppercase text-lg pl-2 pb-2">
+                Service concerné
+              </Label>
+              <select name="service" id="service" className="bg-white h-14 border-none rounded-[24px] px-3 outline-0">
+                <option value="rh">Ressources Humaines</option>
+                <option value="it">Informatique</option>
+                <option value="marketing">Marketing</option>
+              </select>
             </div>
           </div>
           <div className="flex">

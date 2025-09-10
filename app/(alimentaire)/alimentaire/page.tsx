@@ -30,7 +30,7 @@ const AlimentairePage = () => {
       <Years />
       {/* <Other /> */}
       <HeroesForm />
-      <Blog />
+      <Blog page="alimentaire" />
       {/* <Faq page={"alimentaire"} /> */}
       <Footer />
     </>

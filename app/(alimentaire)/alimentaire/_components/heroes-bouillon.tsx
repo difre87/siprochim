@@ -132,8 +132,8 @@ const HeroesBouillon = () => {
               >
                 <div className="w-full h-full flex flex-col justify-center items-center">
                   <Image
-                    src="/assets/alimentaire/produits/poulet.png"
-                    width={230}
+                    src="/assets/alimentaire/produits/news/AROMATE_Poulet-Sachet-75g_nvo.webp"
+                    width={300}
                     height={250}
                     alt="siprochim"
                     className="group-hover:scale-125 transition-all duration-500"
@@ -174,8 +174,8 @@ const HeroesBouillon = () => {
               >
                 <div className="w-full h-full flex flex-col justify-center items-center">
                   <Image
-                    src="/assets/alimentaire/produits/crevette.png"
-                    width={250}
+                    src="/assets/alimentaire/produits/news/AROMATE_Crevette-Sachet-75g_nvo.webp"
+                    width={300}
                     height={250}
                     alt="siprochim"
                     className="group-hover:scale-125 transition-all duration-500"
@@ -195,8 +195,8 @@ const HeroesBouillon = () => {
               >
                 <div className="w-full h-full flex flex-col justify-center items-center">
                   <Image
-                    src="/assets/alimentaire/produits/tomate.png"
-                    width={200}
+                    src="/assets/alimentaire/produits/news/AROMATE_Tomate-Sachet-75g_nvo.webp"
+                    width={300}
                     height={250}
                     alt="siprochim"
                     className="group-hover:scale-125 transition-all duration-500"

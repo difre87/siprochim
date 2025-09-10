@@ -8,7 +8,7 @@ const Product = () => {
         <div className="w-full grid grid-cols-3 gap-x-8">
           <div className="bg-[#313076] rounded-[12px] flex flex-col items-center justify-between p-10 h-96 gap-y-5 group">
             <Image
-              src="/assets/detergent/pour-la-maison.png"
+              src="/assets/detergent/pour_la_maison.webp"
               width={350}
               height={300}
               alt="detergents"
@@ -30,7 +30,7 @@ const Product = () => {
           </div>
           <div className="bg-[#c83d38] rounded-[12px] flex flex-col items-center justify-between p-10 h-96 gap-y-5 group">
             <Image
-              src="/assets/detergent/pour-la-vaiselle.png"
+              src="/assets/detergent/pour_la_vaiselle.webp"
               width={450}
               height={300}
               alt="detergents"
@@ -55,7 +55,7 @@ const Product = () => {
           </div>
           <div className="bg-[#2ba3da] rounded-[12px] flex flex-col items-center justify-between p-10 h-96 gap-y-5 group">
             <Image
-              src="/assets/detergent/pour-le-linge.png"
+              src="/assets/detergent/pour_le_linge.webp"
               width={300}
               height={300}
               alt="detergents"

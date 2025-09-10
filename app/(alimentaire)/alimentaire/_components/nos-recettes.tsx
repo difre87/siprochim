@@ -35,7 +35,7 @@ const NosRecettes = () => {
               </div>
 
               <Image
-                src="/assets/alimentaire/recettes/chef.png"
+                src="/assets/alimentaire/recettes/news/cuisiniere.webp"
                 width={600}
                 height={700}
                 alt="recettes"
@@ -63,7 +63,7 @@ const NosRecettes = () => {
                 <SwiperSlide className="overflow-hidden rounded-[24px] relative">
                   <Link href="#">
                     <Image
-                      src="/assets/alimentaire/recettes/menu-1.png"
+                      src="/assets/alimentaire/recettes/news/1.webp"
                       width={400}
                       height={400}
                       alt="recette au poulets"
@@ -74,7 +74,7 @@ const NosRecettes = () => {
                 <SwiperSlide className="overflow-hidden rounded-[24px]">
                   <Link href="#">
                     <Image
-                      src="/assets/alimentaire/recettes/menu-2.png"
+                      src="/assets/alimentaire/recettes/news/2.webp"
                       width={400}
                       height={400}
                       alt="recette au poulets"
@@ -85,7 +85,7 @@ const NosRecettes = () => {
                 <SwiperSlide className="overflow-hidden rounded-[24px]">
                   <Link href="#">
                     <Image
-                      src="/assets/alimentaire/recettes/recette-3.jpg"
+                      src="/assets/alimentaire/recettes/news/3.webp"
                       width={400}
                       height={400}
                       alt="recette au poulets"
@@ -96,7 +96,7 @@ const NosRecettes = () => {
                 <SwiperSlide className="overflow-hidden rounded-[24px]">
                   <Link href="#">
                     <Image
-                      src="/assets/alimentaire/recettes/recette-4.jpg"
+                      src="/assets/alimentaire/recettes/news/4.webp"
                       width={400}
                       height={400}
                       alt="recette au poulets"

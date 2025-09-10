@@ -9,8 +9,8 @@ const Header = () => {
   return (
     <section className="w-full relative bg-detergent z-40">
       <Image
-        src="/assets/detergent/cloud.png"
-        className="w-full h-[800px] absolute left-0 right-0 -bottom-16 "
+        src="/assets/detergent/cloud.webp"
+        className="w-full h-full absolute left-0 right-0 -bottom-0 "
         width={1000}
         height={500}
         alt="cloud"
@@ -20,11 +20,11 @@ const Header = () => {
        <ThreeBubbles />
         <Nav />
         <Image
-          src="/assets/detergent/profil-detergent.png"
-          width={1300}
+          src="/assets/detergent/profil_detergent.webp"
+          width={1200}
           height={500}
           alt="detergents"
-          className="absolute bottom-[8%] right-5"
+          className="absolute bottom-[1%] right-5"
         />
         <div className="w-full max-w-screen-xl mx-auto">
           <div className="w-[600px] absolute top-[25%] flex flex-col gap-y-4">

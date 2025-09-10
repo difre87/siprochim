@@ -11,13 +11,13 @@ const Mayonnaise = () => {
           initial={{ transform: "translateX(-100px)", opacity: 0 }}
           whileInView={{ transform: "translateX(0px)", opacity: 1 }}
           transition={{ type: "spring", ease: "linear", duration: 2 }}
-          className="md:min-h-[450px] sm:h-[300px] bg-[url('/assets/alimentaire/mayonnaise/planche-1.png')] bg-cover bg-center bg-no-repeat md:rounded-r-[100px] flex items-center justify-center relative"
+          className="md:min-h-[450px] sm:h-[300px] bg-[url('/assets/alimentaire/mayonnaise/news/planche-1.webp')] bg-cover bg-center bg-no-repeat md:rounded-r-[100px] flex items-center justify-center relative"
         >
           <div className="w-full grid grid-cols-2">
             <div className="flex flex-col h-full gap-y-4">
               <div className="flex justify-end w-full">
                 <Image
-                  src={"/assets/alimentaire/mayonnaise/logo-mia.png"}
+                  src={"/assets/alimentaire/mayonnaise/news/logo_mia.webp"}
                   width={100}
                   height={100}
                   alt="mayonnaise mia"
@@ -44,7 +44,7 @@ const Mayonnaise = () => {
             </div>
             <div className="sm:block md:hidden">
               <Image
-                src={"/assets/alimentaire/mayonnaise/mia.png"}
+                src={"/assets/alimentaire/mayonnaise/news/mia.webp"}
                 width={200}
                 height={400}
                 alt="mayonnaise mia"
@@ -52,7 +52,7 @@ const Mayonnaise = () => {
               />
             </div>
             <Image
-              src={"/assets/alimentaire/mayonnaise/mia.png"}
+              src={"/assets/alimentaire/mayonnaise/news/mia.webp"}
               width={400}
               height={400}
               alt="mayonnaise mia"
@@ -65,10 +65,10 @@ const Mayonnaise = () => {
           initial={{ transform: "translateX(100px)", opacity: 0 }}
           whileInView={{ transform: "translateX(0px)", opacity: 1 }}
           transition={{ type: "spring", ease: "linear", duration: 2.5 }}
-          className="md:min-h-[450px] z-10 sm:h-[300px] bg-[url('/assets/alimentaire/mayonnaise/planche-2.png')] bg-cover bg-center bg-no-repeat md:rounded-l-[100px]  flex items-center justify-center relative"
+          className="md:min-h-[450px] z-10 sm:h-[300px] bg-[url('/assets/alimentaire/mayonnaise/news/planche-2.webp')] bg-cover bg-center bg-no-repeat md:rounded-l-[100px]  flex items-center justify-center relative"
         >
           <Image
-            src={"/assets/alimentaire/mayonnaise/top-mayo.png"}
+            src={"/assets/alimentaire/mayonnaise/news/top_mayo.webp"}
             width={400}
             height={400}
             alt="mayonnaise mia"
@@ -76,7 +76,7 @@ const Mayonnaise = () => {
           />
           <div className="sm:block md:hidden">
             <Image
-              src={"/assets/alimentaire/mayonnaise/top-mayo.png"}
+              src={"/assets/alimentaire/mayonnaise/news/top_mayo.webp"}
               width={200}
               height={400}
               alt="mayonnaise mia"
@@ -88,7 +88,7 @@ const Mayonnaise = () => {
             <div className="flex flex-col h-full gap-y-4">
               <div className="flex justify-start w-full">
                 <Image
-                  src={"/assets/alimentaire/mayonnaise/logo-top-mayo.png"}
+                  src={"/assets/alimentaire/mayonnaise/news/logo_top_mayo.webp"}
                   width={100}
                   height={100}
                   alt="mayonnaise top mayo"
@@ -124,7 +124,7 @@ const Mayonnaise = () => {
         className="z-10 absolute w-[700px] top-[35%]"
       >
         <Image
-          src="/assets/cuillere-de-mayonnaise.png"
+          src="/assets/alimentaire/mayonnaise/news/cuillere-de-mayonnaise.webp"
           width={700}
           height={300}
           alt="mayonnaise"
@@ -137,13 +137,13 @@ const Mayonnaise = () => {
           initial={{ transform: "translateX(-100px)", opacity: 0 }}
           whileInView={{ transform: "translateX(0px)", opacity: 1 }}
           transition={{ type: "spring", ease: "linear", duration: 2 }}
-          className="md:min-h-[450px] sm:h-[300px] bg-[url('/assets/alimentaire/mayonnaise/planche-3.png')] bg-cover bg-center bg-no-repeat md:rounded-r-[100px]  flex items-center justify-center relative"
+          className="md:min-h-[450px] sm:h-[300px] bg-[url('/assets/alimentaire/mayonnaise/news/planche-4.webp')] bg-cover bg-center bg-no-repeat md:rounded-r-[100px]  flex items-center justify-center relative"
         >
           <div className="w-full grid grid-cols-2">
             <div className="flex flex-col h-full gap-y-4">
               <div className="flex justify-end w-full">
                 <Image
-                  src={"/assets/alimentaire/mayonnaise/logo-santina.png"}
+                  src={"/assets/alimentaire/mayonnaise/news/logo_aromate.webp"}
                   width={100}
                   height={100}
                   alt="mayonnaise santina"
@@ -170,7 +170,7 @@ const Mayonnaise = () => {
             </div>
             <div className="sm:block md:hidden">
               <Image
-                src={"/assets/alimentaire/mayonnaise/santina.png"}
+                src={"/assets/alimentaire/mayonnaise/news/aromate.webp"}
                 width={200}
                 height={400}
                 alt="mayonnaise santina"
@@ -178,7 +178,7 @@ const Mayonnaise = () => {
               />
             </div>
             <Image
-              src={"/assets/alimentaire/mayonnaise/santina.png"}
+              src={"/assets/alimentaire/mayonnaise/news/aromate.webp"}
               width={400}
               height={400}
               alt="mayonnaise santina"
@@ -191,18 +191,18 @@ const Mayonnaise = () => {
           initial={{ transform: "translateX(100px)", opacity: 0 }}
           whileInView={{ transform: "translateX(0px)", opacity: 1 }}
           transition={{ type: "spring", ease: "linear", duration: 2.5 }}
-          className="md:min-h-[450px] sm:h-[300px] bg-[url('/assets/alimentaire/mayonnaise/planche-4.png')] bg-cover bg-center bg-no-repeat md:rounded-l-[100px] flex items-center justify-center relative"
+          className="md:min-h-[450px] sm:h-[300px] bg-[url('/assets/alimentaire/mayonnaise/news/planche-3.webp')] bg-cover bg-center bg-no-repeat md:rounded-l-[100px] flex items-center justify-center relative"
         >
           <Image
-            src={"/assets/alimentaire/mayonnaise/amerigo.png"}
-            width={450}
+            src={"/assets/alimentaire/mayonnaise/news/amerigo.webp"}
+            width={300}
             height={400}
             alt="mayonnaise amerigo"
             className="absolute -left-20 -top-10  md:block sm:hidden"
           />
           <div className="sm:block md:hidden">
             <Image
-              src={"/assets/alimentaire/mayonnaise/amerigo.png"}
+              src={"/assets/alimentaire/mayonnaise/news/amerigo.webp"}
               width={200}
               height={400}
               alt="mayonnaise amerigo"
@@ -214,7 +214,7 @@ const Mayonnaise = () => {
             <div className="flex flex-col h-full gap-y-4">
               <div className="flex justify-start w-full">
                 <Image
-                  src={"/assets/alimentaire/mayonnaise/logo-amerigo.png"}
+                  src={"/assets/alimentaire/mayonnaise/news/logo_amerigo.webp"}
                   width={100}
                   height={100}
                   alt="mayonnaise amerigo"

@@ -5,8 +5,8 @@ import { QuoteIcon } from "lucide-react";
 const Heroes = () => {
   return (
     <section className="w-full relative py-20 flex justify-between px-20">
-      <div className="relative w-[500px]">
-          <Image
+      <div className="relative w-[600px]">
+        <Image
           src="/assets/detergent/vague.png"
           width={1000}
           height={500}

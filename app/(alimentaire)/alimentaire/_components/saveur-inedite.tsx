@@ -6,7 +6,7 @@ const SaveurInedite = () => {
   return (
     <section className="w-full h-screen  relative">
        <Image
-          src="/assets/alimentaire/saveurs/tranche-de-tomate.png"
+          src="/assets/alimentaire/saveurs/news/tranche-de-tomate.webp"
           width={200}
           height={500}
           alt="siprochim"
@@ -15,7 +15,7 @@ const SaveurInedite = () => {
       <div className="w-full h-full round-b bg-[#436d23]">
 
         <Image
-          src="/assets/alimentaire/saveurs/oignons.png"
+          src="/assets/alimentaire/saveurs/news/oignons.webp"
           width={550}
           height={500}
           alt="siprochim"
@@ -65,7 +65,7 @@ const SaveurInedite = () => {
                 className="w-[300px] h-[200px] absolute right-[38rem] -rotate-[55deg] mt-96"
               >
                 <Image
-                  src={"/assets/alimentaire/saveurs/1.png"}
+                  src={"/assets/alimentaire/saveurs/news/1.webp"}
                   fill
                   objectFit="contain"
                   alt="siprochim"
@@ -82,7 +82,7 @@ const SaveurInedite = () => {
                 className="w-[300px] h-[200px] absolute right-[35rem] -rotate-[45deg] mt-72"
               >
                 <Image
-                  src={"/assets/alimentaire/saveurs/2.png"}
+                  src={"/assets/alimentaire/saveurs/news/2.webp"}
                   fill
                   objectFit="contain"
                   alt="siprochim"
@@ -99,7 +99,7 @@ const SaveurInedite = () => {
                 className="w-[300px] h-[220px] absolute right-[32rem] -rotate-[36deg] mt-56"
               >
                 <Image
-                  src={"/assets/alimentaire/saveurs/3.png"}
+                  src={"/assets/alimentaire/saveurs/news/3.webp"}
                   fill
                   objectFit="contain"
                   alt="siprochim"
@@ -116,7 +116,7 @@ const SaveurInedite = () => {
                 className="w-[300px] h-[240px] absolute right-[28rem] -rotate-[33deg] mt-40"
               >
                 <Image
-                  src={"/assets/alimentaire/saveurs/4.png"}
+                  src={"/assets/alimentaire/saveurs/news/4.webp"}
                   fill
                   objectFit="contain"
                   alt="siprochim"
@@ -133,7 +133,7 @@ const SaveurInedite = () => {
                 className="w-[300px] h-[250px] absolute right-[24rem] -rotate-[28deg] mt-32"
               >
                 <Image
-                  src={"/assets/alimentaire/saveurs/5.png"}
+                  src={"/assets/alimentaire/saveurs/news/5.webp"}
                   fill
                   objectFit="contain"
                   alt="siprochim"
@@ -150,7 +150,7 @@ const SaveurInedite = () => {
                 className="w-[300px] h-[300px] absolute right-[20rem] -rotate-[22deg] mt-20"
               >
                 <Image
-                  src={"/assets/alimentaire/saveurs/6.png"}
+                  src={"/assets/alimentaire/saveurs/news/6.webp"}
                   fill
                   objectFit="contain"
                   alt="siprochim"
@@ -167,7 +167,7 @@ const SaveurInedite = () => {
                 className="w-[300px] h-[350px] absolute right-[15rem] -rotate-[20deg]"
               >
                 <Image
-                  src={"/assets/alimentaire/saveurs/7.png"}
+                  src={"/assets/alimentaire/saveurs/news/7.webp"}
                   fill
                   objectFit="contain"
                   alt="siprochim"
@@ -184,7 +184,7 @@ const SaveurInedite = () => {
                 className="w-[200px] h-[400px] absolute right-[12rem]"
               >
                 <Image
-                  src={"/assets/alimentaire/saveurs/8.png"}
+                  src={"/assets/alimentaire/saveurs/news/8.webp"}
                   fill
                   objectFit="contain"
                   alt="siprochim"
@@ -201,7 +201,7 @@ const SaveurInedite = () => {
                 className="w-[300px] h-[500px] absolute rotate-[20deg]"
               >
                 <Image
-                  src={"/assets/alimentaire/saveurs/9.png"}
+                  src={"/assets/alimentaire/saveurs/news/9.webp"}
                   fill
                   objectFit="contain"
                   alt="siprochim"

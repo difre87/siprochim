@@ -204,11 +204,11 @@ const HeroesAromate = () => {
                       ease: "linear",
                       duration: 1.5,
                     }}
-                    className="h-96 rounded-md bg-[url('/assets/alimentaire/produits/bg-red.png')] bg-cover bg-no-repeat relative"
+                    className="h-96 rounded-md bg-[url('/assets/alimentaire/produits/news/ketchup_fond.webp')] bg-cover bg-no-repeat relative"
                   >
                     <div className="w-full h-full flex flex-col justify-center items-center">
                       <Image
-                        src="/assets/alimentaire/produits/p-5.png"
+                        src="/assets/alimentaire/produits/news/ketchup.webp"
                         width={220}
                         height={250}
                         alt="siprochim"
@@ -225,11 +225,11 @@ const HeroesAromate = () => {
                     initial={{ transform: "translateX(-100px)", opacity: 0 }}
                     whileInView={{ transform: "translateX(0px)", opacity: 1 }}
                     transition={{ type: "spring", ease: "linear", duration: 2 }}
-                    className="h-96 rounded-md bg-[url('/assets/alimentaire/produits/bg-white.png')] bg-cover bg-no-repeat relative"
+                    className="h-96 rounded-md bg-[url('/assets/alimentaire/produits/news/ail_fond.webp')] bg-cover bg-no-repeat relative"
                   >
                     <div className="w-full h-full flex flex-col justify-center items-center">
                       <Image
-                        src="/assets/alimentaire/produits/p-6.png"
+                        src="/assets/alimentaire/produits/news/ail.webp"
                         width={220}
                         height={250}
                         alt="siprochim"
@@ -246,11 +246,11 @@ const HeroesAromate = () => {
                     initial={{ transform: "translateX(-100px)", opacity: 0 }}
                     whileInView={{ transform: "translateX(0px)", opacity: 1 }}
                     transition={{ type: "spring", ease: "linear", duration: 3 }}
-                    className="h-96 rounded-md bg-[url('/assets/alimentaire/produits/bg-gray-black.png')] bg-cover bg-no-repeat relative"
+                    className="h-96 rounded-md bg-[url('/assets/alimentaire/produits/news/barbecue_fond.webp')] bg-cover bg-no-repeat relative"
                   >
                     <div className="w-full h-full flex flex-col justify-center items-center">
                       <Image
-                        src="/assets/alimentaire/produits/p-7.png"
+                        src="/assets/alimentaire/produits/news/barbecue.webp"
                         width={220}
                         height={250}
                         alt="siprochim"
@@ -271,11 +271,11 @@ const HeroesAromate = () => {
                       ease: "linear",
                       duration: 3.5,
                     }}
-                    className="h-96 rounded-md bg-[url('/assets/alimentaire/produits/bg-brown.png')] bg-cover bg-no-repeat relative"
+                    className="h-96 rounded-md bg-[url('/assets/alimentaire/produits/news/burger_fond.webp')] bg-cover bg-no-repeat relative"
                   >
                     <div className="w-full h-full flex flex-col justify-center items-center">
                       <Image
-                        src="/assets/alimentaire/produits/p-8.png"
+                        src="/assets/alimentaire/produits/news/burger.webp"
                         width={220}
                         height={250}
                         alt="siprochim"
