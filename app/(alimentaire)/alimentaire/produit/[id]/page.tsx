@@ -1,12 +1,6 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Image from "next/image";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import Link from "next/link";
 import { Product } from "@/lib/type";
 import { fetchProductById } from "@/data/product";
@@ -78,51 +72,32 @@ const ProductSlugPage = async ({params}:ProductSlugPageProps) => {
                       lorem ipsum
                     </Link>
                   </div>
-                  <p className="text-white uppercase text-justify">
+                  <p className="text-white text-justify whitespace-pre-line">
                     {stripHtml(product.description)}
                   </p>
                 </div>
               </div>
-              <div className="px-20 w-2/3 mx-auto flex justify-center items-center py-10">
+              <div className="px-20 w-2/3 mx-auto flex justify-center items-center py-8">
                 <h2 className="text-2xl text-white uppercase font-bold">
-                  Lorem Ipsum
+                  Volume
                 </h2>
               </div>
-              <div className="px-20 w-2/3 mx-auto grid grid-cols-4  gap-10">
-                <div className="w-32 h-32 bg-transparent border-[1px] border-white flex justify-center items-center rounded-full">
-                  <div className="w-28 h-28 bg-white  flex justify-center items-center rounded-full">
-                    <h3 className="font-bold text-[#2e2e72] text-6xl">0</h3>
-                    <span className="block mt-5 font-semibold text-2xl text-[#2e2e72]">
-                      g
-                    </span>
+              <div className={`px-20 w-2/3 mx-auto grid   gap-10 ${product.analytics.length > 4 ? 'grid-cols-4' : ' justify-center items-center'} py-5`}>
+              {
+                product.analytics.map((analytic) => (
+                  <div key={analytic.id} className="w-32 h-32 bg-transparent border-[1px] border-white flex justify-center items-center rounded-full">
+                    <div className="w-28 h-28 bg-white  flex flex-col justify-center items-center rounded-full">
+                      <h3 className="font-bold text-[#2e2e72] text-3xl leading-none">{analytic.value}</h3>
+                      <span className="block  font-semibold text-xl text-[#2e2e72]">
+                        {analytic.unit}
+                      </span>
+                    </div>
                   </div>
-                </div>
-                <div className="w-32 h-32 bg-transparent border-[1px] border-white flex justify-center items-center rounded-full">
-                  <div className="w-28 h-28 bg-white  flex justify-center items-center rounded-full">
-                    <h3 className="font-bold text-[#2e2e72] text-6xl">0</h3>
-                    <span className="block mt-5 font-semibold text-2xl text-[#2e2e72]">
-                      g
-                    </span>
-                  </div>
-                </div>
-                <div className="w-32 h-32 bg-transparent border-[1px] border-white flex justify-center items-center rounded-full">
-                  <div className="w-28 h-28 bg-white  flex justify-center items-center rounded-full">
-                    <h3 className="font-bold text-[#2e2e72] text-6xl">0</h3>
-                    <span className="block mt-5 font-semibold text-2xl text-[#2e2e72]">
-                      g
-                    </span>
-                  </div>
-                </div>
-                <div className="w-32 h-32 bg-transparent border-[1px] border-white flex justify-center items-center rounded-full">
-                  <div className="w-28 h-28 bg-white  flex justify-center items-center rounded-full">
-                    <h3 className="font-bold text-[#2e2e72] text-6xl">0</h3>
-                    <span className="block mt-5 font-semibold text-2xl text-[#2e2e72]">
-                      g
-                    </span>
-                  </div>
-                </div>
+                ))
+              }
+
               </div>
-              <div className="w-3/4 mx-auto bg-white px-10 py-5 rounded-3xl min-h-[300px] mt-10">
+              {/* <div className="w-3/4 mx-auto bg-white px-10 py-5 rounded-3xl min-h-[300px] mt-10">
                 <Accordion
                   type="single"
                   collapsible
@@ -200,7 +175,7 @@ const ProductSlugPage = async ({params}:ProductSlugPageProps) => {
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
-              </div>
+              </div> */}
             </div>
           ):(
             <div className="max-w-screen-xl m-auto px-20 py-10">

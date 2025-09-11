@@ -1,6 +1,13 @@
 
 
 export type Product = {
+    analytics: [{
+        id: number;
+        label: string;
+        unit: string;
+        value: number;
+        product_id: number;
+    }];
     length: number;
     id: number;
     name: string;

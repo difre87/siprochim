@@ -160,13 +160,13 @@ const NosProduits =  () => {
           ): (
 
 
-            <div className={`max-w-screen-xl m-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-16`}>
+            <div className={`max-w-screen-xl m-auto px-5 grid grid-cols-1 md:grid-cols-4 gap-8`}>
               {
 
                 selectedProduct && Array.isArray(selectedProduct) && selectedProduct.map((subproduct) => (
                   <div
                     key={subproduct.id}
-                    className="bg-white group h-[400px] rounded-lg flex flex-col justify-center items-center transition-all ease-in-out group-hover:scale-110"
+                    className="bg-white group h-[300px] rounded-lg flex flex-col justify-center items-center transition-all ease-in-out group-hover:scale-110"
                     style={{
                       background:
                         "radial-gradient(circle at center, #fff 0%, #ddf4ff 100%)",
@@ -188,7 +188,7 @@ const NosProduits =  () => {
                         )
                       }
 
-                      <h4 className="font-bold text-xl text-[#2e2e72]">{subproduct.name}</h4>
+                      <h4 className="font-bold text-lg text-[#2e2e72]">{subproduct.name}</h4>
                     </Link>
                   </div>
                 ))

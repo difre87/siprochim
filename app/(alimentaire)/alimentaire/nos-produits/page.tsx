@@ -189,11 +189,11 @@ const NosProduitContent = () => {
         {isLoadingProducts ? (
           <Loader />
         ) : (
-          <div className="max-w-screen-xl m-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-16">
+          <div className="max-w-screen-xl m-auto px-5 grid grid-cols-1 md:grid-cols-4 gap-8">
             {selectedProduct && Array.isArray(selectedProduct) && selectedProduct.map((product) => (
               <div
                 key={product.id}
-                className="bg-white group h-[500px] rounded-lg flex flex-col justify-center items-center transition-all ease-in-out group-hover:scale-110"
+                className="bg-white group h-[300px] rounded-lg flex flex-col justify-center items-center transition-all ease-in-out group-hover:scale-110"
                 style={{
                   background: "radial-gradient(circle at center, #28a054 0%, #008b36 100%)",
                 }}
@@ -212,7 +212,7 @@ const NosProduitContent = () => {
                     />
                   )}
 
-                  <h4 className="text-white text-3xl font-bold">{product.name}</h4>
+                  <h4 className="text-white text-lg font-bold">{product.name}</h4>
                 </Link>
               </div>
             ))}
