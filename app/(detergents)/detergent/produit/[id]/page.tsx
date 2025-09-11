@@ -78,7 +78,7 @@ const ProductSlugPage = async ({params}:ProductSlugPageProps) => {
               </div>
               <div className="px-20 w-2/3 mx-auto flex justify-center items-center py-10">
                 <h2 className="text-2xl text-white uppercase font-bold">
-                  Volume
+                  {product.analytics.length > 0 ? `${product.analytics[0].label} Avantages` : "Avantages"}
                 </h2>
               </div>
               <div className={`px-20 w-2/3 mx-auto grid   gap-10 ${product.analytics.length > 4 ? 'grid-cols-4' : ' justify-center items-center'} py-5`}>
