@@ -89,7 +89,7 @@ const BgAlimentaire = () => {
                 ease: "linear",
                 duration: 1.5,
               }}
-              className="w-[200px] h-[300px] relative -mx-10"
+              className="w-[200px] h-[300px] relative -mx-8"
             >
               <Image
                 src="/assets/alimentaire/home/news/Rectangle_7 copie.webp"
