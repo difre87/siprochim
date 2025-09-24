@@ -49,13 +49,7 @@ const ProductSlugPage =  ({params}:ProductSlugPageProps) => {
 
       loadProducts();
     }, []);
-
-  /* try {
-    product = await fetchProductBySlug(resolvedParams.slug);
-    console.log("Produit chargé:", product);
-  } catch (error) {
-    console.error("Erreur lors du chargement du produit:", error);
-  } */
+  
   return (
     <>
       <Header type="alimentaire" className="bg-[#008b36]" isPage />

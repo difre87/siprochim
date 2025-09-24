@@ -174,21 +174,23 @@ const NosProduits =  () => {
                   >
                     <Link
                       href={`/detergent/nos-produits/${subproduct.slug}/${subproduct.id}`}
-                      className="w-full h-full flex flex-col justify-center items-center transition-all duration-500 group hover:scale-110"
+                      className="w-full h-full flex flex-col justify-center items-center transition-all duration-500 group hover:scale-110 p-4"
                     >
                       {
                         subproduct.image && (
-                          <Image
-                            src={`https://esjc.org/siprochim/public/${subproduct.image}`}
-                            width={130}
-                            height={130}
-                            alt={""}
-                            className="drop-shadow-2xl"
-                          />
+                          <div className="w-40 h-40 flex justify-center items-center mb-4">
+                            <Image
+                              src={`https://esjc.org/siprochim/public/${subproduct.image}`}
+                              width={130}
+                              height={130}
+                              alt={subproduct.name}
+                              className="drop-shadow-2xl object-contain max-w-full max-h-full"
+                            />
+                          </div>
                         )
                       }
 
-                      <h4 className="font-bold text-lg text-[#2e2e72]">{subproduct.name}</h4>
+                      <h4 className="font-bold text-lg text-[#2e2e72] text-center">{subproduct.name}</h4>
                     </Link>
                   </div>
                 ))
@@ -202,5 +204,4 @@ const NosProduits =  () => {
     </>
   );
 };
-
 export default NosProduits;

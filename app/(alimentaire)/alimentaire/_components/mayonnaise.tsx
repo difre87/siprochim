@@ -28,9 +28,10 @@ const Mayonnaise = () => {
                   Mayonnaise
                   <br /> Mia
                 </h1>
-                <p className="text-white md:text-sm sm:text-[12px] text-right">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Deserunt laborum saepe itaque velit ipsum sit aliquam pariatur
+                <p className="text-white md:text-sm sm:text-[12px] text-right pl-2">
+                  La mayonnaise MIA, c’est le goût qui surprend !
+                  Préparée avec des ingrédients soigneusement sélectionnés, elle sublime tous vos plats.
+                  Onctueuse et savoureuse, elle ravit les papilles à chaque bouchée.
                 </p>
                 <div className="w-full flex justify-end">
                   <Link
@@ -60,7 +61,6 @@ const Mayonnaise = () => {
             />
           </div>
         </motion.div>
-
         <motion.div
           initial={{ transform: "translateX(100px)", opacity: 0 }}
           whileInView={{ transform: "translateX(0px)", opacity: 1 }}
@@ -99,9 +99,10 @@ const Mayonnaise = () => {
                   Mayonnaise
                   <br /> top mayo
                 </h1>
-                <p className="text-[#2e2e72] md:text-sm sm:text-[12px]">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Deserunt laborum saepe itaque velit ipsum sit aliquam pariatur
+                <p className="text-[#2e2e72] md:text-sm sm:text-[12px] pr-2">
+                  Une onctuosité qui fait fondre de plaisir.
+                  Son goût fin et équilibré sublime frites, viandes, poissons et salades.
+                  Authentique et savoureuse, elle transforme chaque repas en délice gourmand.
                 </p>
                 <div className="w-full flex justify-start">
                   <Link
@@ -152,11 +153,12 @@ const Mayonnaise = () => {
               <div className="flex flex-col gap-y-4">
                 <h1 className="text-white md:text-3xl sm:text-xl font-semibold text-right">
                   Mayonnaise
-                  <br /> Santina
+                  <br /> Aromate
                 </h1>
-                <p className="text-white md:text-sm sm:text-[12px] text-right">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Deserunt laborum saepe itaque velit ipsum sit aliquam pariatur
+                <p className="text-white md:text-sm sm:text-[12px] text-right pl-2">
+                  Une icône depuis plus de 15 ans !
+                  Sa recette à l’huile de tournesol et jaune d’œuf offre une texture légère et raffinée.
+                  Parfaite pour plats, fritures, sandwichs, sauces et vinaigrettes maison.
                 </p>
                 <div className="w-full flex justify-end">
                   <Link
@@ -225,9 +227,10 @@ const Mayonnaise = () => {
                   Mayonnaise
                   <br /> Amerigo
                 </h1>
-                <p className="text-white md:text-sm sm:text-[12px]">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Deserunt laborum saepe itaque velit ipsum sit aliquam pariatur
+                <p className="text-white md:text-sm sm:text-[12px] pr-2">
+                  Une onctuosité qui fait fondre de plaisir.
+                  Son goût fin et équilibré sublime frites, viandes, poissons et salades.
+                  Authentique et savoureuse, elle transforme chaque repas en délice gourmand.
                 </p>
                 <div className="w-full flex justify-start">
                   <Link

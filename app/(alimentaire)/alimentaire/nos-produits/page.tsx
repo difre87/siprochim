@@ -200,19 +200,21 @@ const NosProduitContent = () => {
               >
                 <Link
                   href={`/alimentaire/nos-produits/${product.id}`}
-                  className="w-full h-full flex flex-col justify-center items-center transition-all duration-500 group hover:scale-110"
+                  className="w-full h-full flex flex-col justify-center items-center transition-all duration-500 group hover:scale-110 p-4"
                 >
                   {product.image && (
-                    <Image
-                      src={`https://esjc.org/siprochim/public/${product.image}`}
-                      width={130}
-                      height={130}
-                      alt={""}
-                      className="drop-shadow-2xl"
-                    />
+                    <div className="w-32 h-32 flex justify-center items-center mb-4">
+                      <Image
+                        src={`https://esjc.org/siprochim/public/${product.image}`}
+                        width={130}
+                        height={130}
+                        alt={product.name}
+                        className="drop-shadow-2xl object-contain max-w-full max-h-full"
+                      />
+                    </div>
                   )}
 
-                  <h4 className="text-white text-lg font-bold">{product.name}</h4>
+                  <h4 className="text-white text-lg font-bold text-center">{product.name}</h4>
                 </Link>
               </div>
             ))}

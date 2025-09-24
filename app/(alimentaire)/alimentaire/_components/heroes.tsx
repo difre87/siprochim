@@ -95,11 +95,11 @@ const Heroes = () => {
               initial={{ transform: "translateX(-100px)", opacity: 0 }}
               whileInView={{ transform: "translateX(0px)", opacity: 1 }}
               transition={{ type: "spring", ease: "linear", duration: 3 }}
-              className="h-96 rounded-md bg-[url('/assets/alimentaire/produits/bg-gray.png')] bg-cover bg-no-repeat relative"
+              className="h-96 rounded-md bg-[url('/assets/alimentaire/produits/bg-or.png')] bg-cover bg-no-repeat relative"
             >
               <div className="w-full h-full flex flex-col justify-center items-center">
                 <Image
-                  src="/assets/alimentaire/produits/p-4.png"
+                  src="/assets/alimentaire/produits/p-13.png"
                   width={100}
                   height={250}
                   alt="siprochim"
@@ -108,7 +108,7 @@ const Heroes = () => {
               </div>
               <div className="w-full py-3 bg-black/20 absolute bottom-0 flex justify-center items-center text-center">
                 <h3 className="font-bold uppercase text-2xl text-white">
-                  Aromate
+                  Moutarde
                 </h3>
               </div>
             </motion.div>
@@ -136,3 +136,4 @@ const Heroes = () => {
 };
 
 export default Heroes;
+
