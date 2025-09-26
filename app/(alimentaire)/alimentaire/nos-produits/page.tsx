@@ -137,7 +137,7 @@ const NosProduitContent = () => {
               Le Goût qui Rassemble
             </h1>
             <p className="text-lg text-white leading-normal bg-black/40 backdrop-blur-sm p-6 rounded-lg shadow-lg">
-              Parce qu'un bon repas commence toujours par la bonne touche. <br />
+              Parce qu&apos;un bon repas commence toujours par la bonne touche. <br />
               Des sauces crémeuses, des condiments incontournables et des
               recettes authentiques qui subliment vos plats au quotidien. <br />
               Chez SIPRO-CHIM, chaque produit est pensé pour transformer 

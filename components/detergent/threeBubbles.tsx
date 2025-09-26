@@ -270,8 +270,9 @@ const ThreeBubbles = () => {
         cancelAnimationFrame(animationIdRef.current);
         animationIdRef.current = null;
       }
-      if (mountRef.current && renderer.domElement && mountRef.current.contains(renderer.domElement)) {
-        mountRef.current.removeChild(renderer.domElement);
+      const currentMount = mountRef.current;
+      if (currentMount && renderer.domElement && currentMount.contains(renderer.domElement)) {
+        currentMount.removeChild(renderer.domElement);
       }
 
       // Nettoyer les bulles

@@ -87,7 +87,7 @@ const ProductSlugPage = async ({params}:ProductSlugPageProps) => {
                     className="w-full"
                     defaultValue={`item-${productFaqs[0]?.id}`}
                   >
-                    {productFaqs.map((faq, index) => (
+                    {productFaqs.map((faq) => (
                       <AccordionItem key={faq.id} value={`item-${faq.id}`}>
                         <AccordionTrigger className="border-b-[2px] border-[#00a1cf] uppercase no-underline text-[#2e2e72] font-bold text-lg hover:no-underline">
                           {faq.title}

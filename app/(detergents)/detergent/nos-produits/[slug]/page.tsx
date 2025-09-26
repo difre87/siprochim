@@ -49,7 +49,7 @@ const ProductSlugPage =  ({params}:ProductSlugPageProps) => {
       };
 
       loadProducts();
-    }, []);
+    }, [params]);
 
   /* try {
     product = await fetchProductBySlug(resolvedParams.slug);

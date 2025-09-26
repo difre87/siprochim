@@ -48,7 +48,7 @@ const ProductSlugPage =  ({params}:ProductSlugPageProps) => {
       };
 
       loadProducts();
-    }, []);
+    }, [params]);
   
   return (
     <>
