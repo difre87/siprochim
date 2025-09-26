@@ -26,7 +26,7 @@ const SocialMedia = ({ page = "alimentaire" }: SocialMediaProps) => {
           </h1>
           <p className="uppercase font-medium text-center">
             Astuce ménage ou idée gourmande,
-            on partage tout !
+            on partage tout ! <br />
             Rejoignez notre communauté et
             découvrez chaque jour conseils,
             recettes et bons plans.

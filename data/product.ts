@@ -132,3 +132,32 @@ export const findProductFaq = async (id: number) => {
         return null;
     }
 }
+
+// Blog/Posts functions
+export const fetchPosts = async () => {
+    try {
+        const response = await fetch(`${endpoint}posts`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        return data.data || data;
+    } catch (error) {
+        console.error("Error fetching posts:", error);
+        return [];
+    }
+};
+
+export const fetchPostBySlug = async (slug: string) => {
+    try {
+        const response = await fetch(`${endpoint}posts/${slug}`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        return data.data || data;
+    } catch (error) {
+        console.error("Error fetching post by slug:", error);
+        return null;
+    }
+};

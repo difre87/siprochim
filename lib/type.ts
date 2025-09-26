@@ -30,4 +30,22 @@ export type ProductFaq = {
     product_id: number;
     title: string;
     content: string | null;
+    created_at: string;
+    updated_at: string;
+};
+
+export type Post = {
+    id: number;
+    title: string;
+    slug: string;
+    content: string;
+    image: string | null;
+    user_id: number;
+    created_at: string;
+    updated_at: string;
+    author?: {
+        id: number;
+        name: string;
+        email: string;
+    };
 };
