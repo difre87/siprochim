@@ -17,15 +17,30 @@ const Astuces = () => {
               alt=""
               className="absolute -top-[10%] -left-[10%]"
             />
-            <div className="w-full flex flex-col justify-center items-center gap-y-10">
+            <div className="w-full flex flex-col justify-center items-center gap-y-6">
               <h1 className="text-5xl text-[#000061] font-bold text-center leading-[56px]">
                 Les astuces & <br /> les topos à la maison
               </h1>
               <p className="text-md text-[#000061] text-center">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit
-                error saepe harum culpa accusamus nesciunt cum asperiores autem
-                aspernatur qui, repellendus possimus deserunt suscipit, at
-                quibusdam beatae molestias quis labore!
+                Simplifiez votre quotidien avec nos
+                conseils pratiques.
+                Nous partageons avec vous des
+                idées, des méthodes et des bons
+                plans pour entretenir votre maison
+                sans effort, tout en gagnant du temps
+                et en optimisant vos produits.
+              </p>
+              <p className="text-md text-[#000061] text-center">
+                Conseils malins
+                Des petites astuces qui font une
+                grande différence dans vos tâches
+                ménagères.
+              </p>
+              <p className="text-md text-[#000061] text-center">
+                Guides pratiques
+                Des topos clairs et faciles à suivre
+                pour garder une maison propre, saine
+                et accueillante.
               </p>
             </div>
             <Image
@@ -33,14 +48,14 @@ const Astuces = () => {
               width={250}
               height={300}
               alt=""
-              className="absolute bottom-0 right-0"
+              className="absolute -bottom-5 right-0"
             />
             <Image
               src="/assets/detergent/Lessive-poudre-produit.png"
               width={200}
               height={300}
               alt=""
-              className="absolute bottom-0 right-0"
+              className="absolute -bottom-8 right-0"
             />
           </div>
           <div className="flex w-full flex-col">

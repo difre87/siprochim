@@ -36,7 +36,7 @@ const Apropos = () => {
                 </div>
                 <div className="flex flex-col">
                   <Label className="text-md font-semibold pb-2 text-[#2e2e72]">
-                    Numéro téléphone
+                    Téléphone
                   </Label>
                   <Input className="border-[3px] border-[#2e2e72] rounded-xl h-16" />
                 </div>
@@ -44,21 +44,35 @@ const Apropos = () => {
               <div className="w-full  mb-5">
                 <div className="flex flex-col">
                   <Label className="text-md font-semibold pb-2 text-[#2e2e72]">
-                    Mail
+                    Email
                   </Label>
-                  <Input className="border-[3px] border-[#2e2e72] rounded-xl h-16" />
+                  <Input type="email" className="border-[3px] border-[#2e2e72] rounded-xl h-16" />
                 </div>
               </div>
-              <div className="w-full grid grid-cols-2 gap-5 mb-5">
+              <div className="w-full mb-5">
+                <div className="flex flex-col">
+                  <Label className="text-md font-semibold pb-2 text-[#2e2e72]">
+                    Service concerné
+                  </Label>
+                  <select 
+                    name="service" 
+                    id="service" 
+                    className="border-[3px] border-[#2e2e72] rounded-xl h-16 px-3 outline-none bg-white text-[#2e2e72]"
+                  >
+                    <option value="">Sélectionnez un service</option>
+                    <option value="alimentaire">Alimentaire</option>
+                    <option value="detergent">Détergent</option>
+                    <option value="commercial">Commercial</option>
+                    <option value="administration">Administration</option>
+                    <option value="production">Production</option>
+                    <option value="qualite">Qualité</option>
+                  </select>
+                </div>
+              </div>
+              <div className="w-full grid grid-cols-1 gap-5 mb-5">
                 <div className="flex flex-col">
                   <Label className="text-md font-semibold pb-2 text-[#2e2e72]">
                     Raison de la visite
-                  </Label>
-                  <Input className="border-[3px] border-[#2e2e72] rounded-xl h-16" />
-                </div>
-                <div className="flex flex-col">
-                  <Label className="text-md font-semibold pb-2 text-[#2e2e72]">
-                    Département
                   </Label>
                   <Input className="border-[3px] border-[#2e2e72] rounded-xl h-16" />
                 </div>
@@ -68,13 +82,19 @@ const Apropos = () => {
                   <Label className="text-md font-semibold pb-2 text-[#2e2e72]">
                     Date
                   </Label>
-                  <Input className="border-[3px] border-[#2e2e72] rounded-xl h-16" />
+                  <Input 
+                    type="date" 
+                    className="border-[3px] border-[#2e2e72] rounded-xl h-16 px-3 text-[#2e2e72]" 
+                  />
                 </div>
                 <div className="flex flex-col">
                   <Label className="text-md font-semibold pb-2 text-[#2e2e72]">
                     Heure
                   </Label>
-                  <Input className="border-[3px] border-[#2e2e72] rounded-xl h-16" />
+                  <Input 
+                    type="time" 
+                    className="border-[3px] border-[#2e2e72] rounded-xl h-16 px-3 text-[#2e2e72]" 
+                  />
                 </div>
               </div>
               <Button className="bg-[#2e2e72] rounded-full w-[200px] h-12 mt-10">

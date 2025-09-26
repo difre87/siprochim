@@ -20,8 +20,8 @@ const Header = () => {
        <ThreeBubbles />
         <Nav />
         <Image
-          src="/assets/detergent/profil_detergent.webp"
-          width={1200}
+          src="/assets/detergent/cover-detergent.png"
+          width={1000}
           height={500}
           alt="detergents"
           className="absolute bottom-[1%] right-5"

@@ -1,8 +1,9 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Image from "next/image";
-import { Product } from "@/lib/type";
-import { fetchProductById } from "@/data/product";
+import { Product, ProductFaq } from "@/lib/type";
+import { fetchProductById, findProductFaq } from "@/data/product";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 interface ProductSlugPageProps {
   params: Promise<{
@@ -13,15 +14,17 @@ interface ProductSlugPageProps {
 const ProductSlugPage = async ({params}:ProductSlugPageProps) => {
   //const productId = params.Id; // Extract the product ID from the params
   const resolvedParams = await params;
-  console.log("Params résolus:", resolvedParams);
-  const productId = resolvedParams.id; // Convert the
+  const productId = resolvedParams.id;
   // Fetch the product data based on the ID
   let product: Product | null = null;
-  console.log("ID du produit:", productId);
+  let productFaqs: ProductFaq[] = [];
 
   try {
     product = await fetchProductById(productId);
-    console.log("Produit chargé:", product);
+    if (product) {
+      const faqData = await findProductFaq(parseInt(productId));
+      productFaqs = faqData || [];
+    }
   } catch (error) {
     console.error("Erreur lors du chargement du produit:", error);
   }
@@ -51,27 +54,7 @@ const ProductSlugPage = async ({params}:ProductSlugPageProps) => {
 
                 <div className="flex flex-col gap-10 ml-10">
                   <h2 className="text-[3rem] text-white uppercase font-bold leading-10">{product.name}</h2>
-                  {/* <h2 className="text-[6rem] text-white uppercase font-bold">
-                    Lorem <br />{" "}
-                    <span className="text-6xl uppercase -mt-10 block font-semibold">
-                      Ipsum
-                    </span>
-                  </h2> */}
-                  {/* <div className="grid grid-cols-2 gap-4">
-                    <Link
-                      href={"#"}
-                      className="px-2 h-10 font-bold transition-all ease-in-out duration-500 rounded-full flex justify-center items-center uppercase text-[#2e2e72] bg-white hover:bg-transparent hover:text-white hover:border-[2px]"
-                    >
-                      lorem ipsum
-                    </Link>
-                    <Link
-                      href={"#"}
-                      className="px-2 rounded-full h-10 font-bold transition-all ease-in-out duration-500 flex justify-center items-center uppercase text-white border-[2px] border-white hover:bg-white hover:text-[#2e2e72]"
-                    >
-                      lorem ipsum
-                    </Link>
-                  </div> */}
-                  <p className="text-white text-justify whitespace-pre-line">
+                  <p className="text-white text-left whitespace-pre-line">
                     {stripHtml(product.description)}
                   </p>
                 </div>
@@ -85,7 +68,7 @@ const ProductSlugPage = async ({params}:ProductSlugPageProps) => {
               {
                 product.analytics.map((analytic) => (
                   <div key={analytic.id} className="w-32 h-32 bg-transparent border-[1px] border-white flex justify-center items-center rounded-full">
-                    <div className="w-28 h-28 bg-white  flex flex-col justify-center items-center rounded-full">
+                    <div className="w-28 h-28 bg-white flex justify-center items-center rounded-full">
                       <h3 className="font-bold text-[#2e2e72] text-3xl leading-none">{analytic.value}</h3>
                       <span className="block  font-semibold text-xl text-[#2e2e72]">
                         {analytic.unit}
@@ -96,85 +79,30 @@ const ProductSlugPage = async ({params}:ProductSlugPageProps) => {
               }
 
               </div>
-              {/* <div className="w-3/4 mx-auto bg-white px-10 py-5 rounded-3xl min-h-[300px] mt-10">
-                <Accordion
-                  type="single"
-                  collapsible
-                  className="w-full"
-                  defaultValue="item-1"
-                >
-                  <AccordionItem value="item-1">
-                    <AccordionTrigger className="border-b-[2px] border-[#00a1cf] uppercase no-underline text-[#2e2e72] font-bold text-lg hover:no-underline">
-                      Lorem ipsum
-                    </AccordionTrigger>
-                    <AccordionContent className="w-full text-justify py-10 border-0">
-                      <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        Aut sint, sit id aspernatur accusamus beatae facilis
-                        perspiciatis, quos pariatur inventore exercitationem eum
-                        nihil blanditiis laudantium porro dolore non architecto
-                        cupiditate!
-                      </p>
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem value="item-2">
-                    <AccordionTrigger className="border-b-[2px] border-[#00a1cf] uppercase no-underline text-[#2e2e72] font-bold text-lg hover:no-underline">
-                      Lorem ipsum
-                    </AccordionTrigger>
-                    <AccordionContent className="w-full text-justify py-10 border-0">
-                      <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        Aut sint, sit id aspernatur accusamus beatae facilis
-                        perspiciatis, quos pariatur inventore exercitationem eum
-                        nihil blanditiis laudantium porro dolore non architecto
-                        cupiditate!
-                      </p>
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem value="item-3">
-                    <AccordionTrigger className="border-b-[2px] border-[#00a1cf] uppercase no-underline text-[#2e2e72] font-bold text-lg hover:no-underline">
-                      Lorem ipsum
-                    </AccordionTrigger>
-                    <AccordionContent className="w-full text-justify py-10 border-0">
-                      <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        Aut sint, sit id aspernatur accusamus beatae facilis
-                        perspiciatis, quos pariatur inventore exercitationem eum
-                        nihil blanditiis laudantium porro dolore non architecto
-                        cupiditate!
-                      </p>
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem value="item-4">
-                    <AccordionTrigger className="border-b-[2px] border-[#00a1cf] uppercase no-underline text-[#2e2e72] font-bold text-lg hover:no-underline">
-                      Lorem ipsum
-                    </AccordionTrigger>
-                    <AccordionContent className="w-full text-justify py-10 border-0">
-                      <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        Aut sint, sit id aspernatur accusamus beatae facilis
-                        perspiciatis, quos pariatur inventore exercitationem eum
-                        nihil blanditiis laudantium porro dolore non architecto
-                        cupiditate!
-                      </p>
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem value="item-5">
-                    <AccordionTrigger className="border-b-[2px] border-[#00a1cf] uppercase no-underline text-[#2e2e72] font-bold text-lg hover:no-underline">
-                      Lorem ipsum
-                    </AccordionTrigger>
-                    <AccordionContent className="w-full text-justify py-10 border-0">
-                      <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        Aut sint, sit id aspernatur accusamus beatae facilis
-                        perspiciatis, quos pariatur inventore exercitationem eum
-                        nihil blanditiis laudantium porro dolore non architecto
-                        cupiditate!
-                      </p>
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-              </div> */}
+              {productFaqs.length > 0 && (
+                <div className="w-3/4 mx-auto bg-white px-10 py-5 rounded-3xl min-h-[300px] mt-10">
+                  <Accordion
+                    type="single"
+                    collapsible
+                    className="w-full"
+                    defaultValue={`item-${productFaqs[0]?.id}`}
+                  >
+                    {productFaqs.map((faq, index) => (
+                      <AccordionItem key={faq.id} value={`item-${faq.id}`}>
+                        <AccordionTrigger className="border-b-[2px] border-[#00a1cf] uppercase no-underline text-[#2e2e72] font-bold text-lg hover:no-underline">
+                          {faq.title}
+                        </AccordionTrigger>
+                        <AccordionContent className="w-full text-justify py-10 border-0">
+                          <div 
+                            dangerouslySetInnerHTML={{ __html: faq.content || '' }}
+                            className="prose prose-sm max-w-none"
+                          />
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </div>
+              )}
             </div>
           ):(
             <div className="max-w-screen-xl m-auto px-20 py-10">

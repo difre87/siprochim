@@ -6,7 +6,7 @@ const Heroes = () => {
   return (
     <section className="w-full relative py-20 flex justify-between px-20">
       <div className="relative w-[600px]">
-        <Image
+        {/* <Image
           src="/assets/detergent/vague.png"
           width={1000}
           height={500}
@@ -19,9 +19,9 @@ const Heroes = () => {
           height={500}
           alt=""
           className="position absolute bottom-32 left-0"
-        />
+        /> */}
         <Image
-          src="/assets/detergent/detergent-prod.png"
+          src="/assets/detergent/detergent.png"
           width={600}
           height={500}
           alt=""
@@ -33,8 +33,13 @@ const Heroes = () => {
           Ressentez la fraicheur
         </h1>
         <p className="text-md text-[#313076] text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ipsa
-          dolores incidunt. Iusto, et. Molestiae a dolorem explicabo natus.
+          À chaque utilisation, profitez d’une
+          pureté immédiate et de senteurs
+          légères qui vivifient votre intérieur. <br/>
+          Nos formules neutralisent les odeurs
+          et assurent une fraîcheur durable,
+          pour une maison saine, agréable et
+          pleine de bien-être.
         </p>
       </div>
       <div className="relative w-[500px] mt-32">

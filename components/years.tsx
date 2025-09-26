@@ -12,7 +12,7 @@ const Years = ({ page = "alimentaire" }: YearsProps) => {
           src={`${
             page == "alimentaire"
               ? "/assets/alimentaire/years/produit.png"
-              : "/assets/detergent/year_det.webp"
+              : "/assets/detergent/family-detergent.png"
           }`}
           fill
           objectFit="contain"

@@ -24,3 +24,10 @@ export type Category = {
     description: string;
     image: string;
 };
+
+export type ProductFaq = {
+    id: number;
+    product_id: number;
+    title: string;
+    content: string | null;
+};

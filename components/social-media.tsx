@@ -22,13 +22,16 @@ const SocialMedia = ({ page = "alimentaire" }: SocialMediaProps) => {
       <div className="w-full max-w-screen-xl mx-auto">
         <div className="w-full flex flex-col justify-center items-center mt-20 gap-y-10">
           <h1 className="md:text-6xl sm:text-4xl sm:py-5 md:py-0 uppercase text-center font-semibold">
-            Se faire intégrer dans les <br /> réseaux sociaux
+            Suivez-nous sur les réseaux
           </h1>
           <p className="uppercase font-medium text-center">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore
-            iusto aperiam, totam cumque libero sunt nam! Quam molestias placeat
-            obcaecati dolorem velit impedit suscipit facilis non, maxime ad
-            eveniet! Voluptatum?
+            Astuce ménage ou idée gourmande,
+            on partage tout !
+            Rejoignez notre communauté et
+            découvrez chaque jour conseils,
+            recettes et bons plans.
+            <br />
+            Un clic, et vous êtes dans la boucle.
           </p>
         </div>
         <div className="w-full flex justify-center items-center gap-x-5 mt-5">

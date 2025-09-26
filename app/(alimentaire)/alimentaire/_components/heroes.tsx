@@ -62,32 +62,6 @@ const Heroes = () => {
             </motion.div>
           </Link>
           <Link
-            href="/alimentaire/nos-produits?category=top-mayo"
-            className="transition-all duration-500 group hover:scale-110"
-          >
-            <motion.div
-              initial={{ transform: "translateX(-100px)", opacity: 0 }}
-              whileInView={{ transform: "translateX(0px)", opacity: 1 }}
-              transition={{ type: "spring", ease: "linear", duration: 2.5 }}
-              className="h-96 rounded-md bg-[url('/assets/alimentaire/produits/bg-indigo-2.png')] bg-cover bg-no-repeat relative"
-            >
-              <div className="w-full h-full flex flex-col justify-center items-center">
-                <Image
-                  src="/assets/alimentaire/produits/p-3.png"
-                  width={100}
-                  height={250}
-                  alt="siprochim"
-                  className="group-hover:scale-125 transition-all duration-500"
-                />
-              </div>
-              <div className="w-full py-3 bg-black/20 absolute bottom-0 flex justify-center items-center text-center">
-                <h3 className="font-bold uppercase text-2xl text-white">
-                  Top mayo
-                </h3>
-              </div>
-            </motion.div>
-          </Link>
-          <Link
             href="/alimentaire/nos-produits?category=aromate"
             className="transition-all duration-500 group hover:scale-110"
           >
@@ -109,6 +83,32 @@ const Heroes = () => {
               <div className="w-full py-3 bg-black/20 absolute bottom-0 flex justify-center items-center text-center">
                 <h3 className="font-bold uppercase text-2xl text-white">
                   Moutarde
+                </h3>
+              </div>
+            </motion.div>
+          </Link>
+          <Link
+            href="/alimentaire/nos-produits?category=top-mayo"
+            className="transition-all duration-500 group hover:scale-110"
+          >
+            <motion.div
+              initial={{ transform: "translateX(-100px)", opacity: 0 }}
+              whileInView={{ transform: "translateX(0px)", opacity: 1 }}
+              transition={{ type: "spring", ease: "linear", duration: 2.5 }}
+              className="h-96 rounded-md bg-[url('/assets/alimentaire/produits/bg-indigo-2.png')] bg-cover bg-no-repeat relative"
+            >
+              <div className="w-full h-full flex flex-col justify-center items-center">
+                <Image
+                  src="/assets/alimentaire/produits/p-3.png"
+                  width={100}
+                  height={250}
+                  alt="siprochim"
+                  className="group-hover:scale-125 transition-all duration-500"
+                />
+              </div>
+              <div className="w-full py-3 bg-black/20 absolute bottom-0 flex justify-center items-center text-center">
+                <h3 className="font-bold uppercase text-2xl text-white">
+                  Top mayo
                 </h3>
               </div>
             </motion.div>

@@ -38,12 +38,17 @@ const SaveurInedite = () => {
               <h4 className="text-white md:text-6xl sm:text-4xl uppercase font-bold">
                 Inédites
               </h4>
-              {/* <p className="text-white md:text-md sm:text-sm text-justify mt-5">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Dignissimos ea sint cumque perspiciatis voluptatem quaerat nobis
-                porro, doloribus possimus debitis voluptatum corrupti, tempora
-                rerum nesciunt ex enim eveniet, cum exercitationem!
-              </p> */}
+              <p className="text-white md:text-md sm:text-sm text-justify mt-5 pb-4">
+                Laissez-vous surprendre par des
+                goûts uniques et des associations
+                originales.
+                Nos recettes allient tradition et
+                créativité pour offrir des expériences
+                culinaires qui éveillent vos papilles et
+                transforment chaque repas en
+                découverte. <br /><br />
+                Originalité garantie. Plaisir assuré.
+              </p>
             </div>
             <div className="w-full h-[300px] relative sm:block md:hidden lg:hidden 2xl:hidden">
               <Image

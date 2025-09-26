@@ -1,14 +1,6 @@
 import { Baby, Dog, Hand, House, LampDesk, Shirt } from "lucide-react"
 
 export const menuAlimentaire = [
-    /*  {
-         title:"Expertise",
-         link:"/alimentaire/expertise"
-     },
-     {
-         title:"Besoins",
-         link:"/alimentaire/besoins"
-     }, */
     {
         title: "Nos produits",
         link: "/alimentaire/nos-produits"
@@ -22,19 +14,17 @@ export const menuAlimentaire = [
         link: "/alimentaire/actualites"
     },
     {
+        title: "Carrière",
+        link: "#"
+
+    },
+    {
         title: "Contactez-nous",
         link: "/contactez-nous"
     },
 ]
 
 export const menuDetergent = [
-    /*  {
-         title:"Expertise"
-     },
-     {
-         title:"Besoins",
-         link:"/detergent/nos-produits"
-     }, */
     {
         title: "Nos produits",
         link: "/detergent/nos-produits"
@@ -49,6 +39,11 @@ export const menuDetergent = [
 
     },
     {
+        title: "Carrière",
+        link: "#"
+
+    },
+    {
         title: "Contactez-nous",
         link: "/contactez-nous"
     },
@@ -60,20 +55,21 @@ export const menuFooter = [
     },
     {
         label: "Actualités",
-        link: "#"
+        link: "/detergent/actualites"
     },
     {
         label: "Qui sommes-nous?",
+        link: "/detergent/qui-sommes-nous"
+    },
+    {
+        title: "Carrière",
         link: "#"
+
     },
     {
         label: "Contactez-nous",
-        link: "#"
-    },
-    {
-        label: "Catégorie",
-        link: "#"
-    },
+        link: "/contactez-nous"
+    }
 ]
 
 export const astucesObject = [

@@ -15,10 +15,12 @@ const Blog = ({ page }: BlogProps) => {
           <div className="w-full py-40 flex flex-col gap-y-8">
             <span className="text-white font-semibold">Blog</span>
             <h1 className="text-white text-5xl font-bold">
-              Actualités de l&apos;entreprise
+              Nos Actualités
             </h1>
             <p className="text-white font-medium">
-              Découvrez nos dernières nouvelles et produits innovants.
+              Tendances, nouveautés et coulisses
+              de l’entreprise : suivez toute l’actu
+              SIPRO-CHIM.
             </p>
           </div>
           <div className="w-full grid md:grid-cols-3 sm:grid-cols-1 sm:gap-y-10 gap-x-10">

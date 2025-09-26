@@ -28,10 +28,8 @@ const AlimentairePage = () => {
       <SaveurInedite />
       <SocialMedia page={"alimentaire"} />
       <Years />
-      {/* <Other /> */}
       <HeroesForm />
       <Blog page="alimentaire" />
-      {/* <Faq page={"alimentaire"} /> */}
       <Footer />
     </>
   );

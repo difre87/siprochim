@@ -60,10 +60,10 @@ const ProductSlugPage =  ({params}:ProductSlugPageProps) => {
               <div className="flex flex-col items-center justify-center gap-3 pb-10 mb-20">
 
                 <h3 className="text-2xl text-[#2e2e72] font-semibold bg-gradient-to-r from-[#008b36] to-[#09ef3b] bg-clip-text text-transparent">
-                  {categoryData ? categoryData.name : "Chargement..."}
+                  {subCategoryData ? subCategoryData.name : "Chargement..."}
                 </h3>
                 <span className="text-xl text-[#008b36] font-semibold">
-                  {subCategoryData ? subCategoryData.name : "Chargement..."}
+                  {categoryData ? categoryData.name : "Chargement..."}
                 </span>
               </div>
             )}
@@ -81,17 +81,17 @@ const ProductSlugPage =  ({params}:ProductSlugPageProps) => {
                       className="w-full h-full border border-[#008b36] flex flex-col justify-center items-center transition-all duration-500 group bg-[#FAFAFA] hover:bg-[#008b36] hover:scale-110 hover:shadow-2xl rounded-3xl overflow-hidden"
                   >
                     <div className="w-full h-[450px] p-10 flex flex-col justify-center items-center relative  transition-all duration-500 hover:bg-hover-aliment  rounded-lg overflow-hidden">
-                      <Image
-                        src={`https://esjc.org/siprochim/public/${item.image}`}
-                        alt={item.name}
-                        width={100}
-                        height={100}
-                        className="drop-shadow-2xl object-contain transition-all duration-500 group-hover:scale-110 group-hover:rotate-6"
-
-                    />
-                    <h4 className="font-light text-center text-xl text-[#008b36] py-4 group-hover:text-white">{item.name}</h4>
-                  </div>
-
+                      <div className="w-48 h-48 flex justify-center items-center mb-4">
+                        <Image
+                          src={`https://esjc.org/siprochim/public/${item.image}`}
+                          alt={item.name}
+                          width={200}
+                          height={200}
+                          className="drop-shadow-2xl object-contain max-w-full max-h-full transition-all duration-500 group-hover:scale-110 group-hover:rotate-6"
+                        />
+                      </div>
+                      <h4 className="font-light text-center text-xl text-[#008b36] group-hover:text-white">{item.name}</h4>
+                    </div>
                   </Link>
                 </div>)
               ))

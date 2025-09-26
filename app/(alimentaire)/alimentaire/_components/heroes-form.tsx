@@ -27,19 +27,23 @@ const HeroesForm = () => {
             ease: "linear",
             duration: 1.5,
           }}
-          className="md:w-[600px] sm:w-full flex flex-col gap-y-10 justify-center h-full"
+          className="md:w-[600px] sm:w-full flex flex-col gap-y-6 justify-center h-full"
         >
           <h1 className="md:text-6xl sm:text-4xl font-bold text-white uppercase leading-none ">
-            Rester au
+            Restez au
             <h4 className="uppercase text-white md:text-6xl sm:text-4xl font-bold">Courant!</h4>
           </h1>
+          <p className="text-white md:text-lg sm:text-sm font-light leading-7">
+            Recevez nos recettes, astuces et
+            inspirations gourmandes directement
+            dans votre boîte mail.
+            De nouvelles idées simples et
+            savoureuses pour égayer vos repas
+            et surprendre vos proches.Un
+            rendez-vous culinaire à ne pas
+            manquer.
+          </p>
 
-          {/* <p className="md:text-lg sm:text-md uppercase text-white text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-            nisi, est minus modi excepturi iure obcaecati placeat, recusandae
-            esse beatae sit neque dolorum vel facilis! Blanditiis esse
-            asperiores ad officiis!
-          </p> */}
           <div className="w-full flex flex-col">
             <div className="w-full grid md:grid-cols-2 sm:grid-cols-1 gap-5 mb-5">
               <div className="relative flex flex-col">
@@ -57,19 +61,9 @@ const HeroesForm = () => {
             </div>
             <div className="w-full flex flex-col">
               <Label className="text-white uppercase text-lg pl-2 pb-2">
-                Objet
+                Email
               </Label>
-              <Input className="bg-white h-14 border-none rounded-[24px] outline-0" />
-            </div>
-            <div className="w-full flex flex-col mt-5 mb-5">
-              <Label className="text-white uppercase text-lg pl-2 pb-2">
-                Service concerné
-              </Label>
-              <select name="service" id="service" className="bg-white h-14 border-none rounded-[24px] px-3 outline-0">
-                <option value="rh">Ressources Humaines</option>
-                <option value="it">Informatique</option>
-                <option value="marketing">Marketing</option>
-              </select>
+              <Input type="email" className="bg-white h-14 border-none rounded-[24px] outline-0" />
             </div>
           </div>
           <div className="flex">

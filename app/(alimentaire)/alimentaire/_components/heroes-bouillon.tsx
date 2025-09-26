@@ -10,52 +10,6 @@ const HeroesBouillon = () => {
   return (
     <section className="w-full min-h-screen relative bg-[#e5bd83] ">
       <div className="w-full max-w-screen-xl relative mx-auto ">
-        {/* <div className="w-full relative z-10">
-          <Image
-            src="/assets/alimentaire/produits/p-9.png"
-            width={250}
-            height={250}
-            alt="siprochim"
-            className="absolute z-10 -rotate-[30deg] left-[18%]"
-          />
-          <Image
-            src="/assets/alimentaire/produits/p-10.png"
-            width={250}
-            height={250}
-            alt="siprochim"
-            className="absolute z-10 transform left-[42%] -top-[10%]"
-          />
-          <Image
-            src="/assets/alimentaire/produits/p-12.png"
-            width={350}
-            height={250}
-            alt="siprochim"
-            className="absolute z-10 transform left-[38%] top-[25%]"
-          />
-          <Image
-            src="/assets/alimentaire/produits/p-11.png"
-            width={250}
-            height={250}
-            alt="siprochim"
-            className="absolute  z-10 rotate-[30deg] right-[15%]"
-          />
-          <Image
-            src="/assets/alimentaire/plateau.png"
-            width={1000}
-            height={400}
-            alt="sipro-chim"
-            className="mx-auto relative -top-20 z-20"
-          />
-          <div className="w-full h-[300px] absolute bottom-96 z-30 overflow-hidden bg-red-500">
-            <Image
-              src="/assets/alimentaire/ombre-planche.png"
-              fill
-              objectFit="cover"
-              alt="siprochim"
-            />
-          </div>
-        </div> */}
-
         <div className="w-full min-h-[500px]  z-30 overflow-hidden ">
           <div className="w-full relative h-full">
             <Image
@@ -66,12 +20,6 @@ const HeroesBouillon = () => {
               className="mx-auto  absolute left-[10%]"
             />
           </div>
-          {/* <Image
-            src="/assets/alimentaire/ombre-planche.png"
-            fill
-            objectFit="cover"
-            alt="siprochim"
-          /> */}
           <Image
             src="/assets/alimentaire/produits/p-9.png"
             width={250}
@@ -100,7 +48,6 @@ const HeroesBouillon = () => {
             alt="siprochim"
             className="absolute  z-20 rotate-[30deg] right-[15%] transition-all duration-500 hover:scale-110"
           />
-
         </div>
 
         <div className="w-full max-w-screen-xl mx-auto">
@@ -111,14 +58,6 @@ const HeroesBouillon = () => {
           />
         </div>
         <div className="w-full max-w-screen-xl mx-auto relative">
-          {/* <div className="absolute bg-red-400  left-0 right-0 top-[50%] z-10">
-            <div className="w-16 h-16 border-[5px] border-white rounded-full flex justify-center items-center cursor-pointer absolute -left-24 transition-all duration-500 hover:scale-110 hover:bg-white hover:shadow-2xl hover:-left-28 group">
-              <ArrowLeft className="text-white w-12 h-12 group-hover:text-black" />
-            </div>
-            <div className="w-16 h-16 border-[5px] border-white rounded-full flex justify-center items-center cursor-pointer absolute -right-24 transition-all duration-500 hover:scale-110 hover:bg-white hover:shadow-2xl hover:-right-28 group">
-              <ArrowRight className="text-white w-12 h-12 group-hover:text-black" />
-            </div>
-          </div> */}
           <div className="w-full grid md:grid-cols-4 sm:grid-cols-1 sm:px-14 md:px-0 gap-10 py-10 ">
             <Link
               href="/alimentaire/produit/aromate-poulet-sachet-50g"

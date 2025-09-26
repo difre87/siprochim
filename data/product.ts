@@ -116,3 +116,19 @@ export const findSubCategoryById = async (id: number) => {
         return null;
     }
 }
+
+export const findProductFaq = async (id: number) => {
+    try {
+        const response = await fetch(
+            `${endpoint}products/${id}/accordions` // Adjust the endpoint as needed
+        );
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        return data.data;
+    } catch (error) {
+        console.error("Error fetching subcategory by ID:", error);
+        return null;
+    }
+}
