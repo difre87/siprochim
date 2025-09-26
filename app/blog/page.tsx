@@ -53,7 +53,7 @@ const BlogPage = () => {
         <div className="max-w-screen-xl mx-auto px-5">
           <div className="w-full flex flex-col gap-y-6 text-white">
             <nav className="flex items-center space-x-2 text-sm">
-              <a href="/" className="hover:underline">Accueil</a>
+              <Link href="/" className="hover:underline">Accueil</Link>
               <span>/</span>
               <span className="text-gray-300">Blog</span>
             </nav>

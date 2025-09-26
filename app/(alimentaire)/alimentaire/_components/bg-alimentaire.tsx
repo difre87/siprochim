@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const BgAlimentaire = () => {
   return (
-    <section className="w-full md:min-h-screen sm:bg-[url('/assets/alimentaire/home/news/tournesol.webp')] md:bg-[url('/assets/alimentaire/home/news/tournesol.webp')]  bg-cover bg-center bg-no-repeat relative sm:h-[300px] ">
-      <div className="sm:hidden md:block absolute bottom-0 left-0 right-0 h-80 bg-[url('/assets/alimentaire/home/news/SUPPORT.webp')] bg-center bg-cover">
+    <section className="w-full min-h-[50vh] md:min-h-screen bg-[url('/assets/alimentaire/home/news/tournesol.webp')] bg-cover bg-center bg-no-repeat relative overflow-hidden">
+      <div className="hidden md:block absolute bottom-0 left-0 right-0 h-80 bg-[url('/assets/alimentaire/home/news/SUPPORT.webp')] bg-center bg-cover">
         <div className="w-full h-[400px]  flex justify-between absolute bottom-58 bottom-64">
           <div className="flex items-end justify-end h-full">
             <motion.div

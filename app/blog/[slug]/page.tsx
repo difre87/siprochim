@@ -7,6 +7,7 @@ import { fetchPostBySlug } from "@/data/product";
 import { Post } from "@/lib/type";
 import { ImageIcon } from "lucide-react";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 interface BlogDetailPageProps {
   params: Promise<{
@@ -112,9 +113,9 @@ const BlogDetailPage = ({ params }: BlogDetailPageProps) => {
         <div className="max-w-screen-xl mx-auto px-5">
           <div className="w-full flex flex-col gap-y-6 text-white">
             <nav className="flex items-center space-x-2 text-sm">
-              <a href="/" className="hover:underline">Accueil</a>
+              <Link href="/" className="hover:underline">Accueil</Link>
               <span>/</span>
-              <a href="/blog" className="hover:underline">Blog</a>
+              <Link href="/blog" className="hover:underline">Blog</Link>
               <span>/</span>
               <span className="text-gray-300">{post.title}</span>
             </nav>
@@ -183,12 +184,12 @@ const BlogDetailPage = ({ params }: BlogDetailPageProps) => {
 
           {/* Navigation */}
           <div className="mt-12 flex justify-between items-center">
-            <a 
+            <Link 
               href="/blog" 
               className="flex items-center gap-x-2 text-[#40409c] hover:underline font-medium"
             >
               ← Retour au blog
-            </a>
+            </Link>
             
             <div className="flex gap-x-2">
               <button 
